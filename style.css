@@ -1,0 +1,46 @@
+.footer{
+    margin-top: 40px;
+}
+#search-box{
+    height: 30px;
+    border: none;
+}
+
+.card{
+    height: 330px;
+    box-shadow: none;
+}
+
+
+.xem-nhieu img{
+    width: 145px;
+}
+
+.fter footer{
+    text-align: center;
+}
+
+.tin-noi-bat .list-inline li{
+    width: 260px;
+}
+
+.tin-noi-bat .list-inline{
+    display:inline-block;
+}
+
+
+.tin-noi-bat .list-inline .list-inline-item .name-title{
+    height: 100px;
+}
+
+.fter .container{
+    padding-top: 20px;
+}
+
+.fter .cpyr{
+    padding-bottom: 10px;
+}
+
+/* .container .navbar .collapse .navbar-nav li{
+    width: 110px;
+} */

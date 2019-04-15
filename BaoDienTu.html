@@ -5,114 +5,225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script language="javascript" src="Javascript.js"></script>
     <title>TH16-News</title>
 </head>
+<div>
+    <h4><a style="text-decoration: none;" href="BaoDienTu.html"><b class="text-align center">Báo điện tử - TH16 NEWS</b></a></h4>
+</div>
+<div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <a class="navbar-brand" href="#"><b>TH16 NEWS</b></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><b>Đăng nhập</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><b>Đăng ký</b></a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width:100%;">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Thời sự
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Thế giới
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pháp luật
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Kinh doanh
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Công nghệ
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Xe
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Du lịch
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Nhịp sống trẻ
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Thể thao
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Văn hóa
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <hr>
+
+    <h6>Tin nổi bật</h6>
+    <div class="tin-noi-bat">
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <a href="https://nhadat.tuoitre.vn/lan-song-han-phan-lo-ban-nen-20190414075603764.htm"><img
+                        style="width:240px;"
+                        src="https://cdn.tuoitre.vn/zoom/188_117/2019/4/14/xay-lan-song-han-15552030911981136107554-crop-1555203143189225441272.jpg"></a><br>
+                <a style="text-decoration: none;" href="ThoiSu.html">Thời sự</a>
+                <h5 class="name-title"><a style="text-decoration: none;" href="https://nhadat.tuoitre.vn/lan-song-han-phan-lo-ban-nen-20190414075603764.htm">Lấn sông Hàn
+                        phân lô bán nền</a></h5>
+                <span title="14-4-2019T11:00">1 ngày trước</span>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://nhadat.tuoitre.vn/lan-song-han-phan-lo-ban-nen-20190414075603764.htm"><img
+                        style="width:240px;"
+                        src="https://cdn.tuoitre.vn/zoom/188_117/2019/4/14/tong-bi-thu-tham-kg-15552260976431654179908-crop-15552261819362042068629.jpg"></a><br>
+                <a style="text-decoration: none;" href="ThoiSu.html">Thời sự</a>
+                <h5 class="name-title"><a style="text-decoration: none;" href="https://nhadat.tuoitre.vn/lan-song-han-phan-lo-ban-nen-20190414075603764.htm">Kiên Giang kiến nghị sớm có chủ trương thành lập thành phố Phú Quốc</a></h5>
+                <span title="14-4-2019T11:00">1 ngày trước</span>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://nhadat.tuoitre.vn/lan-song-han-phan-lo-ban-nen-20190414075603764.htm"><img
+                        style="width:240px;"
+                        src="https://cdn.tuoitre.vn/zoom/188_117/2019/4/14/3-155524236841835663340-crop-15552435259152088442999.jpg"></a><br>
+                <a style="text-decoration: none;" href="ThoiSu.html">Thời sự</a>
+                <h5 class="name-title"><a style="text-decoration: none;" href="https://nhadat.tuoitre.vn/lan-song-han-phan-lo-ban-nen-20190414075603764.htm">Biển Vũng Tàu chật kín du khách</a></h5>
+                <span title="14-4-2019T11:00">1 ngày trước</span>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://nhadat.tuoitre.vn/lan-song-han-phan-lo-ban-nen-20190414075603764.htm"><img
+                        style="width:240px;"
+                        src="https://cdn.tuoitre.vn/zoom/188_117/2018/11/26/1-nguoi-dan-ong-mac-ao-ba-lo-la-du-khach-bi-nhan-vien-bai-giu-xe-ruot-duoi-15432268795501934228179-crop-1555228638103196036617.jpg"></a><br>
+                <a style="text-decoration: none;" href="ThoiSu.html">Thời sự</a>
+                <h5 class="name-title"><a style="text-decoration: none;" href="https://nhadat.tuoitre.vn/lan-song-han-phan-lo-ban-nen-20190414075603764.htm">Người Việt hung dữ là 'sự thật phũ phàng' hay 'để bảo vệ mình'?</a></h5>
+                <span title="14-4-2019T11:00">1 ngày trước</span>
+            </li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h6>10 bài được xem nhiều nhất</h6>
+    <div>
+
+    </div>
+
+</div>
+
+<div class="fter bg-dark text-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm">
+                <h6>TH16 NEWS<h6>
+                        <h6>Thiết kế: Phan Văn Hậu - Lưu Nhất Hàn</h6>
+            </div>
+            <div class="col-sm">
+                <h6>Liên hệ</h6>
+                <a href="https://www.facebook.com/mrhauphan">https://www.facebook.com/mrhauphan</a>
+                <a href="https://www.facebook.com/nhathan.luu.5">https://www.facebook.com/nhathan.luu.5</a>
+            </div>
+        </div>
+    </div>
+    <div class="text-center cpyr">
+        <i class="fa fa-copyright" aria-hidden="true"> Copyright(c) 2019 TH16 NEWS</i>
+    </div>
+
+</div>
 
 <body>
-    <div class="header">
-        <h3><b>Báo điện tử - TH16 NEWS</b></h3>
-    </div>
-
-    <div class="nav">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Logo</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">JavaScript</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="https://materializecss.com/images/sample-1.jpg">
-                        <span class="card-title black-text lighten-4">Card Title</span>
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">This is a link</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="https://materializecss.com/images/sample-1.jpg">
-                        <span class="card-title black-text lighten-4">Card Title</span>
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">This is a link</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="https://materializecss.com/images/sample-1.jpg">
-                        <span class="card-title black-text lighten-4">Card Title</span>
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">This is a link</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <footer class="page-footer blue-grey darken-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Footer Content</h5>
-                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                            content.</p>
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Links</h5>
-                        <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2014 Copyright Text
-                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-                </div>
-            </div>
-        </footer>
-    </div>
 </body>
 
 </html>
