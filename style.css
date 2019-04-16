@@ -1,38 +1,44 @@
-.footer{
-    margin-top: 40px;
-}
-#search-box{
-    height: 30px;
-    border: none;
-}
-
-.card{
-    height: 330px;
-    box-shadow: none;
-}
-
-
-.xem-nhieu img{
-    width: 145px;
-}
 
 .fter footer{
     text-align: center;
 }
-
+/* tin nổi bật */
 .tin-noi-bat .list-inline li{
-    width: 260px;
+    width: 267px;
 }
 
 .tin-noi-bat .list-inline{
     display:inline-block;
 }
 
-
 .tin-noi-bat .list-inline .list-inline-item .name-title{
-    height: 100px;
+    height: 90px;
 }
 
+.tin-noi-bat .list-inline .list-inline-item img{
+    width: 270px;
+}
+
+
+/* xem nhiều */
+
+.xem-nhieu .list-inline li{
+    width: 212px;
+}
+
+.xem-nhieu .list-inline{
+    display: inline-block;
+}
+
+.xem-nhieu .list-inline .list-inline-item .name-title{
+    height: 70px;
+}
+
+.xem-nhieu .list-inline .list-inline-item img{
+    width: 210px;
+}
+
+/* footer */
 .fter .container{
     padding-top: 20px;
 }
@@ -41,6 +47,11 @@
     padding-bottom: 10px;
 }
 
-/* .container .navbar .collapse .navbar-nav li{
-    width: 110px;
-} */
+.fter{
+    margin-top: 30px;
+}
+
+/* khác */
+span{
+    font-size: small;
+}
