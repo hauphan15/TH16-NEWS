@@ -16,6 +16,7 @@
 }
 
 .tin-noi-bat .list-inline .list-inline-item img{
+    height: 170px;
     width: 270px;
 }
 
@@ -35,8 +36,52 @@
 }
 
 .xem-nhieu .list-inline .list-inline-item img{
+    height: 130px;
     width: 210px;
 }
+
+
+/* mới nhất */
+
+.moi-nhat .list-inline li{
+    width: 212px;
+}
+
+.moi-nhat .list-inline{
+    display: inline-block;
+}
+
+.moi-nhat .list-inline .list-inline-item .name-title{
+    height: 70px;
+}
+
+.moi-nhat .list-inline .list-inline-item img{
+    height: 130px;
+    width: 210px;
+}
+
+
+/* Top 10 chuyên mục */
+
+.top-chuyen-muc .list-inline li{
+    width: 212px;
+    height: 256px;
+}
+
+.top-chuyen-muc .list-inline{
+    display: inline-block;
+}
+
+.top-chuyen-muc .list-inline .list-inline-item .name-title{
+    height: 70px;
+}
+
+.top-chuyen-muc .list-inline .list-inline-item img{
+    height: 130px;
+    width: 210px;
+}
+
+
 
 /* footer */
 .fter .container{
@@ -54,4 +99,8 @@
 /* khác */
 span{
     font-size: small;
+}
+
+.fa-user{
+    margin-top: 12px;
 }
