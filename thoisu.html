@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script language="javascript" src="Javascript.js"></script>
+    <title>TH16-News</title>
+</head>
+<body>
+<div>
+    <h4 class="text-center"><a style="text-decoration: none;color:red" href="BaoDienTu.html"><b
+                class="text-align center">Báo điện tử - TH16 NEWS</b></a>
+    </h4>
+</div>
+<div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <a class="navbar-brand" href="#"><b style="color:white;">TH16 NEWS</b></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a href="" style="text-decoration: none;color:white"><i class="far fa-user fa-lg"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><b style="color:white;">Đăng nhập</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><b style="color:white;">Đăng ký</b></a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width:100%;">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Thời sự
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Xã hội</a>
+                        <a class="dropdown-item" href="#">Phóng sự</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Thế giới
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Bình luận</a>
+                        <a class="dropdown-item" href="#">Kiều bào</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pháp luật
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Chuyện pháp đình</a>
+                        <a class="dropdown-item" href="#">Tư vấn</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Kinh doanh
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Tài chính</a>
+                        <a class="dropdown-item" href="#">Đầu tư</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Công nghệ
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Nhịp sống số</a>
+                        <a class="dropdown-item" href="#">Trải nghiệm</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Xe
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Cơ hội du lịch</a>
+                        <a class="dropdown-item" href="#">Đi chơi</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Du lịch
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Cơ hội du lịch</a>
+                        <a class="dropdown-item" href="#">Đi chơi</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Nhịp sống trẻ
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Xu hướng</a>
+                        <a class="dropdown-item" href="#">Khám phá</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Thể thao
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Tin tức</a>
+                        <a class="dropdown-item" href="#">Bình luận</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Giáo dục
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Học đường</a>
+                        <a class="dropdown-item" href="#">Du học</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <hr>
+    <div class="d-flex">
+        <a class="p-2 text-danger" href="#"><b>Thời Sự</b></a>
+        <a class="p-2" href="#">Phóng Sự</a>
+        <a class="p-2" href="#">Xã Hội</a>
+    </div>
+    <hr>
+
+    <h5 class="text-danger">Tin nổi bật</h5>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="mySlides w3-animate-fading">
+            <a href="https://tuoitre.vn/cong-an-kiem-tra-hang-chuc-bao-tai-chua-ma-tuy-o-nghe-an-20190417150832691.htm">
+                <img src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/17/abc-1555488290157423687663-15554896770931199147912-1555489751243212122674.png" style="width:100%" >
+            </a>
+            <h3><a href="https://tuoitre.vn/cong-an-kiem-tra-hang-chuc-bao-tai-chua-ma-tuy-o-nghe-an-20190417150832691.htm">
+            <b>Công an kiểm tra hàng chục bao tải nghi chứa ma túy ở Nghệ An</b>
+            </a></h3>
+            <p>TTO - Lực lượng công an đã kiểm tra hàng chục bao tải được cho vô chủ để bên đường nghi chứa ma túy ở huyện Quỳnh Lưu, Nghệ An.</p>
+            </div>
+            <div class="mySlides w3-animate-fading">
+                <a href="https://tuoitre.vn/doi-nam-nu-boc-chay-trong-dem-o-bai-dat-trong-quan-12-20190417220316608.htm">
+                    <img src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/17/logo-1-1555512509464583193961.jpg" style="width:100%" >
+                </a>
+                <h3><a href="https://tuoitre.vn/doi-nam-nu-boc-chay-trong-dem-o-bai-dat-trong-quan-12-20190417220316608.htm">
+                    <b>Đôi nam nữ bốc cháy trong đêm ở bãi đất trống quận 12</b>
+                </a></h3>
+                <p>TTO - Thấy lửa bùng lên giữa khu đất trống ở phường Tân Hưng Thuận, quận 12, TP.HCM, người dân chạy đến thì
+                     phát hiện đôi nam nữ bốc cháy nên cùng lực lượng chức năng dập lửa, đưa đi cấp cứu.</p>
+            </div>
+            <div class="mySlides w3-animate-fading">
+                <a href="https://tuoitre.vn/phat-hien-doi-nam-nu-treo-co-chet-trong-tiem-uon-toc-20181031143822227.htm">
+                    <img src="https://cdn.tuoitre.vn/thumb_w/640/2018/10/31/hien-truong-vu-an-ca-mau-15409714317911273196221.jpg" style="width:100%" >
+                </a>
+                <h3><a href="https://tuoitre.vn/phat-hien-doi-nam-nu-treo-co-chet-trong-tiem-uon-toc-20181031143822227.htm">
+                    <b>Phát hiện đôi nam nữ treo cổ chết trong tiệm uốn tóc</b>
+                </a></h3>
+                <p>TTO - Ngày 31-10, thông tin từ Công an tỉnh Cà Mau cho biết đang điều tra nguyên nhân cái chết của đôi
+                     nam nữ trong tiệm uốn tóc Minh Tuyết, đường Nguyễn Ngọc Sanh, phường 6, TP Cà Mau.</p>
+            </div>
+            <div class="mySlides w3-animate-fading">
+                <a href="https://tuoitre.vn/nguoi-dan-chung-cu-galaxy-9-ky-don-tap-the-yeu-cau-khoi-to-nguyen-huu-linh-2019041713075955.htm">
+                    <img src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/17/cuu-vien-pho-dam-ochrqthumbsdiethumb-15554810635181141283214.jpg" style="width:100%" >
+                </a>
+                <h3><a href="https://tuoitre.vn/nguoi-dan-chung-cu-galaxy-9-ky-don-tap-the-yeu-cau-khoi-to-nguyen-huu-linh-2019041713075955.htm">
+                    <b>Dân chung cư Galaxy 9 ký đơn tập thể yêu cầu khởi tố Nguyễn Hữu Linh</b>
+                </a></h3>
+                <p>TTO - Tập thể cư dân ở chung cư Galaxy 9 (quận 4, TP.HCM) gửi đơn đề nghị cơ quan có thẩm quyền khởi tố và xử phạt nghiêm ông
+                     Nguyễn Hữu Linh theo quy định tại điều 146c Bộ luật hình sự 2015 về tội dâm ô đối với người dưới 16 tuổi.</p>
+            </div>        
+            <div class="mySlides w3-animate-fading">
+                <a href="https://tuoitre.vn/gan-70-tre-em-viet-nam-tung-bi-bao-hanh-xam-hai-20190418102323645.htm">
+                    <img src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/18/18-4-tt-bo-ld-nguyenthiha-1555557424315218259546.jpg" style="width:100%" >
+                </a>
+                <h3><a href="https://tuoitre.vn/gan-70-tre-em-viet-nam-tung-bi-bao-hanh-xam-hai-20190418102323645.htm">
+                    <b>Gần 70% trẻ em Việt Nam từng bị bạo hành, xâm hại</b>
+                </a></h3>
+                <p>TTO - Bạo lực trẻ em rất phổ biến ở Việt Nam, có đến 68,4% trẻ em Việt Nam (dưới 18 tuổi) từng ít nhất một lần bị bạo lực dưới một trong vài
+                     hình thức, từ bị đánh đập, xâm hại thân thể đến xâm hại tình dục...</p>
+            </div>  
+            <div class="mySlides w3-animate-fading">
+                <a href="https://tuoitre.vn/gia-ve-xe-dip-le-30-4-cua-tp-hcm-chi-duoc-tang-toi-da-40-20190418115630193.htm">
+                    <img src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/18/img-0624-154606925941168755978-15555643687151274365281.png" style="width:100%" >
+                </a>
+                <h3><a href="https://tuoitre.vn/gia-ve-xe-dip-le-30-4-cua-tp-hcm-chi-duoc-tang-toi-da-40-20190418115630193.htm">
+                    <b>Giá vé xe dịp lễ 30-4 của TP.HCM chỉ được tăng tối đa 40%</b>
+                </a></h3>
+                <p>TTO - Sở Giao thông vận tải TP.HCM cho biết trong thời gian phục vụ lễ 30-4 và 1-5, đơn vị này phối hợp với các bến xe liên tỉnh lớn
+                     thường xuyên kiểm tra, kiểm soát giá vé xe, đảm bảo chỉ tăng tối đa 40% so với ngày thường.</p>
+            </div>
+            <div class="mySlides w3-animate-fading">
+                <a href="https://tuoitre.vn/nhieu-quan-diem-khac-nhau-viec-xay-dung-nha-ga-t3-tan-son-nhat-2019041808402761.htm">
+                    <img src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/18/qdnguyendinhchung3s-3read-only-1555551225375419040351.jpg" style="width:100%" >
+                </a>
+                <h3><a href="https://tuoitre.vn/nhieu-quan-diem-khac-nhau-viec-xay-dung-nha-ga-t3-tan-son-nhat-2019041808402761.htm">
+                    <b>Giá vé xe dịp lễ 30-4 của TP.HCM chỉ được tăng tối đa 40%</b>
+                </a></h3>
+                <p>TTO - Dù nhiều ý kiến đồng tình đẩy nhanh việc xây dựng nhà ga T3 Tân Sơn Nhất nhưng vẫn còn quan điểm khác nhau về cách thực hiện.
+                </p>
+            </div>
+            <div class="mySlides w3-animate-fading">
+                <a href="https://tuoitre.vn/ca-lai-chet-noi-tren-kenh-nhieu-loc-thi-nghe-20190418113641485.htm">
+                    <img src="https://cdn.tuoitre.vn/thumb_w/980/2019/4/18/logo-dp-4-15555620967131983745674.jpg" style="width:100%" >
+                </a>
+                <h3><a href="https://tuoitre.vn/ca-lai-chet-noi-tren-kenh-nhieu-loc-thi-nghe-20190418113641485.htm">
+                    <b>Cá lại chết nổi trên kênh Nhiêu Lộc - Thị Nghè</b>
+                </a></h3>
+                <p>
+                        TTO - Sau hai cơn mưa bất ngờ rạng sáng 17 và 18-4, cá trên kênh Nhiêu Lộc - Thị Nghè lại nổi lên để thở
+                         do lượng oxy hòa tan trong nước thấp, một số cá bị chết nhưng không đáng kể.
+                </p>
+            </div>
+            <div class="mySlides w3-animate-fading">
+                <a href="https://tuoitre.vn/luoi-dien-tp-hcm-dang-qua-tai-cuc-bo-vi-nang-nong-20190418093234885.htm">
+                    <img src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/18/logo-img1571-15555547430171942094482.jpeg" style="width:100%" >
+                </a>
+                <h3><a href="https://tuoitre.vn/luoi-dien-tp-hcm-dang-qua-tai-cuc-bo-vi-nang-nong-20190418093234885.htm">
+                    <b>Lưới điện TP.HCM đang quá tải cục bộ vì nắng nóng</b>
+                </a></h3>
+                <p>
+                        TTO - Nhu cầu sử dụng các thiết bị điện, đặc biệt là các thiết bị điện để làm mát của người dân tăng cao khiến lưới
+                         điện của Tổng công ty điện lực TP.HCM bị quá tải cục bộ.
+                </p>
+            </div>
+            <div class="mySlides w3-animate-fading">
+                <a href="https://tuoitre.vn/xe-dien-tong-3-nguoi-dung-xe-may-mua-nuoc-mia-ben-ve-duong-20190418124934221.htm">
+                    <img src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/18/o-to-dien-dam-loan-xa-vao-xe-may-3-nguoi-bi-thuong-1-1555566478327558770352.jpg" style="width:100%" >
+                </a>
+                <h3><a href="https://tuoitre.vn/xe-dien-tong-3-nguoi-dung-xe-may-mua-nuoc-mia-ben-ve-duong-20190418124934221.htm">
+                    <b>'Xe điên' tông 3 người dừng xe máy mua nước mía bên vệ đường</b>
+                </a></h3>
+                <p>
+                    TTO - Đang chạy trên đường, chiếc ôtô 4 chỗ bất ngờ lao vào xe nước mía bên vệ đường khiến 3 người dừng xe máy mua nước mía bị thương.
+                </p>
+            </div>
+            <script>
+                    var myIndex = 0;
+                    carousel();
+                    
+                    function carousel() {
+                      var i;
+                      var x = document.getElementsByClassName("mySlides");
+                      for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                      }
+                      myIndex++;
+                      if (myIndex > x.length) {myIndex = 1}    
+                      x[myIndex-1].style.display = "block";  
+                      setTimeout(carousel, 9000);    
+                    }
+                    </script>
+        </div>
+        <div class="col-sm-6">
+            <ul >
+                <li>
+                    <a href="https://tuoitre.vn/cong-an-kiem-tra-hang-chuc-bao-tai-chua-ma-tuy-o-nghe-an-20190417150832691.htm">
+                        Công an kiểm tra hàng chục bao tải nghi chứa ma túy ở Nghệ An
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tuoitre.vn/doi-nam-nu-boc-chay-trong-dem-o-bai-dat-trong-quan-12-20190417220316608.htm">
+                    Đôi nam nữ bốc cháy trong đêm ở bãi đất trống quận 12.
+                </a></li>
+                <li>
+                    <a href="https://tuoitre.vn/phat-hien-doi-nam-nu-treo-co-chet-trong-tiem-uon-toc-20181031143822227.htm">
+                    Phát hiện đôi nam nữ treo cổ chết trong tiệm uốn tóc.
+                </a></li>
+                <li>
+                    <a href="https://tuoitre.vn/nguoi-dan-chung-cu-galaxy-9-ky-don-tap-the-yeu-cau-khoi-to-nguyen-huu-linh-2019041713075955.htm">
+                    Dân chung cư Galaxy 9 ký đơn tập thể yêu cầu khởi tố Nguyễn Hữu Linh
+                </a></li>
+                <li>
+                    <a href="https://tuoitre.vn/gan-70-tre-em-viet-nam-tung-bi-bao-hanh-xam-hai-20190418102323645.htm">
+                    Gần 70% trẻ em Việt Nam từng bị bạo hành, xâm hại</a>
+                </li>
+                <li>
+                    <a href="https://tuoitre.vn/gia-ve-xe-dip-le-30-4-cua-tp-hcm-chi-duoc-tang-toi-da-40-20190418115630193.htm">
+                    Giá vé xe dịp lễ 30-4 của TP.HCM chỉ được tăng tối đa 40%</a>
+                </li>
+                <li>
+                    <a href="https://tuoitre.vn/nhieu-quan-diem-khac-nhau-viec-xay-dung-nha-ga-t3-tan-son-nhat-2019041808402761.htm">
+                    Nhiều quan điểm khác nhau việc xây dựng nhà ga T3 Tân Sơn Nhất</a>
+                </li>
+                <li>
+                    <a href="https://tuoitre.vn/ca-lai-chet-noi-tren-kenh-nhieu-loc-thi-nghe-20190418113641485.htm">
+                        Cá lại chết nổi trên kênh Nhiêu Lộc - Thị Nghè
+                    </a>
+                </li>
+                <li><a href="https://tuoitre.vn/luoi-dien-tp-hcm-dang-qua-tai-cuc-bo-vi-nang-nong-20190418093234885.htm">
+                    Lưới điện TP.HCM đang quá tải cục bộ vì nắng nóng</a></li>
+                <li><a href="https://tuoitre.vn/xe-dien-tong-3-nguoi-dung-xe-may-mua-nuoc-mia-ben-ve-duong-20190418124934221.htm">
+                    'Xe điên' tông 3 người dừng xe máy mua nước mía bên vệ đường</a></li>
+            </ul>
+        </div>
+    </div>
+<hr>
+<hr>
+<h5>Tin mới</h5>
+<div class="moi-nhat">
+    <ul class="list-inline">
+        <li class="list-inline-item">
+            <a href="https://tuoitre.vn/canh-cao-bi-thu-xa-de-vo-ke-khai-con-gai-nhan-den-bu-su-co-moi-truong-bien-20190418143237076.htm">
+                <img src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/18/images593863nh12-1555572015897612193335.jpg">
+            </a>
+            <h6 class="name-title"><a style="text-decoration:none;color:black"
+                 href="https://tuoitre.vn/canh-cao-bi-thu-xa-de-vo-ke-khai-con-gai-nhan-den-bu-su-co-moi-truong-bien-20190418143237076.htm">
+                 Cảnh cáo bí thư xã để vợ kê khai con gái nhận đền bù sự cố môi trường biển
+                </a></h6>
+        </li>
+        <li  class="list-inline-item">
+            <a href="https://tuoitre.vn/da-lat-khong-xay-khach-san-chan-tam-nhin-ra-ho-xuan-huong-20190418142724171.htm">
+                <img src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/6/khu-hoa-binh-1554510675982380922300.jpg" ></a>
+            <h6 class="name-title">
+                <a href="https://tuoitre.vn/da-lat-khong-xay-khach-san-chan-tam-nhin-ra-ho-xuan-huong-20190418142724171.htm" style="text-decoration:none;color:black">
+                    Đà Lạt: không xây khách sạn chắn tầm nhìn ra Hồ Xuân Hương</a>
+            </h6>
+        </li>
+        <li class="list-inline-item">
+            <a href="https://tuoitre.vn/giam-doc-lam-truong-chiem-dat-lam-trang-trai-20190418132616025.htm">
+            <img src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/18/qt-15555686437901229746447.jpg">
+        </a>
+        <h6 class="name-title"><a href="https://tuoitre.vn/giam-doc-lam-truong-chiem-dat-lam-trang-trai-20190418132616025.htm" style="text-decoration:none;color:black">
+            Giám đốc lâm trường chiếm đất làm trang trại</a>
+        </h6>
+        </li>
+    </ul>
+</div>
+
+<hr>
+<hr>
+
+<h5 class="text-danger">Được xem nhiều nhất</h5>
+<div class="xem-nhieu">
+    <ul class="list-inline">
+        <li class="list-inline-item">
+            <a
+                href="https://nhadat.tuoitre.vn/lan-song-han-phan-lo-ban-nen-20190414075603764.htm"><img
+                src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/14/xay-lan-song-han-15552030911981136107554.jpg"></a><br>
+            <h6 class="name-title"><a style="text-decoration: none;color: black"
+                href="https://nhadat.tuoitre.vn/lan-song-han-phan-lo-ban-nen-20190414075603764.htm">Lấn sông Hàn phân lô bán nền</a></h6>
+            <span title="16-4-2019 5:39">14/04/2019</span>
+        </li>
+        <li class="list-inline-item">
+            <a
+                href="https://tuoitre.vn/csgt-bi-tai-xe-o-to-ep-nga-da-tu-vong-20190417202127871.htm"><img
+                    src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/17/9-15555067082352075691397.jpg"></a><br>
+            <h6 class="name-title"><a style="text-decoration: none;color: black"
+                    href="https://tuoitre.vn/csgt-bi-tai-xe-o-to-ep-nga-da-tu-vong-20190417202127871.htm">
+                    CSGT bị tài xế ôtô ép ngã đã tử vong</a></h6>
+            <span title="16-4-2019 5:39">14 giờ trước</span>
+        </li>
+        <li class="list-inline-item">
+            <a
+                href="https://tuoitre.vn/xe-tai-huc-duoi-xe-cau-2-tai-xe-tu-vong-20190418084400191.htm"><img
+                    src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/18/w-2-1555553263510344821363.jpg"></a><br>
+            <h6 class="name-title"><a style="text-decoration: none;color: black"
+                    href="https://tuoitre.vn/xe-tai-huc-duoi-xe-cau-2-tai-xe-tu-vong-20190418084400191.htm">
+                    Xe tải húc đuôi xe cẩu, 2 tài xế tử vong</a></h6>
+            <span title="16-4-2019 5:39">5 giờ trước</span>
+        </li>
+        <li class="list-inline-item">
+            <a
+                href="https://tuoitre.vn/tang-tru-hang-chuc-ky-thit-va-trung-vich-20190417132343351.htm"><img
+                src="https://cdn.tuoitre.vn/thumb_w/640/2019/4/17/thit-vich-tai-nha-ong-vnt-1555481616181384324589.jpg"></a><br>
+            <h6 class="name-title"><a style="text-decoration: none;color: black"
+                    href="https://tuoitre.vn/tang-tru-hang-chuc-ky-thit-va-trung-vich-20190417132343351.htm">
+                    Tàng trữ hàng chục ký thịt và trứng vích</a></h6>
+            <span title="16-4-2019 5:39">8 giờ trước</span>
+        </li>
+        <li class="list-inline-item">
+            <a
+                href="https://tuoitre.vn/hop-tac-xa-phuc-vu-khong-tot-nguoi-dan-ngung-dong-tien-dien-20190417115746653.htm"><img
+                    src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/17/dien-son-tay-1555476734898593774042.jpg"></a><br>
+            <h6 class="name-title"><a style="text-decoration: none;color: black"
+                    href="https://tuoitre.vn/hop-tac-xa-phuc-vu-khong-tot-nguoi-dan-ngung-dong-tien-dien-20190417115746653.htm">Tấm
+                    Hợp tác xã phục vụ không tốt, người dân ngưng đóng tiền điện</a></h6>
+            <span title="16-4-2019 5:39">12 giờ trước</span>
+        </li>
+    </ul>
+    <hr>
+    <ul class="list-inline">
+        <li class="list-inline-item">
+            <a href="https://tuoitre.vn/chu-trang-trai-nuoi-ca-bat-can-de-dien-ro-ri-giat-chet-nguoi-20190418075758502.htm"><img
+                    src="https://cdn.tuoitre.vn/zoom/150_120/2019/2/17/giat-1550394988553939262971-crop-155039499350838313594.jpg"></a><br>
+            <h6 class="name-title"><a style="text-decoration: none;color: black"
+                    href="https://tuoitre.vn/chu-trang-trai-nuoi-ca-bat-can-de-dien-ro-ri-giat-chet-nguoi-20190418075758502.htm">
+                    Chủ trang trại nuôi cá bất cẩn để điện rò rỉ giật chết người</a></h6>
+            <span title="16-4-2019 5:39">3 giờ trước</span>
+        </li>
+        <li class="list-inline-item">
+            <a
+                href="https://tuoitre.vn/dong-cua-trung-tam-dang-kiem-cap-khong-giay-chung-nhan-va-tem-kiem-dinh-20190417211347501.htm"><img
+                    src="https://cdn.tuoitre.vn/zoom/212_132/2019/4/16/tuyen-sinh-15553786314281052689877-crop-15553786828211522833453.jpg"></a><br>
+            <h6 class="name-title"><a style="text-decoration: none;color: black"
+                    href="https://tuoitre.vn/dong-cua-trung-tam-dang-kiem-cap-khong-giay-chung-nhan-va-tem-kiem-dinh-20190417211347501.htm">Nhiều
+                    phương thức tuyển sinh, nên chọn thế nào?</a></h6>
+            <span title="16-4-2019 5:39">5 giờ trước</span>
+        </li>
+        <li class="list-inline-item">
+            <a href="https://tuoitre.vn/sau-cau-hoi-dat-ra-sau-vu-chay-nha-tho-duc-ba-paris-20190416114721685.htm"><img
+                    src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/17/dang-kiem-bac-giang-1555510043751278561470.png"></a><br>
+            <h6 class="name-title"><a style="text-decoration: none;color: black"
+                    href="https://tuoitre.vn/sau-cau-hoi-dat-ra-sau-vu-chay-nha-tho-duc-ba-paris-20190416114721685.htm">
+                    Đóng cửa trung tâm đăng kiểm cấp khống giấy chứng nhận và tem kiểm định</a></h6>
+            <span title="16-4-2019 5:39">6 giờ trước</span>
+        </li>
+        <li class="list-inline-item">
+            <a
+                href="https://tuoitre.vn/cua-hang-tap-hoa-boc-chay-du-doi-me-tinh-giac-bong-con-thao-chay-20190418093738836.htm"><img
+                    src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/18/chay-15555546126831937112709.jpg"></a><br>
+            <h6 class="name-title"><a style="text-decoration: none;color: black"
+                    href="https://tuoitre.vn/cua-hang-tap-hoa-boc-chay-du-doi-me-tinh-giac-bong-con-thao-chay-20190418093738836.htm">
+                    Cửa hàng tạp hóa bốc cháy dữ dội, mẹ tỉnh giấc bồng con tháo chạy</a></h6>
+            <span title="16-4-2019 5:39">2 giờ trước</span>
+        </li>
+        <li class="list-inline-item">
+            <a href="https://tuoitre.vn/cuong-che-thao-do-nha-kho-trai-phep-hang-tram-met-vuong-20190418064117937.htm"><img
+                    src="https://cdn.tuoitre.vn/thumb_w/586/2019/4/18/trai-phpe-2-phu-huu-15555600173731850376845.jpg"></a><br>
+            <h6 class="name-title"><a style="text-decoration: none;color: black"
+                    href="https://tuoitre.vn/cuong-che-thao-do-nha-kho-trai-phep-hang-tram-met-vuong-20190418064117937.htm">
+                    Cưỡng chế tháo dỡ nhà kho trái phép hàng trăm mét vuông</a></h6>
+            <span title="16-4-2019 5:39">7 giờ trước</span>
+        </li>
+    </ul>
+</div>
+</div>
+
+
+
+<div class="fter bg-dark text-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm">
+                <h6>TH16 NEWS<h6>
+                        <h6>Thiết kế: Phan Văn Hậu - Lưu Nhất Hàn</h6>
+            </div>
+            <div class="col-sm">
+                <h6>Liên hệ</h6>
+                <a style="text-decoration: none;"
+                    href="https://www.facebook.com/mrhauphan">https://www.facebook.com/mrhauphan</a>
+                <a style="text-decoration: none;"
+                    href="https://www.facebook.com/nhathan.luu.5">https://www.facebook.com/nhathan.luu.5</a>
+            </div>
+        </div>
+    </div>
+    <div class="text-center cpyr">
+        <i class="fa fa-copyright" aria-hidden="true"> Copyright 2019 TH16 NEWS</i>
+    </div> 
+</div>
+
+</body>
+
+</html>
