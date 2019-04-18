@@ -1,0 +1,17 @@
+/* bản tin */
+img{
+    width: 410px;
+    height: 240px;
+}
+
+
+/* phân trang */
+.phan-trang nav{
+    display: flex;
+    justify-content: center;
+}
+
+/* footer */
+.fter {
+    margin-top: 10px;
+}
