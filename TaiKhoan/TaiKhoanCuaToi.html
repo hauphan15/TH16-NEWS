@@ -44,24 +44,28 @@
                 <input type="date" class="form-control" value="" disabled="true">
             </div>
             <div style="text-align:center;margin-top:20px;">
-                <button style="width:180px;" type="submit" class="btn btn-danger">Cập nhật thông tin</button>
+                <a href="CapNhatTaiKhoan.html">
+                    <button style="width:180px;" type="button" class="btn btn-danger">Cập nhật thông tin</button>
+                </a>
             </div>
         </form>
         <form>
             <div class="form-group" style=" margin-top:20px;">
                 <label for="">Đổi mật khẩu</label>
-                <input type="password" class="form-control" placeholder="Nhập mật khẩu cũ" disabled="true">
+                <input type="password" class="form-control" placeholder="Nhập mật khẩu cũ" disabled="true" id="mkc">
                 <input style="margin-top: 10px;" type="password" class="form-control" placeholder="Nhập mật mật mới"
-                    disabled="true">
+                    disabled="true" id="mkm">
                 <input style="margin-top: 10px;" type="password" class="form-control" placeholder="Xác nhận lại"
-                    disabled="true">
+                    disabled="true" id="xn">
             </div>
             <div style="text-align:center;margin-top:20px;margin-bottom:50px;">
-                <button style="width:180px;" type="submit" class="btn btn-danger">Đổi mật khẩu</button>
+                <button style="width:180px;" type="button" class="btn btn-danger" id="btn-doimk" onclick="enableInput()">Đổi mật khẩu</button>
             </div>
         </form>
         </form>
     </div>
+
+    <script language="javascript" src="TaiKhoanCuaToi.js"></script>
 </body>
 
 </html>
