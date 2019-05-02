@@ -26,23 +26,23 @@
             <form>
                 <div class="row">
                     <div class="col-1">
-                        <input type="text" class="form-control" placeholder="STT">
+                        <input type="text" class="form-control" placeholder="STT" id="stt">
                     </div>
                     <div class="col-2">
-                        <input type="text" class="form-control" placeholder="Chuyên mục">
+                        <input type="text" class="form-control" placeholder="Chuyên mục" id="cm">
                     </div>
                     <div class="col-4">
                         <div class="input-group">
                             <input type="text" aria-label="First name" class="form-control"
-                                placeholder="Chuyên mục con">
-                            <input type="text" aria-label="Last name" class="form-control" placeholder="Chuyên mục con">
+                                placeholder="Chuyên mục con" id="cmc1">
+                            <input type="text" aria-label="Last name" class="form-control" placeholder="Chuyên mục con" id="cmc2">
                         </div>
                     </div>
                     <div class="col-2">
-                        <input type="text" class="form-control" placeholder="Số bài viết">
+                        <input type="text" class="form-control" placeholder="Số bài viết" id="sbv">
                     </div>
                     <div class="col-2">
-                        <input type="text" class="form-control" placeholder="Biên tập viên">
+                        <input type="text" class="form-control" placeholder="Biên tập viên" id="btv">
                     </div>
                 </div>
             </form>
@@ -52,7 +52,7 @@
                 <button style="width:150px;" type="button" class="btn btn-outline-success">Cập nhật</button>
             </div>
         </div>
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover" id="tbl">
             <thead style="text-align:center;">
                 <tr>
                     <th>STT</th>
@@ -177,6 +177,8 @@
         </table>
 
     </div>
+
+    <script language="javascript" src="QuanLyChuyenMuc.js"></script>
 </body>
 
 </html>
