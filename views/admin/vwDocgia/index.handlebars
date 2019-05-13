@@ -1,0 +1,72 @@
+<div class="container">
+    <h4 class="text-center" style="margin-top:40px;margin-bottom:20px;">Danh sách đọc giả</h4>
+    <form action="" method="POST" role="form" style="margin-bottom:20px;">
+        <div class="row">
+            <div class="col-1">
+                <input type="text" class="form-control" id="stt" name="ID" placeholder="STT">
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" id="email" name="Email" placeholder="Email">
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" id="ht" name="HoTen" placeholder="Họ tên">
+            </div>
+            <div class="col-2">
+                <input type="text" class="form-control" id="ns" name="NgaySinh" placeholder="Ngày sinh">
+            </div>
+            <div class="col-2">
+                <input type="text" class="form-control" id="ncl" name="NgayConLai" placeholder="Số ngày còn lại ">
+            </div>
+        </div>
+        <div style="margin-top:20px;">
+            <button style="width:150px;" type="submit" class="btn btn-outline-primary"><i class="fas fa-plus"
+                    style="margin-right:10px;"></i>Thêm</button>
+            <button style="width:150px;" type="button" class="btn btn-outline-danger"><i class="fas fa-trash-alt"
+                    style="margin-right:10px;"></i>Xóa</button>
+            <button style="width:150px;" type="button" class="btn btn-outline-success"><i class="fas fa-pen"
+                    style="margin-right:10px;"></i>Cập
+                nhật</button>
+            <button style="width:150px;" type="button" class="btn btn-outline-warning"><i class="fas fa-hourglass-half"
+                    style="margin-right:10px;"></i>Gia hạn</button>
+
+        </div>
+    </form>
+
+    <div>
+        <table class="table table-bordered table-hover" id="tbl">
+            <thead style="text-align:center;">
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Họ tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Số ngày còn lại</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each this.docgia}}
+                <tr>
+                    <td scope="row">{{ID}}</td>
+                    <td>{{Email}}</td>
+                    <td>{{HoTen}}</td>
+                    <td>{{NgaySinh}}</td>
+                    <td>{{NgayConLai}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    var tb = document.getElementById("tbl");
+    for (let i = 1; i < tb.rows.length; i++) {
+        tb.rows[i].onclick = function () {
+            document.getElementById("stt").value = this.cells[0].innerHTML;
+            document.getElementById("email").value = this.cells[1].innerHTML;
+            document.getElementById("ht").value = this.cells[2].innerHTML;
+            document.getElementById("ns").value = this.cells[3].innerHTML;
+            document.getElementById("ncl").value = this.cells[4].innerHTML;
+        };
+    }
+</script>
