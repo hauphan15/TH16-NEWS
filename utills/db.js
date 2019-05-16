@@ -38,6 +38,37 @@ module.exports = {
                 connec.end();
             });
         });
+    },
+    update: (tableName, idField,entity) => {
+        return new Promise((resolve, reject) => {
+            var id = entity[idField];
+            delete entity[idField];
+
+            var sql = `UPDATE ${tableName} SET ? WHERE ${idField} = ?`;
+            var connec = createConnection();
+            connec.query(sql, [entity, id], (error, values) => {
+                if (error)
+                    reject(error);
+                else {
+                    resolve(values.changedRows);
+                }
+                connec.end();
+            });
+        });
+    },
+    delete: (tableName, idField, id) => {
+        return new Promise((resolve, reject) => {
+            var sql = `DELETE FROM ${tableName} WHERE ${idField} = ?`;
+            var connec = createConnection();
+            connec.query(sql, id, (error, values) => {
+                if (error)
+                    reject(error);
+                else {
+                    resolve(values.affectedRows);
+                }
+                connec.end();
+            });
+        });
     }
 }
 

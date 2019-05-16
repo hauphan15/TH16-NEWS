@@ -24,6 +24,7 @@ app.use('/admin/bientapvien', require('./routes/admin/bientapvien.route'));
 app.use('/admin/docgia', require('./routes/admin/docgia.route'));
 app.use('/admin/phongvien', require('./routes/admin/phongvien.route'));
 app.use('/admin/chuyenmuc', require('./routes/admin/chuyenmuc.route'));
+app.use('/chuyenmuc', require('./routes/chuyenmuc.route'));
 
 app.listen(3000, () => {
     console.log('server is running at http://localhost:3000');
