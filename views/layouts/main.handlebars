@@ -11,9 +11,82 @@
 </head>
 
 <body>
+    <div>
+        <h4 class="text-center"><a style="text-decoration: none;color:red" href="BaoDienTu.html"><b
+                    class="text-align center">Báo điện tử - TH16 NEWS</b></a>
+        </h4>
+    </div>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+            <a class="navbar-brand" href="#"><b style="color:white;">TH16 NEWS</b></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="/DangnhapDangKy/DangNhap.html" style="text-decoration: none;color:white"><i
+                            class="far fa-user fa-lg" style="margin-top:12px;"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/DangnhapDangKy/DangNhap.html"><b style="color:white;">Đăng nhập</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/DangnhapDangKy/DangKy.html"><b style="color:white;">Đăng ký</b></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <hr>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width:100%;">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    {{#each lcChuyenmuc}}
+                    <li class="nav-item dropdown {{#if isActive}}active font-weight-bold{{/if}}">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ChuyenMuc}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/chuyenmuc/{{ID}}/baiviet">{{ChuyenMuc}}</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/chuyenmuc/{{ID}}/baiviet">{{CMC1}}</a>
+                            <a class="dropdown-item" href="/chuyenmuc/{{ID}}/baiviet">{{CMC2}}</a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </nav>
+    </div>
 
-    {{{body}}}
+    <div class="container">
+        {{{body}}}
+    </div>
 
+    <div class="fter bg-dark text-light align-text-bottom " style="margin-top:50px;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm">
+                    <h6>TH16 NEWS<h6>
+                            <h6>Thiết kế: Phan Văn Hậu - Lưu Nhất Hàn</h6>
+                </div>
+                <div class="col-sm">
+                    <h6>Liên hệ</h6>
+                    <a style="text-decoration: none;"
+                        href="https://www.facebook.com/mrhauphan">https://www.facebook.com/mrhauphan</a>
+                    <a style="text-decoration: none;"
+                        href="https://www.facebook.com/nhathan.luu.5">https://www.facebook.com/nhathan.luu.5</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center cpyr">
+            <i class="fa fa-copyright" aria-hidden="true"> Copyright 2019 TH16 NEWS</i>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

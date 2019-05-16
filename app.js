@@ -9,12 +9,14 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.json());
 
-app.engine('handlebars', exphbs({ 
+app.engine('handlebars', exphbs({
     defaultLayout: 'main',
     layoutsDir: 'views/layouts'
 }));
 
 app.set('view engine', 'handlebars');
+
+app.use(require('./middlewares/locals.mdw'));
 
 app.get('/', (req, res) => {
     res.render('home');
