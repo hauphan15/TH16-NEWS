@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 
 
 router.post('/add', (req, res) => {
-    bientapvienModel.add(req.body)
+    docgiaModel.add(req.body)
         .then(ID => {
             console.log(ID);
             res.redirect('back');
@@ -26,7 +26,7 @@ router.post('/add', (req, res) => {
 })
 
 router.post('/update', (req, res) => {
-    bientapvienModel.update(req.body)
+    docgiaModel.update(req.body)
         .then(n => {
             res.redirect('back');
         })
@@ -36,7 +36,7 @@ router.post('/update', (req, res) => {
 })
 
 router.post('/delete', (req, res) => {
-    bientapvienModel.delete(req.body.ID)
+    docgiaModel.delete(req.body.ID)
         .then(n => {
             res.redirect('back');
         })
