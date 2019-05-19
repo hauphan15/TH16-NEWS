@@ -1,5 +1,6 @@
 var exress = require('express');
 var baivietModel = require('../models/baiviet.model');
+var chuyenmuc=require('../models/chuyenmuc.model');
 var router = exress.Router();
 
 
@@ -27,6 +28,8 @@ router.get('/:id/:id_cmc/baiviet', (req, res) => {
     var id_cmc = req.params.id_cmc;
     console.log(id_cmc,id);
     var p = baivietModel.allByCMC(id_cmc);
+    var q=chuyenmuc.singel(id);
+    var r;
 
     p.then(rows => {
         for (const cm of res.locals.lcChuyenmuc) {
@@ -35,8 +38,8 @@ router.get('/:id/:id_cmc/baiviet', (req, res) => {
             }
         }
         res.render('vwBaiviet/byCat', {
-            baiviet: rows
-        });
+            baiviet: rows,
+            });
     }).catch(err => {
         console.log(err);
     });
