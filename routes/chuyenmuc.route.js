@@ -26,10 +26,10 @@ router.get('/:id/baiviet', (req, res) => {
 router.get('/:id/:id_cmc/baiviet', (req, res) => {
     var id = req.params.id;
     var id_cmc = req.params.id_cmc;
-    console.log(id_cmc,id);
     var p = baivietModel.allByCMC(id_cmc);
-    var q=chuyenmuc.singel(id);
-    var r;
+
+    // var q=chuyenmuc.singel(id);
+    // var r;
 
     p.then(rows => {
         for (const cm of res.locals.lcChuyenmuc) {
@@ -39,6 +39,7 @@ router.get('/:id/:id_cmc/baiviet', (req, res) => {
         }
         res.render('vwBaiviet/byCat', {
             baiviet: rows,
+            cmc: rows[0]
             });
     }).catch(err => {
         console.log(err);
