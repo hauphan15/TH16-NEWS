@@ -1,5 +1,6 @@
 var exress = require('express');
 var baivietModel = require('../models/baiviet.model');
+var chuyenmuc =require('../models/chuyenmuc.model');
 var router = exress.Router();
 
 
@@ -13,9 +14,9 @@ router.get('/:id/baiviet', (req, res) => {
                 cm.isActive = true;
             }
         }
-
         res.render('vwBaiviet/byCat', {
-            baiviet: rows
+            baiviet: rows2,
+            CM:row[0]
         });
     }).catch(err => {
         console.log(err);
