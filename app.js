@@ -1,7 +1,7 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
 var morgan = require('morgan');
-
+var moment  = require('moment');
 
 var app = express();
 app.use(morgan('dev'));
@@ -11,8 +11,10 @@ app.use(express.json());
 
 app.engine('handlebars', exphbs({
     defaultLayout: 'main',
-    layoutsDir: 'views/layouts'
+    layoutsDir: 'views/layouts',
 }));
+
+
 
 app.set('view engine', 'handlebars');
 

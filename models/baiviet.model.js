@@ -13,6 +13,14 @@ module.exports = {
         return db.load(`SELECT * FROM baiviet WHERE ID_CMC = '${IdCMC}' `);
     },
 
+    pageByCM: (IdCM, limit, offset) => {
+        return db.load(`SELECT * FROM baiviet WHERE ID_ChuyenMuc = '${IdCM}' limit ${limit} offset ${offset}`);
+    },
+
+    countByCM: IdCM => {
+        return db.load(`SELECT count(*) as total FROM baiviet WHERE ID_ChuyenMuc = '${IdCM}' `);
+    },
+
     singel: id => {
         return db.load(`SELECT * FROM baiviet WHERE ID = ${id}`);
     },
