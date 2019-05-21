@@ -25,6 +25,8 @@ app.get('/', (req, res) => {
 })
 
 
+app.use('/writer/dangbaiviet', require('./routes/writer/dangbaiviet.route'));
+app.use('/writer/dsbaiviet', require('./routes/writer/dsbaiviet.route'));
 app.use('/admin/duyetbaiviet', require('./routes/admin/duyetbaiviet.route'));
 app.use('/bientapvien/duyetbaiviet', require('./routes/editor/duyetbaiviet.route'));
 app.use('/admin/bientapvien', require('./routes/admin/bientapvien.route'));

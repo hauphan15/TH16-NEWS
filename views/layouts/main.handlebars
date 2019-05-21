@@ -7,13 +7,14 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
     <title>TH16 NEWS</title>
 </head>
 
 <body>
     <div>
-        <h4 class="text-center"><a style="text-decoration: none;color:red" href="/"><b
-                    class="text-align center">Báo điện tử - TH16 NEWS</b></a>
+        <h4 class="text-center"><a style="text-decoration: none;color:red" href="/"><b class="text-align center">Báo
+                    điện tử - TH16 NEWS</b></a>
         </h4>
     </div>
     <div>
@@ -45,7 +46,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     {{#each lcChuyenmuc}}
-                    <li class="nav-item dropdown {{#if isActive}}border-bottom border-danger active font-weight-bold{{/if}}">
+                    <li
+                        class="nav-item dropdown {{#if isActive}}border-bottom border-danger active font-weight-bold{{/if}}">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{ChuyenMuc}}
