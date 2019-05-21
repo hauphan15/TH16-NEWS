@@ -24,6 +24,9 @@ app.get('/', (req, res) => {
     res.render('home');
 })
 
+
+app.use('/admin/duyetbaiviet', require('./routes/admin/duyetbaiviet.route'));
+app.use('/bientapvien/duyetbaiviet', require('./routes/editor/duyetbaiviet.route'));
 app.use('/admin/bientapvien', require('./routes/admin/bientapvien.route'));
 app.use('/admin/docgia', require('./routes/admin/docgia.route'));
 app.use('/admin/phongvien', require('./routes/admin/phongvien.route'));

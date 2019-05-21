@@ -26,14 +26,17 @@
             <div style="margin-top:10px;" class="col-3">
                 <input type="text" class="form-control" placeholder="Chuyên mục quản lý" name="ChuyenMucQl" id="cm">
             </div>
+            <div style="margin-top:10px;" class="col-3">
+                <input type="text" class="form-control" placeholder="ID chuyên mục quản lý" name="ID_ChuyenMuc" id="idcm">
+            </div>
         </div>
         <div style="margin-top:20px;">
-            <button formaction="/admin/bientapvien/add" style="width:150px;" type="submit" class="btn btn-outline-primary"><i class="fas fa-plus"
-                    style="margin-right:10px;"></i>Thêm</button>
-            <button formaction="/admin/bientapvien/delete" style="width:150px;" type="submit" class="btn btn-outline-danger"><i class="fas fa-trash-alt"
-                    style="margin-right:10px;"></i>Xóa</button>
-            <button formaction="/admin/bientapvien/update" style="width:150px;" type="submit" class="btn btn-outline-success"><i class="fas fa-pen"
-                    style="margin-right:10px;"></i>Cập
+            <button formaction="/admin/bientapvien/add" style="width:150px;" type="submit"
+                class="btn btn-outline-primary"><i class="fas fa-plus" style="margin-right:10px;"></i>Thêm</button>
+            <button formaction="/admin/bientapvien/delete" style="width:150px;" type="submit"
+                class="btn btn-outline-danger"><i class="fas fa-trash-alt" style="margin-right:10px;"></i>Xóa</button>
+            <button formaction="/admin/bientapvien/update" style="width:150px;" type="submit"
+                class="btn btn-outline-success"><i class="fas fa-pen" style="margin-right:10px;"></i>Cập
                 nhật</button>
         </div>
     </form>
@@ -48,6 +51,7 @@
                 <th>Số điện thoại</th>
                 <th>Bút danh</th>
                 <th>Chuyên mục quản lý</th>
+                <th>ID Chuyên mục quản lý</th>
             </tr>
         </thead>
         <tbody>
@@ -61,6 +65,7 @@
                 <td>{{Sdt}}</td>
                 <td>{{ButDanh}}</td>
                 <td>{{ChuyenMucQL}}</td>
+                <td>{{ID_ChuyenMuc}}</td>
             </tr>
             {{/each}}
         </tbody>
@@ -79,6 +84,7 @@
             document.getElementById("sdt").value = this.cells[5].innerHTML;
             document.getElementById("bd").value = this.cells[6].innerHTML;
             document.getElementById("cm").value = this.cells[7].innerHTML;
+            document.getElementById("idcm").value = this.cells[8].innerHTML;
         };
     }
 </script>

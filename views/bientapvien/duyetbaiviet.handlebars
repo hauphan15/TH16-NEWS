@@ -1,0 +1,83 @@
+<div class="container">
+    <h4 class="text-center" style="margin-top:40px;margin-bottom:20px;">Danh sách bài viết chờ duyệt</h4>
+    <form action="" method="POST" role="form" style="margin-bottom:20px;">
+        <div class="row">
+            <div class="col-1">
+                <input type="text" readonly class="form-control" id="stt" name="ID" placeholder="STT">
+            </div>
+            <div class="col-2.5">
+                <input type="text" readonly class="form-control" id="tenbv" name="tenbv" placeholder="Tên bài viết">
+            </div>
+            <div class="col-2">
+                <input type="text" readonly class="form-control" id="idcm" name="idcm" placeholder="ID chuyên mục">
+            </div>
+            <div class="col-2">
+                <input type="text" readonly class="form-control" id="cm" name="cm" placeholder="huyên mục">
+            </div>
+            <div class="col-2">
+                <input type="text" readonly class="form-control" id="idcmc" name="idcmc"
+                    placeholder="ID chuyên mục con">
+            </div>
+            <div class="col-2">
+                <input type="text" readonly class="form-control" id="cmc" name="cmc" placeholder="chuyên mục con">
+            </div>
+            <div class="col-2" style="margin-top:10px;">
+                <input type="text" class="form-control" id="gc" name="gc" placeholder="Ghi chú">
+            </div>
+        </div>
+        <div style="margin-top:20px;">
+            <button formaction="/admin/bientapvien/add" style="width:150px;" type="submit"
+                class="btn btn-outline-primary"><i class="fas fa-check"
+                    style="margin-right:10px;"></i></i>Duyệt</button>
+            <button formaction="/admin/bientapvien/delete" style="width:150px;" type="submit"
+                class="btn btn-outline-danger"><i class="far fa-window-close" style="margin-right:10px;"></i>Từ
+                chối</button>
+        </div>
+    </form>
+    <div class="da-xb" style="margin-top:20px;">
+        <h5>Đã xuất bản</h5>
+        <table class="table table-bordered table-hover" id="tbl">
+            <thead style="text-align:center;">
+                <tr>
+                    <th>ID</th>
+                    <th>Bài viết</th>
+                    <th>ID Chuyên mục</th>
+                    <th>Chuyên mục</th>
+                    <th>ID Chuyên mục con</th>
+                    <th>Chuyên mục con</th>
+                    <th>Ghi chú</th>
+                </tr>
+            <tbody>
+                {{#each this.baivietchoduyet}}
+                <tr>
+                    <td>{{ID}}</td>
+                    <td>{{TenBaiViet}}</td>
+                    <td>{{ID_ChuyenMuc}}</td>
+                    <td>{{TenChuyenMuc}}</td>
+                    <td>{{ID_CMC}}</td>
+                    <td>{{ChuyenMucCon}}</td>
+                    <td>{{GhiChu}}</td>
+                    <td> <button type="button" class="btn btn-info"><i class="fas fa-eye"
+                                style="margin-right:10px;"></i>Xem bài
+                            viết</button></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    var tb = document.getElementById("tbl");
+    for (let i = 1; i < tb.rows.length; i++) {
+        tb.rows[i].onclick = function () {
+            document.getElementById("stt").value = this.cells[0].innerHTML;
+            document.getElementById("tenbv").value = this.cells[1].innerHTML;
+            document.getElementById("idcm").value = this.cells[2].innerHTML;
+            document.getElementById("cm").value = this.cells[3].innerHTML;
+            document.getElementById("idcmc").value = this.cells[4].innerHTML;
+            document.getElementById("cmc").value = this.cells[5].innerHTML;
+            document.getElementById("gc").value = this.cells[6].innerHTML;
+        };
+    }
+</script>
