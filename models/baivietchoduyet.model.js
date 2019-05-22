@@ -10,7 +10,7 @@ module.exports = {
     },
 
     singel: id => {
-        return db.load(`SELECT * FROM baivietchoduyet WHERE ID = ${id}`);
+        return db.load(`SELECT * FROM baivietchoduyet WHERE ID = N'${id}' `);
     },
 
     add: entity => {

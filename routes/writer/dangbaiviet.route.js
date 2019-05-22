@@ -21,7 +21,7 @@ router.post('/submit', (req, res) => {
         baivietchoduyetcModel.add(req.body),
         dsbbaivietPVModel.add(req.body)])
         .then(() => {
-            res.redirect('phongvien/danhsachbaiviet');
+            res.redirect('back');
         })
         .catch(err => {
             console.log(err);
