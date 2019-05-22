@@ -16,4 +16,8 @@ module.exports = {
     singel: id => {
         return db.load(`SELECT * FROM dsbaivietphongvien WHERE ID = ${id}`);
     },
+
+    add: entity => {
+        return db.add('dsbaivietphongvien', entity);
+    },
 };

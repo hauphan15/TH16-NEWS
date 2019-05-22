@@ -13,6 +13,10 @@ module.exports = {
         return db.load(`SELECT * FROM baivietchoduyet WHERE ID = ${id}`);
     },
 
+    add: entity => {
+        return db.add('baivietchoduyet', entity);
+    },
+
     delete: id => {
         return db.delete('baivietchoduyet', 'ID', id);
     }

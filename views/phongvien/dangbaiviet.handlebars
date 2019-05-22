@@ -3,15 +3,15 @@
 <form action="" method="POST" role="form" style="margin-bottom:20px;">
     <div class="form-group">
         <label for="exampleFormControlSelect1">Chuyên mục</label>
-        <select class="form-control" id="exampleFormControlSelect1">
+        <select class="form-control" id="TenChuyenMuc" name="TenChuyenMuc">
             {{#each this.chuyenmuc}}
-            <option>{{ChuyenMuc}}</option>
+            <option >{{ChuyenMuc}}</option>
             {{/each}}
         </select>
     </div>
     <div class="form-group">
         <label for="exampleFormControlSelect1">Chuyên mục con</label>
-        <select class="form-control" id="exampleFormControlSelect1">
+        <select class="form-control" id="ChuyenMucCon" name="ChuyenMucCon">
             {{#each this.chuyenmuc}}
             <option>{{CMC1}}</option>
             <option>{{CMC2}}</option>
@@ -20,32 +20,42 @@
     </div>
 
     <div class="form-group">
-        <label for="exampleFormControlInput1">Tiêu đề</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1">
+        <label for="exampleFormControlInput1">Tên bài viết</label>
+        <input class="form-control" id="TenBaiViet" name="TenBaiViet">
     </div>
 
     <div class="form-group">
         <label for="exampleFormControlInput1">Các tag</label>
         <div class="input-group">
-            <input type="text" class="form-control">
-            <input type="text" class="form-control">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" id="tag1" name="tag1">
+            <input type="text" class="form-control" id="tag2" name="tag2">
+            <input type="text" class="form-control" id="tag3" name="tag3">
         </div>
     </div>
 
     <div class="form-group">
         <label for="exampleFormControlTextarea1">Tóm tắt</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" id="TomTat" name="TomTat" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Ảnh đại diện</label>
+        <textarea class="form-control" id="AnhDaiDien" name="AnhDaiDien" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Tiêu đề ảnh</label>
+        <textarea class="form-control" id="TieuDeAnh" name="TieuDeAnh" rows="3"></textarea>
     </div>
 
     <div class="form-group" style="height:auto;">
         <label for="exampleFormControlTextarea1">Nội dung</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" name="editor1" rows="10"></textarea>
+        <textarea class="form-control" id="NoiDung" name="NoiDung" rows="10"></textarea>
         <script>
             CKEDITOR.replace('editor1');
         </script>
     </div>
     <div style="text-align:center;margin-top: 50px;margin-bottom: 50px;">
-        <button type="submit" class="btn btn-primary">Đăng bản tin</button>
+        <button type="submit" formaction="/writer/dangbaiviet/submit" class="btn btn-primary">Đăng bản tin</button>
     </div>
 </form>
