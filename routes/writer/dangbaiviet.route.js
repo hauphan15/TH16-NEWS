@@ -5,10 +5,12 @@ var dsbbaivietPVModel = require('../../models/dsbaiviet_phongvien.model');
 var router = exress.Router();
 
 router.get('/', (req, res) => {
-    chuyenmucModel.all()
-        .then(rows => {
+    Promise.all([chuyenmucModel.all(),
+    dsbbaivietPVModel.countAll()])
+        .then(([rows,total]) => {
             res.render('phongvien/dangbaiviet', {
-                chuyenmuc: rows
+                chuyenmuc: rows,
+                total: total[0].total
             });
         }).catch(err => {
             console.log(err);

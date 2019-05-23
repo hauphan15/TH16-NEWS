@@ -27,14 +27,18 @@ app.get('/', (req, res) => {
 })
 
 
+app.use('/writer/xemchitiet', require('./routes/writer/xemchitiet.route'));
 app.use('/writer/dangbaiviet', require('./routes/writer/dangbaiviet.route'));
 app.use('/writer/dsbaiviet', require('./routes/writer/dsbaiviet.route'));
-app.use('/admin/duyetbaiviet', require('./routes/admin/duyetbaiviet.route'));
+
 app.use('/bientapvien/duyetbaiviet', require('./routes/editor/duyetbaiviet.route'));
+
+app.use('/admin/duyetbaiviet', require('./routes/admin/duyetbaiviet.route'));
 app.use('/admin/bientapvien', require('./routes/admin/bientapvien.route'));
 app.use('/admin/docgia', require('./routes/admin/docgia.route'));
 app.use('/admin/phongvien', require('./routes/admin/phongvien.route'));
 app.use('/admin/chuyenmuc', require('./routes/admin/chuyenmuc.route'));
+
 app.use('/chuyenmuc', require('./routes/chuyenmuc.route'));
 
 app.listen(3000, () => {

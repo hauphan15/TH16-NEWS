@@ -1,5 +1,20 @@
 <h4 class="text-center" style="margin-top:40px;margin-bottom:20px;">Danh sách bài viết</h4>
-<table class="table table-bordered table-hover">
+
+<form action="" method="POST" role="form" style="margin-bottom:20px;">
+    <div class="row">
+        <div class="col-2">
+            <input type="text" readonly class="form-control" id="stt" name="ID" placeholder="ID">
+        </div>
+        <div class="col-5">
+            <button style="width:150px;" type="submit" class="btn btn-outline-info" formaction="/writer/xemchitiet">
+                <i class="fas fa-eye" style="margin-right:10px;"></i>Xem chi tiết</button>
+            <button style="width:150px;" type="submit" class="btn btn-outline-danger" formaction="/writer/dsbaiviet/xoa">
+                <i class="fas fa-trash-alt" style="margin-right:10px;"></i>Xóa</button>
+        </div>
+    </div>
+</form>
+
+<table class="table table-bordered table-hover" id="tbl">
     <thead>
         <tr>
             <th>ID</th>
@@ -23,3 +38,16 @@
         {{/each}}
     </tbody>
 </table>
+
+<script>
+    var tb = document.getElementById("tbl");
+    for (let i = 1; i < tb.rows.length; i++) {
+        tb.rows[i].onclick = function () {
+            document.getElementById("stt").value = this.cells[0].innerHTML;
+            document.getElementById("tenbv").value = this.cells[1].innerHTML;
+            document.getElementById("idcm").value = this.cells[2].innerHTML;
+            document.getElementById("idcmc").value = this.cells[3].innerHTML;
+            document.getElementById("gc").value = this.cells[4].innerHTML;
+        };
+    }
+</script>

@@ -6,8 +6,8 @@
                 <input type="text" readonly class="form-control" id="stt" name="ID" placeholder="STT">
             </div>
             <div class="col-3">
-                <button type="submit" class="btn btn-info" formaction="/bientapvien/duyetbaiviet/xemchitiet">
-                    <i class="fas fa-eye" style="margin-right:10px;"></i>Xem bài viết</button>
+                <button type="submit" class="btn btn-outline-info" formaction="/bientapvien/duyetbaiviet/xemchitiet">
+                    <i class="fas fa-eye" style="margin-right:10px;"></i>Xem chi tiết</button>
             </div>
         </div>
     </form>
@@ -16,6 +16,7 @@
             <thead style="text-align:center;">
                 <tr>
                     <th>ID</th>
+                    <th>ID BVPV</th>
                     <th>Bài viết</th>
                     <th>ID Chuyên mục</th>
                     <th>Chuyên mục</th>
@@ -27,6 +28,7 @@
                 {{#each this.baivietchoduyet}}
                 <tr>
                     <td>{{ID}}</td>
+                    <td>{{ID_BVPV}}</td>
                     <td>{{TenBaiViet}}</td>
                     <td>{{ID_ChuyenMuc}}</td>
                     <td>{{TenChuyenMuc}}</td>

@@ -20,4 +20,14 @@ module.exports = {
     add: entity => {
         return db.add('dsbaivietphongvien', entity);
     },
+    update: entity => {
+        return db.update('dsbaivietphongvien', 'ID', entity);
+    },
+
+    delete: id => {
+        return db.delete('dsbaivietphongvien', 'ID', id);
+    },
+    countAll: () => {
+        return db.load(`SELECT count(*) as total FROM dsbaivietphongvien`);
+    }
 };

@@ -29,7 +29,7 @@ router.post('/update', (req, res) => {
     bientapvienModel.update(req.body)
         .then(n => {
             res.redirect('back');
-        })
+        }) 
         .catch(err => {
             console.log(err);
         })

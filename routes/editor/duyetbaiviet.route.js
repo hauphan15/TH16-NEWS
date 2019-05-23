@@ -16,7 +16,7 @@ router.get('/:idCMQL', (req, res) => {
         .catch(err => {
             console.log(err);
         });
-})
+}) 
 
 
 router.post('/xemchitiet', (req, res) => {
@@ -33,6 +33,7 @@ router.post('/xemchitiet', (req, res) => {
             console.log(err);
         });
 })
+
 
 
 module.exports = router;
