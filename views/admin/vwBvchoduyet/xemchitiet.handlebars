@@ -2,9 +2,15 @@
 
 <form action="" method="POST" role="form" style="margin-bottom:20px;">
     <div class="form-group">
+        <label for="exampleFormControlSelect1">ID</label>
+        <input readonly style="width:150px;" class="form-control" id="ID_BVCD" name="ID_BVCD" value="{{this.xemchitiet.ID_BVCD}}">
+    </div>
+
+    <div class="form-group">
         <label for="exampleFormControlSelect1">ID BVPV</label>
         <input readonly style="width:150px;" class="form-control" id="ID_BVPV" name="ID_BVPV" value="{{this.xemchitiet.ID_BVPV}}">
     </div>
+
     <div class="form-group">
         <div class="input-group">
             <div>
@@ -81,11 +87,14 @@
 
     <div class="form-group">
         <label for="exampleFormControlTextarea1">Ghi chú</label>
-        <textarea class="form-control" id="GhiChu" name="GhiChu" rows="3">{{this.xemchitiet.GhiChu}}</textarea>
+        <textarea class="form-control" id="GhiChu" name="GhiChu" rows="3"></textarea>
     </div>
 
     <div style="text-align:center;margin-top: 50px;margin-bottom: 50px;">
-        <button formaction="/writer/xemchitiet/capnhat" style="width:150px;" type="submit"
-            class="btn btn-outline-primary"><i class="fas fa-pen" style="margin-right:10px;"></i></i>Cập nhật</button>
+        <button formaction="/admin/xemchitiet/duyet" style="width:150px;" type="submit"
+            class="btn btn-outline-primary"><i class="fas fa-check" style="margin-right:10px;"></i></i>Duyệt</button>
+        <button formaction="/admin/xemchitiet/tuchoi" style="width:150px;" type="submit"
+            class="btn btn-outline-danger"><i class="far fa-window-close" style="margin-right:10px;"></i>Từ
+            chối</button>
     </div>
 </form>

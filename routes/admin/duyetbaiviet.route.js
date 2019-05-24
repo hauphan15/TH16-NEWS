@@ -4,13 +4,24 @@ var router = exress.Router();
 
 
 router.get('/', (req, res) => {
-    var id = req.params.idcm;
-
-    baivietchoduyetModel.all(id)
+    baivietchoduyetModel.all()
         .then(rows => {
-            res.render('bientapvien/duyetbaiviet', {
+            res.render('admin/vwBvchoduyet/duyetbaiviet', {
                 baivietchoduyet: rows
             })
+        })
+        .catch(err => {
+            console.log(err);
+        });
+})
+
+router.post('/xemchitiet', (req, res) => {
+    baivietchoduyetModel.singel(req.body.ID_BVCD)
+        .then(rows => { 
+            res.render('admin/vwBvchoduyet/xemchitiet', {
+                xemchitiet: rows[0]
+            })
+
         })
         .catch(err => {
             console.log(err);

@@ -3,7 +3,7 @@ var bientapvienModel = require('../../models/bientapvien.model');
 var router = exress.Router();
 
 router.get('/', (req, res) => {
-    var p = bientapvienModel.all();
+    var p = bientapvienModel.all(); 
     p.then(rows => {
         res.render('admin/vwBientapvien/index', {
             bientapvien: rows

@@ -1,0 +1,58 @@
+<div class="container">
+    <h4 class="text-center" style="margin-top:40px;margin-bottom:20px;">Danh sách bài viết chờ duyệt</h4>
+    <form action="" method="POST" role="form" style="margin-bottom:20px;">
+        <div class="row">
+            <div class="col-2">
+                <input type="text" readonly class="form-control" id="stt" name="ID_BVCD">
+            </div>
+            <div class="col-3">
+                <button type="submit" class="btn btn-outline-info" formaction="/admin/duyetbaiviet/xemchitiet">
+                    <i class="fas fa-eye" style="margin-right:10px;"></i>Xem chi tiết</button>
+            </div>
+        </div>
+    </form>
+    <div class="da-xb" style="margin-top:20px;">
+        <table class="table table-bordered table-hover" id="tbl">
+            <thead style="text-align:center;">
+                <tr>
+                    <th>ID BVCD</th>
+                    <th>ID BVPV</th>
+                    <th>Bài viết</th>
+                    <th>ID Chuyên mục</th>
+                    <th>Chuyên mục</th>
+                    <th>ID Chuyên mục con</th>
+                    <th>Chuyên mục con</th>
+                    <th>Ghi chú</th>
+                </tr>
+            <tbody>
+                {{#each this.baivietchoduyet}}
+                <tr>
+                    <td>{{ID_BVCD}}</td>
+                    <td>{{ID_BVPV}}</td>
+                    <td>{{TenBaiViet}}</td>
+                    <td>{{ID_ChuyenMuc}}</td>
+                    <td>{{TenChuyenMuc}}</td>
+                    <td>{{ID_CMC}}</td>
+                    <td>{{ChuyenMucCon}}</td>
+                    <td>{{GhiChu}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    var tb = document.getElementById("tbl");
+    for (let i = 1; i < tb.rows.length; i++) {
+        tb.rows[i].onclick = function () {
+            document.getElementById("stt").value = this.cells[0].innerHTML;
+            document.getElementById("tenbv").value = this.cells[1].innerHTML;
+            document.getElementById("idcm").value = this.cells[2].innerHTML;
+            document.getElementById("cm").value = this.cells[3].innerHTML;
+            document.getElementById("idcmc").value = this.cells[4].innerHTML;
+            document.getElementById("cmc").value = this.cells[5].innerHTML;
+            document.getElementById("gc").value = this.cells[6].innerHTML;
+        };
+    }
+</script>

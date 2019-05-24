@@ -1,12 +1,11 @@
 var exress = require('express');
-var dsbavietModel = require('../../models/dsbaiviet_phongvien.model');
-var bvchoduyetModel = require('../../models/baivietchoduyet.model');
+var baivietModel = require('../../models/baiviet.model');
 var router = exress.Router();
 
 router.get('/', (req, res) => {
-    dsbavietModel.all()
+    baivietModel.all()
         .then(rows => {
-            res.render('phongvien/danhsachbaiviet', {
+            res.render('admin/vwDsbaiviet/index', {
                 dsbaiviet: rows
             });
         }).catch(err => {
@@ -14,19 +13,14 @@ router.get('/', (req, res) => {
         });
 })
 
-
 router.post('/xoa', (req, res) => {
-    Promise.all([
-        dsbavietModel.delete(req.body.ID_BVPV),
-        bvchoduyetModel.delete(req.body.ID_BVPV)])
-        .then(() => {
+    baivietModel.delete(req.body.ID)
+        .then(n => {
             res.redirect('back');
         })
         .catch(err => {
             console.log(err);
         })
 })
-
-
 
 module.exports = router;

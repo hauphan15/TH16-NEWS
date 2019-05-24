@@ -10,7 +10,7 @@ module.exports = {
     },
 
     singel: id => {
-        return db.load(`SELECT * FROM baivietchoduyet WHERE ID = N'${id}' `);
+        return db.load(`SELECT * FROM baivietchoduyet WHERE ID_BVCD = ${id} `);
     },
 
     add: entity => {
@@ -18,6 +18,6 @@ module.exports = {
     },
 
     delete: id => {
-        return db.delete('baivietchoduyet', 'ID', id);
+        return db.delete('baivietchoduyet', 'ID_BVCD', id);
     }
 };

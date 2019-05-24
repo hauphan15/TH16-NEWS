@@ -5,12 +5,12 @@ var dsbbaivietPVModel = require('../../models/dsbaiviet_phongvien.model');
 var router = exress.Router();
 
 router.get('/', (req, res) => {
-    Promise.all([chuyenmucModel.all(),
-    dsbbaivietPVModel.countAll()])
-        .then(([rows,total]) => {
+    var ID_BVPV = Math.floor(Math.random() * (10000 - 1 + 1) ) + 1;
+    chuyenmucModel.all()
+        .then(rows => {
             res.render('phongvien/dangbaiviet', {
                 chuyenmuc: rows,
-                total: total[0].total
+                ID_BVPV
             });
         }).catch(err => {
             console.log(err);

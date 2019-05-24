@@ -6,10 +6,6 @@
         <input class="form-control" id="id" name="ID" value="{{this.xemchitiet.ID}}">
     </div>
     <div class="form-group">
-        <label for="exampleFormControlSelect1">ID BVPV</label>
-        <input class="form-control" id="id" name="ID" value="{{this.xemchitiet.ID_BVPV}}">
-    </div>
-    <div class="form-group">
         <div class="input-group">
             <div>
                 <label for="exampleFormControlSelect1">Chuyên mục</label>
@@ -72,7 +68,7 @@
 
     <div class="form-group" style="height:auto;">
         <label for="exampleFormControlTextarea1">Nội dung</label>
-        <textarea class="form-control" id="NoiDung" name="NoiDung" rows="10">{{this.xemchitiet.NoiDung}}</textarea>
+        <textarea class="form-control" id="NoiDung" name="NoiDung" rows="50">{{this.xemchitiet.NoiDung}}</textarea>
         <script>
             CKEDITOR.replace('editor1');
         </script>
