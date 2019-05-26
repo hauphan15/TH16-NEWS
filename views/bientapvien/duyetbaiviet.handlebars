@@ -3,7 +3,7 @@
     <form action="" method="POST" role="form" style="margin-bottom:20px;">
         <div class="row">
             <div class="col-2">
-                <input type="text" readonly class="form-control" id="stt" name="ID" placeholder="STT">
+                <input type="text" readonly class="form-control" id="stt" name="ID_BVCD">
             </div>
             <div class="col-3">
                 <button type="submit" class="btn btn-outline-info" formaction="/bientapvien/duyetbaiviet/xemchitiet">
@@ -15,19 +15,19 @@
         <table class="table table-bordered table-hover" id="tbl">
             <thead style="text-align:center;">
                 <tr>
-                    <th>ID</th>
+                    <th>ID BVCD</th>
                     <th>ID BVPV</th>
                     <th>Bài viết</th>
                     <th>ID Chuyên mục</th>
                     <th>Chuyên mục</th>
-                    <th>ID Chuyên mục con</th>
+                    <th>ID Chuyên mục con</th> 
                     <th>Chuyên mục con</th>
                     <th>Ghi chú</th>
                 </tr>
             <tbody>
                 {{#each this.baivietchoduyet}}
                 <tr>
-                    <td>{{ID}}</td>
+                    <td>{{ID_BVCD}}</td>
                     <td>{{ID_BVPV}}</td>
                     <td>{{TenBaiViet}}</td>
                     <td>{{ID_ChuyenMuc}}</td>

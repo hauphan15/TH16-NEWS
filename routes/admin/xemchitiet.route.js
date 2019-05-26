@@ -9,7 +9,7 @@ router.post('/duyet', (req, res) => {
     Promise.all([
         baivietModel.add(req.body),
         dsbaivietpvModel.update(req.body),
-        baivietchoduyetModel.delete(req.body.ID)])
+        baivietchoduyetModel.delete(req.body.ID_BVCD)])
         .then(() => {
             res.redirect('admin/duyetbaiviet');
         })

@@ -23,7 +23,7 @@ router.post('/submit', (req, res) => {
         baivietchoduyetcModel.add(req.body),
         dsbbaivietPVModel.add(req.body)])
         .then(() => {
-            res.redirect('back');
+            res.redirect('/writer/dsbaiviet');
         })
         .catch(err => {
             console.log(err);

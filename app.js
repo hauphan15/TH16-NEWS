@@ -32,6 +32,7 @@ app.use('/writer/dangbaiviet', require('./routes/writer/dangbaiviet.route'));
 app.use('/writer/dsbaiviet', require('./routes/writer/dsbaiviet.route'));
 
 app.use('/bientapvien/duyetbaiviet', require('./routes/editor/duyetbaiviet.route'));
+app.use('/bientapvien/xemchitiet', require('./routes/editor/xemchitiet.route'));
 
 app.use('/admin/xemchitiet', require('./routes/admin/xemchitiet.route'));
 app.use('/admin/duyetbaiviet', require('./routes/admin/duyetbaiviet.route'));
@@ -43,9 +44,21 @@ app.use('/admin/dsbaiviet', require('./routes/admin/dsbaiviet.route'));
 
 app.use('/chuyenmuc', require('./routes/chuyenmuc.route'));
 
-app.listen(3000, () => {
-    console.log('server is running at http://localhost:3000');
+
+app.use((req, res, next) => {
+    res.render('err/404', { layout: false });
 })
 
 
-/// còn lỗi chỗ duyệt và từ chối bài viết
+app.use((error, req, res, next) => {
+    res.render('err/error', {
+        layout: false,
+        message: error.message,
+        error
+    })
+})
+
+
+app.listen(3000, () => {
+    console.log('server is running at http://localhost:3000');
+})

@@ -4,7 +4,7 @@ var chuyenmuc = require('../models/chuyenmuc.model');
 var router = exress.Router();
 
 
-router.get('/:id/baiviet', (req, res) => {
+router.get('/:id/baiviet', (req, res, next) => {
     var id = req.params.id;
 
     var page = req.query.page || 1;
@@ -38,9 +38,7 @@ router.get('/:id/baiviet', (req, res) => {
                 pages
             })
         })
-        .catch(err => {
-            err;
-        })
+        .catch(next)
 })
 
 router.get('/:id/:id_cmc/baiviet', (req, res) => {
