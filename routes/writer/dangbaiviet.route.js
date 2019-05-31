@@ -4,20 +4,18 @@ var baivietchoduyetcModel = require('../../models/baivietchoduyet.model');
 var dsbbaivietPVModel = require('../../models/dsbaiviet_phongvien.model');
 var router = exress.Router();
 
-router.get('/', (req, res) => {
-    var ID_BVPV = Math.floor(Math.random() * (10000 - 1 + 1) ) + 1;
+router.get('/', (req, res, next) => {
+    var ID_BVPV = Math.floor(Math.random() * (10000 - 1 + 1)) + 1;
     chuyenmucModel.all()
         .then(rows => {
             res.render('phongvien/dangbaiviet', {
                 chuyenmuc: rows,
                 ID_BVPV
             });
-        }).catch(err => {
-            console.log(err);
-        });
+        }).catch(next);
 })
 
-router.post('/submit', (req, res) => {
+router.post('/submit', (req, res, next) => {
 
     Promise.all([
         baivietchoduyetcModel.add(req.body),
@@ -25,9 +23,7 @@ router.post('/submit', (req, res) => {
         .then(() => {
             res.redirect('/writer/dsbaiviet');
         })
-        .catch(err => {
-            console.log(err);
-        })
+        .catch(next)
 })
 
 module.exports = router;

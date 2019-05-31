@@ -9,22 +9,18 @@ router.get('/', (req, res, next) => {
             res.render('phongvien/danhsachbaiviet', {
                 dsbaiviet: rows
             });
-        }).catch(err => {
-            console.log(err);
-        });
+        }).catch(next)
 })
 
 
-router.post('/xoa', (req, res) => {
+router.post('/xoa', (req, res, next) => {
     Promise.all([
         dsbavietModel.delete(req.body.ID_BVPV),
-        bvchoduyetModel.delete(req.body.ID_BVPV)])
+        bvchoduyetModel.delete1(req.body.ID_BVPV)])
         .then(() => {
             res.redirect('back');
         })
-        .catch(err => {
-            console.log(err);
-        })
+        .catch(next)
 })
 
 

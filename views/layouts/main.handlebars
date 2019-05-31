@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+    {{{_sections.css}}}
+    {{{_sections.cssbtv}}}
     <title>TH16 NEWS</title>
 </head>
 
@@ -18,30 +18,36 @@
         </h4>
     </div>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger" style="height: 51px;">
             <a class="navbar-brand" href="/"><b style="color:white;">TH16 NEWS</b></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+                    <input style="height: 27px;" class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm"
+                        aria-label="Search">
+                    <button style="width:50px;;height: 27px;padding:0;font-size:11px;"
+                        class="btn btn-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto" style="height: 40px;">
                 <li class="nav-item">
                     <a href="/DangnhapDangKy/DangNhap.html" style="text-decoration: none;color:white"><i
-                            class="far fa-user fa-lg" style="margin-top:12px;"></i></a>
+                            class="far fa-user fa-sm" style="margin-top:12px;"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/DangnhapDangKy/DangNhap.html"><b style="color:white;">Đăng nhập</b></a>
+                    <a class="nav-link" href="/taikhoan/dangnhap">
+                        <p style="color:white;">Đăng nhập</p>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/DangnhapDangKy/DangKy.html"><b style="color:white;">Đăng ký</b></a>
+                    <a class="nav-link" href="/taikhoan/dangky">
+                        <p style="color:white;">Đăng ký</p>
+                    </a>
                 </li>
             </ul>
         </nav>
     </div>
     <hr>
-    <div class="container">
+    <div class="container" style="padding: 0px;">
         <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width:100%;">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
@@ -71,34 +77,33 @@
 
     <div class="fter bg-dark text-light align-text-bottom " style="margin-top:50px;">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-sm">
-                    <h6>TH16 NEWS<h6>
-                            <h6>Thiết kế: Phan Văn Hậu - Lưu Nhất Hàn</h6>
+            <div class="row">
+                <div class="col-sm" style="margin-top:13px;color:azure;">
+                    <h5>TH16 NEWS<h5>
+                            <h6>Thiết kế:</h6>
+                            <h6>Phan Văn Hậu</h6>
+                            <h6>Lưu Nhất Hàn</h6>
+                            <div style="padding-bottom: 26px;color:azure;">
+                                <i class="fa fa-copyright" aria-hidden="true"> Copyright 2019 TH16 NEWS</i>
+                            </div>
                 </div>
-                <div class="col-sm">
+                <div class="col-sm" style="margin-top:13px;">
                     <h6>Liên hệ</h6>
-                    <a style="text-decoration: none;"
+                    <a style="text-decoration: none;color:azure;"
                         href="https://www.facebook.com/mrhauphan">https://www.facebook.com/mrhauphan</a>
-                    <a style="text-decoration: none;"
+                    <a style="text-decoration: none;color:azure;"
                         href="https://www.facebook.com/nhathan.luu.5">https://www.facebook.com/nhathan.luu.5</a>
                 </div>
             </div>
         </div>
-        <div class="text-center cpyr">
-            <i class="fa fa-copyright" aria-hidden="true"> Copyright 2019 TH16 NEWS</i>
-        </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+    {{{_sections.js}}}
+    {{{_sections.jsbtv}}}
 </body>
 
 </html>

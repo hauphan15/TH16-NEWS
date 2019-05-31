@@ -4,20 +4,18 @@ var baivietModel = require('../../models/baiviet.model');
 var router = exress.Router();
 
 
-router.get('/:idCMQL', (req, res) => {
+router.get('/:idCMQL', (req, res, next) => {
     baivietchoduyetModel.allByCM(req.params.idCMQL)
         .then(rows => {
             res.render('bientapvien/duyetbaiviet', {
                 baivietchoduyet: rows
             })
         })
-        .catch(err => {
-            console.log(err);
-        });
+        .catch(next);
 })
 
 
-router.post('/xemchitiet', (req, res) => {
+router.post('/xemchitiet', (req, res, next) => {
     baivietchoduyetModel.singel(req.body.ID_BVCD)
         .then(rows => {
             res.render('bientapvien/xemchitiet', {
@@ -25,9 +23,7 @@ router.post('/xemchitiet', (req, res) => {
             })
 
         })
-        .catch(err => {
-            console.log(err);
-        });
+        .catch(next);
 })
 
 

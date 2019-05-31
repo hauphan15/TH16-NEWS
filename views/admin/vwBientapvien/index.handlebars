@@ -1,76 +1,101 @@
-<div class="container">
-    <h4 class="text-center" style="margin-top:40px;margin-bottom:20px;">Danh sách biên tập viên</h4>
-    <form action="" method="POST" role="form" style="margin-bottom:20px;">
-        <div class="row">
-            <div class="col-1">
-                <input type="text" class="form-control" id="stt" name="ID" placeholder="STT">
+{{#section 'cssbtv'}}
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+{{/section}}
+
+{{#section 'jsbtv'}} 
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+<script>
+    $(function () {
+        $('#ns').datetimepicker({
+            format: 'd/m/Y',
+            timepicker: false,
+            mask: true,
+        });
+    })
+</script>
+{{/section}}
+
+<h4 class="text-center" style="margin-top:40px;margin-bottom:20px;">Danh sách biên tập viên</h4>
+<form novalidate action="" method="POST" role="form" style="margin-bottom:20px;" id="form">
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label for="txttendn">ID</label>
+                <input readonly type="text" class="form-control" id="stt" name="ID">
             </div>
-            <div class="col-2.5">
-                <input type="text" class="form-control" id="email" name="Email" placeholder="Email">
+            <div class="form-group">
+                <label for="txttendn">Email</label>
+                <input type="text" class="form-control" id="email" name="Email">
             </div>
-            <div class="col-2">
-                <input type="text" class="form-control" id="ht" name="HoTen" placeholder="Họ tên">
+            <div class="form-group">
+                <label for="txttendn">Họ tên</label>
+                <input type="text" class="form-control" id="ht" name="HoTen">
             </div>
-            <div class="col-2">
-                <input type="text" class="form-control" id="ns" name="NgaySinh" placeholder="Ngày sinh">
-            </div>
-            <div class="col-2">
-                <input type="text" class="form-control" id="cmnd" name="CMND" placeholder="CMND/Hộ chiếu">
-            </div>
-            <div class="col-2">
-                <input type="text" class="form-control" id="sdt" name="Sdt" placeholder="Số điện thoại">
-            </div>
-            <div style="margin-top:10px;" class="col-2">
-                <input type="text" class="form-control" placeholder="Bút danh" name="ButDanh" id="bd">
-            </div>
-            <div style="margin-top:10px;" class="col-3">
-                <input type="text" class="form-control" placeholder="Chuyên mục quản lý" name="ChuyenMucQl" id="cm">
-            </div>
-            <div style="margin-top:10px;" class="col-3">
-                <input type="text" class="form-control" placeholder="ID chuyên mục quản lý" name="ID_ChuyenMuc" id="idcm">
+            <div class="form-group">
+                <label for="txttendn">Ngày sinh</label>
+                <input type="text" class="form-control" id="ns" name="NgaySinh">
             </div>
         </div>
-        <div style="margin-top:20px;">
-            <button formaction="/admin/bientapvien/add" style="width:150px;" type="submit"
-                class="btn btn-outline-primary"><i class="fas fa-plus" style="margin-right:10px;"></i>Thêm</button>
-            <button formaction="/admin/bientapvien/delete" style="width:150px;" type="submit"
-                class="btn btn-outline-danger"><i class="fas fa-trash-alt" style="margin-right:10px;"></i>Xóa</button>
-            <button formaction="/admin/bientapvien/update" style="width:150px;" type="submit"
-                class="btn btn-outline-success"><i class="fas fa-pen" style="margin-right:10px;"></i>Cập
-                nhật</button>
+        <div class="col-6">
+            <div class="form-group">
+                <label for="txttendn">CMND/Hộ chiếu</label>
+                <input type="text" class="form-control" id="cmnd" name="CMND">
+            </div>
+            <div class="form-group">
+                <label for="txttendn">Số điện thoại</label>
+                <input type="text" class="form-control" id="sdt" name="Sdt">
+            </div>
+            <div class="form-group">
+                <label for="txttendn">Bút danh</label>
+                <input type="text" class="form-control" name="ButDanh" id="bd">
+            </div>
+            <div class="form-group">
+                <label for="txttendn">ID chuyên mục quản lý</label>
+                <input type="text" class="form-control" name="ID_ChuyenMuc" id="idcm">
+            </div>
         </div>
-    </form>
-    <table class="table table-bordered table-hover" id="tbl">
-        <thead style="text-align:center;">
-            <tr>
-                <th>ID</th>
-                <th>Email</th>
-                <th>Họ tên</th>
-                <th>Ngày sinh</th>
-                <th>CMND/Hộ chiếu</th>
-                <th>Số điện thoại</th>
-                <th>Bút danh</th>
-                <th>Chuyên mục quản lý</th>
-                <th>ID Chuyên mục quản lý</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each this.bientapvien}}
-            <tr>
-                <th scope="row">{{ID}}</th>
-                <td>{{Email}}</td>
-                <td>{{HoTen}}</td>
-                <td>{{NgaySinh}}</td>
-                <td>{{CMND}}</td>
-                <td>{{Sdt}}</td>
-                <td>{{ButDanh}}</td>
-                <td>{{ChuyenMucQL}}</td>
-                <td>{{ID_ChuyenMuc}}</td>
-            </tr>
-            {{/each}}
-        </tbody>
-    </table>
-</div>
+    </div>
+    <div style="margin-top:20px;">
+        <button formaction="/admin/bientapvien/add" style="width:150px;" type="submit"
+            class="btn btn-outline-primary"><i class="fas fa-plus" style="margin-right:10px;"></i>Thêm</button>
+        <button formaction="/admin/bientapvien/delete" style="width:150px;" type="submit"
+            class="btn btn-outline-danger"><i class="fas fa-trash-alt" style="margin-right:10px;"></i>Xóa</button>
+        <button formaction="/admin/bientapvien/update" style="width:150px;" type="submit"
+            class="btn btn-outline-success"><i class="fas fa-pen" style="margin-right:10px;"></i>Cập
+            nhật</button>
+    </div>
+</form>
+<table class="table table-bordered table-hover" id="tbl">
+    <thead style="text-align:center;">
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Họ tên</th>
+            <th>Ngày sinh</th>
+            <th>CMND/Hộ chiếu</th>
+            <th>Số điện thoại</th>
+            <th>Bút danh</th>
+            <th>ID Chuyên mục quản lý</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each this.bientapvien}}
+        <tr>
+            <th scope="row">{{ID}}</th>
+            <td>{{Email}}</td>
+            <td>{{HoTen}}</td>
+            <td>{{NgaySinh}}</td>
+            <td>{{CMND}}</td>
+            <td>{{Sdt}}</td>
+            <td>{{ButDanh}}</td>
+            <td>{{ID_ChuyenMuc}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
 
 <script>
     var tb = document.getElementById("tbl");
@@ -83,8 +108,7 @@
             document.getElementById("cmnd").value = this.cells[4].innerHTML;
             document.getElementById("sdt").value = this.cells[5].innerHTML;
             document.getElementById("bd").value = this.cells[6].innerHTML;
-            document.getElementById("cm").value = this.cells[7].innerHTML;
-            document.getElementById("idcm").value = this.cells[8].innerHTML;
+            document.getElementById("idcm").value = this.cells[7].innerHTML;
         };
     }
 </script>

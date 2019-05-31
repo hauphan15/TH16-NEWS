@@ -41,7 +41,7 @@ router.get('/:id/baiviet', (req, res, next) => {
         .catch(next)
 })
 
-router.get('/:id/:id_cmc/baiviet', (req, res) => {
+router.get('/:id/:id_cmc/baiviet', (req, res, next) => {
     var id = req.params.id;
     var id_cmc = req.params.id_cmc;
 
@@ -56,9 +56,7 @@ router.get('/:id/:id_cmc/baiviet', (req, res) => {
                 baiviet: rows,
                 cmc: rows[0]
             });
-        }).catch(err => {
-            console.log(err);
-        });
+        }).catch(next);
 })
 
 

@@ -1,0 +1,138 @@
+{{#section 'css'}}
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+{{/section}}
+
+
+{{#section 'js'}}
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+<script>
+    $(function () {
+
+        $('#txtngaysinh').datetimepicker({
+            format: 'd/m/Y',
+            timepicker: false,
+            mask: true,
+        });
+
+        $('#formdk').validate({
+            rules: {
+                tendn: {
+                    required: true,
+                    remote: {
+                        url: '/taikhoan/is-available'
+                    }
+                },
+                matkhau: {
+                    required: true,
+                    minlength: 6
+                },
+                xacnhanmk: {
+                    required: true,
+                    equalTo: $('[name="matkhau"]')
+                },
+                hoten: {
+                    required: true,
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                ngaysinh: {
+                    required: true
+                },
+            },
+            messages: {
+                tendn: {
+                    required: 'Your username is required.',
+                    remote: 'Your username has been taken, please take another.'
+                },
+                matkhau: {
+                    required: 'Your password is required.',
+                    minlength: 'Your password must have at least 6 characters.'
+                },
+                xacnhanmk: {
+                    required: 'Your password does not match.',
+                    equalTo: 'Your password does not match.'
+                },
+                hoten: {
+                    required: 'Valid full name is required.',
+                },
+                email: {
+                    required: 'Please enter a valid email address.',
+                    email: 'Please enter a valid email address.'
+                },
+                ngaysinh: {
+                    required: 'Valid date of birth is required.',
+                },
+            },
+            errorElement: 'small',
+            errorClass: 'help-block text-danger',
+            highlight: function (e) {
+                $(e).removeClass('is-valid').addClass('is-invalid');
+            },
+            unhighlight: function (e) {
+                $(e).removeClass('is-invalid').addClass('is-valid');
+            }
+        });
+    })
+</script>
+{{/section}}
+
+<form novalidate action="" method="POST" id="formdk"
+    style="width:420px;margin-top:40px;margin-bottom:50px;margin-left:320px;background:whitesmoke;">
+    <div class="label">
+        <ul class="list-inline">
+            <li style="width:203px;text-align:center;background:#d8d8d8;" class="list-inline-item">
+                <h5><a href="/taikhoan/dangnhap" style="text-decoration:none;color:black;">Đăng
+                        nhập</a></h5>
+            </li>
+            <li style="width:203px;text-align:center;" class="list-inline-item">
+                <h5 style="border-top:solid red;"><a href="/taikhoan/dangky"
+                        style="text-decoration: none;color: black;">Đăng
+                        ký</a></h5>
+            </li>
+        </ul>
+    </div>
+    <div style="margin: 10px;">
+        <div class="form-group">
+            <label for="txttendn">Tên đăng nhập</label>
+            <input type="text" class="form-control" id="txttendn" name="tendn" autofocus>
+        </div>
+        <div class="form-group">
+            <label for="txtmatkhau">Mật khẩu</label>
+            <input type="password" class="form-control" id="txtmatkhau" name="matkhau">
+        </div>
+        <div class="form-group">
+            <label for="txtxacnhanmk">Xác nhận mật khẩu</label>
+            <input type="password" class="form-control" id="txtxacnhanmk" name="xacnhanmk">
+        </div>
+        <div class="form-group">
+            <label for="txtemail">Email</label>
+            <input type="text" class="form-control" id="txtemail" name="email">
+        </div>
+        <div class="form-group">
+            <label for="txthoten">Họ và tên</label>
+            <input type="text" class="form-control" id="txthoten" name="hoten">
+        </div>
+        <div class="form-group">
+            <label for="txtngaysinh">Ngày sinh</label>
+            <input type="text" class="form-control" id="txtngaysinh" name="ngaysinh">
+        </div>
+        <button style="margin-bottom:10px;width:400px;" type="submit" class="btn btn-primary">Đăng ký</button>
+        <ul class="list-inline">
+            <li class="list-inline-item">--------------------------</li>
+            <li class="list-inline-item">Hoặc</li>
+            <li class="list-inline-item">--------------------------</li>
+        </ul>
+        <div class="form-group">
+            <button style="width:197px;background: #3b5a9b;" type="button" class="btn btn-primary btn-facebook"><i
+                    style="margin-right:8px;" class="fab fa-facebook-f"></i>Facebook</button>
+            <button style="width:198px; background: #c9302c;" type="button" class="btn btn-danger btn-google"><i
+                    style="margin-right:8px;" class="fab fa-google-plus-g"></i>Google</button>
+        </div>
+    </div>
+</form>

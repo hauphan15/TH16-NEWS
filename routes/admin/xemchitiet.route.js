@@ -5,7 +5,7 @@ var baivietModel = require('../../models/baiviet.model');
 var router = exress.Router();
 
 
-router.post('/duyet', (req, res) => {
+router.post('/duyet', (req, res, next) => {
     Promise.all([
         baivietModel.add(req.body),
         dsbaivietpvModel.update(req.body),
@@ -13,22 +13,18 @@ router.post('/duyet', (req, res) => {
         .then(() => {
             res.redirect('admin/duyetbaiviet');
         })
-        .catch(err => {
-            console.log(err);
-        })
+        .catch(next)
 })
 
 
-router.post('/tuchoi', (req, res) => {
+router.post('/tuchoi', (req, res, next) => {
     Promise.all([
         baivietchoduyetModel.delete(req.body.ID_BVCD),
         dsbaivietpvModel.update(req.body)])
         .then(() => {
             res.redirect('admin/duyetbaiviet');
         })
-        .catch(err => {
-            console.log(err);
-        })
+        .catch(next)
 })
 
 

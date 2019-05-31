@@ -3,29 +3,25 @@ var baivietchoduyetModel = require('../../models/baivietchoduyet.model');
 var router = exress.Router();
 
 
-router.get('/', (req, res) => {
+router.get('/', (req, res, next) => {
     baivietchoduyetModel.all()
         .then(rows => {
             res.render('admin/vwBvchoduyet/duyetbaiviet', {
                 baivietchoduyet: rows
             })
         })
-        .catch(err => {
-            console.log(err);
-        });
+        .catch(next);
 })
 
-router.post('/xemchitiet', (req, res) => {
+router.post('/xemchitiet', (req, res, next) => {
     baivietchoduyetModel.singel(req.body.ID_BVCD)
-        .then(rows => { 
+        .then(rows => {
             res.render('admin/vwBvchoduyet/xemchitiet', {
                 xemchitiet: rows[0]
             })
 
         })
-        .catch(err => {
-            console.log(err);
-        });
+        .catch(next);
 })
 
 module.exports = router;

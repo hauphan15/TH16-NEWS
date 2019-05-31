@@ -1,0 +1,220 @@
+<style>
+    /* tin nổi bật */
+    .tin-noi-bat {
+        width: 100%;
+        height: 680px;
+        margin-bottom: 20px;
+    }
+
+    .tin-noi-bat .tin-thu-nhat .title {
+        margin-top: 5px;
+    }
+
+    /* xem nhiều */
+    .xem-nhieu .list-inline li {
+        width: 211px;
+    }
+
+    .xem-nhieu .list-inline {
+        display: inline-block;
+    }
+
+    .xem-nhieu .list-inline .list-inline-item .name-title {
+        height: 80px;
+    }
+
+    .xem-nhieu .list-inline .list-inline-item img {
+        height: 130px;
+        width: 210px;
+    }
+
+    /* mới nhất */
+    .moi-nhat .list-inline li {
+        width: 210px;
+    }
+
+    .moi-nhat .list-inline .list-inline-item .name-title {
+        height: 80px;
+    }
+
+    .moi-nhat .list-inline .list-inline-item img {
+        height: 130px;
+        width: 210px;
+    }
+
+    /* Top 10 chuyên mục */
+    .top-chuyen-muc .list-inline li {
+        width: 210px;
+        height: 256px;
+    }
+
+    .top-chuyen-muc .list-inline {
+        display: inline-block;
+    }
+
+    .top-chuyen-muc .list-inline .list-inline-item .name-title {
+        height: 80px;
+    }
+
+    .top-chuyen-muc .list-inline .list-inline-item img {
+        height: 130px;
+        width: 210px;
+    }
+</style>
+
+<br>
+<div class="tin-noi-bat row">
+    <div class="col-sm-8">
+        {{#each this.bainoibat}}
+        <div class="mySlides tin-thu-nhat border-right" style="padding-left: 14px;">
+            <a href="/chitietbaiviet/{{ID}}">
+                <img style="width:640px;height:400px;" src="{{AnhDaiDien}}" alt="">
+            </a>
+            <h6 style="margin-top:5px;">{{TenChuyenMuc}}</h6>
+            <h3 class="title">
+                <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{ID}}">{{TenBaiViet}}</a>
+            </h3>
+            <p class="sapo" style="width:640px;">{{TomTat}}</p>
+            <span title="{{NgayDang}}">{{NgayDang}}</span>
+        </div>
+        {{/each}}
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) { myIndex = 1 }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 4000);
+            }
+        </script>
+    </div>
+    <div class="col-sm-4">
+        <div class="list-group list-group-flush" style="width:300px;">
+            {{#each this.bainoibat}}
+            <div class="list-group-item">
+                <a href="/chitietbaiviet/{{ID}}"><img style="width:235px;" src="{{AnhDaiDien}}"></a>
+                <br>
+                <a style="text-decoration: none;color: black;" href="/chitietbaiviet/{{ID}}">{{TenBaiViet}}</a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<hr>
+<hr>
+
+<h5 class="text-danger">Được xem nhiều nhất</h5>
+<div class="xem-nhieu">
+    <ul class="list-inline">
+        {{#each this.xemnhieunhat1}}
+        <li class="list-inline-item">
+            <a href="/chitietbaiviet/{{ID}}"><img src="{{AnhDaiDien}}"></a>
+            <br>
+            <a style="text-decoration: none;color: black"
+                href="/chuyenmuc/{{ID_ChuyenMuc}}/baiviet">{{TenChuyenMuc}}</a>
+            <h6 class="name-title">
+                <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{ID}}">{{TenBaiViet}}</a>
+            </h6>
+            <span title="{{NgayDang}}">{{NgayDang}}</span>
+        </li>
+        {{/each}}
+    </ul>
+    <hr>
+    <ul class="list-inline">
+        {{#each this.xemnhieunhat2}}
+        <li class="list-inline-item">
+            <a href="/chitietbaiviet/{{ID}}"><img src="{{AnhDaiDien}}"></a>
+            <br>
+            <a style="text-decoration: none;color: black"
+                href="/chuyenmuc/{{ID_ChuyenMuc}}/baiviet">{{TenChuyenMuc}}</a>
+            <h6 class="name-title">
+                <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{ID}}">{{TenBaiViet}}</a>
+            </h6>
+            <span title="{{NgayDang}}">{{NgayDang}}</span>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+<hr>
+<hr>
+
+
+<h5 class="text-danger">Mới nhất</h5>
+<div class="moi-nhat">
+    <ul class="list-inline">
+        {{#each this.moinhat1}}
+        <li class="list-inline-item">
+            <a href="/chitietbaiviet/{{ID}}"><img src="{{AnhDaiDien}}"></a>
+            <br>
+            <a style="text-decoration: none;color: black"
+                href="/chuyenmuc/{{ID_ChuyenMuc}}/baiviet">{{TenChuyenMuc}}</a>
+            <h6 class="name-title">
+                <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{ID}}">{{TenBaiViet}}</a>
+            </h6>
+            <span title="{{NgayDang}}">{{NgayDang}}</span>
+        </li>
+        {{/each}}
+    </ul>
+    <hr>
+    <ul class="list-inline">
+        {{#each this.moinhat2}}
+        <li class="list-inline-item">
+            <a href="/chitietbaiviet/{{ID}}"><img src="{{AnhDaiDien}}"></a>
+            <br>
+            <a style="text-decoration: none;color: black"
+                href="/chuyenmuc/{{ID_ChuyenMuc}}/baiviet">{{TenChuyenMuc}}</a>
+            <h6 class="name-title">
+                <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{ID}}">{{TenBaiViet}}</a>
+            </h6>
+            <span title="{{NgayDang}}">{{NgayDang}}</span>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+<hr>
+<hr>
+
+<h5 class="text-danger">Top 10 chuyên mục</h5>
+<div class="top-chuyen-muc">
+    <ul class="list-inline">
+        {{#each this.topcm1}}
+        <li class="list-inline-item">
+            <a href="/chitietbaiviet/{{ID}}"><img src="{{AnhDaiDien}}"></a>
+            <br>
+            <a style="text-decoration: none;color: black"
+                href="/chuyenmuc/{{ID_ChuyenMuc}}/baiviet">{{TenChuyenMuc}}</a>
+            <h6 class="name-title">
+                <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{ID}}">{{TenBaiViet}}</a>
+            </h6>
+            <span title="{{NgayDang}}">{{NgayDang}}</span>
+        </li>
+        {{/each}}
+    </ul>
+    <hr>
+    <ul class="list-inline">
+        {{#each this.topcm2}}
+        <li class="list-inline-item">
+            <a href="/chitietbaiviet/{{ID}}"><img src="{{AnhDaiDien}}"></a>
+            <br>
+            <a style="text-decoration: none;color: black"
+                href="/chuyenmuc/{{ID_ChuyenMuc}}/baiviet">{{TenChuyenMuc}}</a>
+            <h6 class="name-title">
+                <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{ID}}">{{TenBaiViet}}</a>
+            </h6>
+            <span title="{{NgayDang}}">{{NgayDang}}</span>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<hr>
+<hr>

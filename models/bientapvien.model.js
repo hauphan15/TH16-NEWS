@@ -5,19 +5,23 @@ module.exports = {
         return db.load(`SELECT * FROM bientapvien`);
     },
 
-    singel: id =>{
+    singel: id => {
         return db.load(`SELECT * FROM bientapvien WHERE ID = ${id}`)
+    },
+
+    singelByPenName: butdanh => {
+        return db.load(`SELECT * FROM bientapvien WHERE ButDanh = N'${butdanh}' `)
     },
 
     add: entity => {
         return db.add('bientapvien', entity);
     },
 
-    update: entity =>{
+    update: entity => {
         return db.update('bientapvien', 'ID', entity);
     },
 
-    delete: id =>{
+    delete: id => {
         return db.delete('bientapvien', 'ID', id);
     }
 };

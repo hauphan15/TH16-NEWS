@@ -17,7 +17,15 @@ module.exports = {
         return db.add('baivietchoduyet', entity);
     },
 
+    update: entity => {
+        return db.update('baivietchoduyet', 'ID_BVCD', entity);
+    },
+
     delete: id => {
         return db.delete('baivietchoduyet', 'ID_BVCD', id);
+    },
+
+    delete1: id => {
+        return db.delete('baivietchoduyet', 'ID_BVPV', id);
     }
 };

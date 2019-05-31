@@ -19,5 +19,8 @@ module.exports = {
 
     delete: id =>{
         return db.delete('docgia', 'ID', id);
+    },
+    singleByUserName: tendn =>{
+        return db.load(`SELECT * FROM docgia WHERE TenDangNhap = '${tendn}' `);
     }
 };

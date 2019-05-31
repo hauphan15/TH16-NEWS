@@ -1,26 +1,46 @@
+{{#section 'cssdt'}}
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+{{/section}}
+
+{{#section 'jsdt'}}
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+<script>
+    $(function () {
+        $('#NgayDang').datetimepicker({
+            format: 'd/m/Y H:i',
+            mask: true,
+        });
+    })
+</script>
+{{/section}}
+
 <h4 class="text-center" style="margin-top:20px;"><b>Chi tiết bài viết</b></h4>
 
 <form action="" method="POST" role="form" style="margin-bottom:20px;">
     <div class="form-group">
-        <label for="exampleFormControlSelect1">ID</label>
-        <input readonly style="width:150px;" class="form-control" id="ID_BVCD" name="ID_BVCD" value="{{this.xemchitiet.ID_BVCD}}">
+        <label for="ID_BVCD">ID</label>
+        <input readonly style="width:150px;" class="form-control" id="ID_BVCD" name="ID_BVCD"
+            value="{{this.xemchitiet.ID_BVCD}}">
     </div>
 
     <div class="form-group">
-        <label for="exampleFormControlSelect1">ID BVPV</label>
-        <input readonly style="width:150px;" class="form-control" id="ID_BVPV" name="ID_BVPV" value="{{this.xemchitiet.ID_BVPV}}">
+        <label for="ID_BVPV">ID BVPV</label>
+        <input readonly style="width:150px;" class="form-control" id="ID_BVPV" name="ID_BVPV"
+            value="{{this.xemchitiet.ID_BVPV}}">
     </div>
 
     <div class="form-group">
         <div class="input-group">
             <div>
-                <label for="exampleFormControlSelect1">Chuyên mục</label>
+                <label for="TenChuyenMuc">Chuyên mục</label>
                 <select class="form-control" id="TenChuyenMuc" name="TenChuyenMuc">
                     <option value="{{this.xemchitiet.TenChuyenMuc}}">{{this.xemchitiet.TenChuyenMuc}}</option>
                 </select>
             </div>
             <div style="margin-left:20px;">
-                <label for="exampleFormControlSelect1">ID Chuyên mục</label>
+                <label for="ID_ChuyenMuc">ID Chuyên mục</label>
                 <input type="text" class="form-control" id="ID_ChuyenMuc" name="ID_ChuyenMuc"
                     value="{{this.xemchitiet.ID_ChuyenMuc}}">
             </div>
@@ -30,20 +50,20 @@
     <div class="form-group">
         <div class="input-group">
             <div>
-                <label for="exampleFormControlSelect1">Chuyên mục con</label>
+                <label for="ChuyenMucCon">Chuyên mục con</label>
                 <select class="form-control" id="ChuyenMucCon" name="ChuyenMucCon">
                     <option value="{{this.xemchitiet.ChuyenMucCon}}">{{this.xemchitiet.ChuyenMucCon}}</option>
                 </select>
             </div>
             <div style="margin-left:20px;">
-                <label for="exampleFormControlSelect1">ID Chuyên mục con</label>
+                <label for="ID_CMC">ID Chuyên mục con</label>
                 <input type="text" class="form-control" id="ID_CMC" name="ID_CMC" value="{{this.xemchitiet.ID_CMC}}">
             </div>
         </div>
     </div>
 
     <div class="form-group">
-        <label for="exampleFormControlInput1">Tên bài viết</label>
+        <label for="TenBaiViet">Tên bài viết</label>
         <input class="form-control" id="TenBaiViet" name="TenBaiViet" value="{{this.xemchitiet.TenBaiViet}}">
     </div>
 
@@ -57,23 +77,23 @@
     </div>
 
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Tóm tắt</label>
+        <label for="TomTat">Tóm tắt</label>
         <textarea class="form-control" id="TomTat" name="TomTat" rows="3">{{this.xemchitiet.TomTat}}</textarea>
     </div>
 
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Ảnh đại diện</label>
+        <label for="AnhDaiDien">Ảnh đại diện</label>
         <textarea class="form-control" id="AnhDaiDien" name="AnhDaiDien"
             rows="3">{{this.xemchitiet.AnhDaiDien}}</textarea>
     </div>
 
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Tiêu đề ảnh</label>
+        <label for="TieuDeAnh">Tiêu đề ảnh</label>
         <textarea class="form-control" id="TieuDeAnh" name="TieuDeAnh" rows="3">{{this.xemchitiet.TieuDeAnh}}</textarea>
     </div>
 
     <div class="form-group" style="height:auto;">
-        <label for="exampleFormControlTextarea1">Nội dung</label>
+        <label for="NoiDung">Nội dung</label>
         <textarea class="form-control" id="NoiDung" name="NoiDung" rows="50">{{this.xemchitiet.NoiDung}}</textarea>
         <script>
             CKEDITOR.replace('editor1');
@@ -81,13 +101,18 @@
     </div>
 
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Tình trạng</label>
+        <label for="TinhTrang">Tình trạng</label>
         <textarea class="form-control" id="TinhTrang" name="TinhTrang" rows="3">{{this.xemchitiet.TinhTrang}}</textarea>
     </div>
 
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Ghi chú</label>
+        <label for="GhiChu">Ghi chú</label>
         <textarea class="form-control" id="GhiChu" name="GhiChu" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="NgayDang">Ngày duyệt</label>
+        <input class="form-control" id="NgayDang" name="NgayDang">
     </div>
 
     <div style="text-align:center;margin-top: 50px;margin-bottom: 50px;">

@@ -4,7 +4,7 @@ var bvchoduyetModel = require('../../models/baivietchoduyet.model');
 var router = exress.Router();
 
 
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
     var id = req.body.ID_BVPV;
 
     dsbavietModel.singel(id)
@@ -14,22 +14,18 @@ router.post('/', (req, res) => {
             })
 
         })
-        .catch(err => {
-            console.log(err);
-        });
+        .catch(next);
 })
 
 
-router.post('/capnhat', (req, res) => {
+router.post('/capnhat', (req, res, next) => {
     Promise.all([
         dsbavietModel.update(req.body),
         bvchoduyetModel.update(req.body)])
         .then(() => {
-            res.redirect('back');
+            res.redirect('/writer/dsbaiviet');
         })
-        .catch(err => {
-            console.log(err);
-        })
+        .catch(next)
 })
 
 module.exports = router;

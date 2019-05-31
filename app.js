@@ -1,31 +1,31 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
 var morgan = require('morgan');
-// var moment  = require('moment');
 var bodyParser = require('body-parser');
+var hbs_sections = require('express-handlebars-sections');
 
 var app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-// app.use(express.urlencoded());
-// app.use(express.json());
 
 app.engine('handlebars', exphbs({
     defaultLayout: 'main',
     layoutsDir: 'views/layouts',
+    helpers: {
+        section: hbs_sections()
+    }
 }));
-
-
-
 app.set('view engine', 'handlebars');
+
+
+require('./middlewares/passport')(app);
+require('./middlewares/secsion')(app);
 
 app.use(require('./middlewares/locals.mdw'));
 
-app.get('/', (req, res) => {
-    res.render('home');
-})
 
+app.use('/', require('./routes/home.route'));
 
 app.use('/writer/xemchitiet', require('./routes/writer/xemchitiet.route'));
 app.use('/writer/dangbaiviet', require('./routes/writer/dangbaiviet.route'));
@@ -44,11 +44,13 @@ app.use('/admin/dsbaiviet', require('./routes/admin/dsbaiviet.route'));
 
 app.use('/chuyenmuc', require('./routes/chuyenmuc.route'));
 
+app.use('/taikhoan', require('./routes/taikhoan.route'));
+
+app.use('/chitietbaiviet', require('./routes/chitietbaiviet.route'));
 
 app.use((req, res, next) => {
     res.render('err/404', { layout: false });
 })
-
 
 app.use((error, req, res, next) => {
     res.render('err/error', {
