@@ -1,19 +1,22 @@
 <div style="width:913px;margin-left:90px;">
     <div class="chuyenmuc" style="margin-top:20px;">
-        <h4>{{this.baivietchitiet.TenChuyenMuc}}</h4>
+        <a href="/chuyenmuc/{{this.baivietchitiet.ID_ChuyenMuc}}/baiviet"
+            style="text-decoration: none;color: black;font-size:25px;font:Arial;">
+            <b>{{this.baivietchitiet.TenChuyenMuc}}</b>
+        </a>
     </div>
     <hr>
     <div class="row">
         <div class="col-sm-8 content">
             <div class="tieu-de">
-                <p style="color: #e32;font-size:x-large;font-family:Arial;">
+                <p style="color: #e32;font-size:x-large;font:Arial;">
                     <b>
                         {{this.baivietchitiet.TenBaiViet}}
                     </b>
                 </p>
             </div>
             <div class="ngay">
-                <p style="color:slategray"> {{this.baivietchitiet.NgayDang}}</p>
+                <p style="color:slategray"> {{format this.baivietchitiet.NgayDang}}</p>
             </div>
 
             <div class="tom-tat">
@@ -39,7 +42,7 @@
                     </p>
                 </div>
             </div>
-
+ 
             <div class="d-flex justify-content-end">
                 <b> {{this.baivietchitiet.BienTapVien}} </b>
             </div>
@@ -47,16 +50,22 @@
             <div class="tag-list" style="margin-top:25px;margin-bottom: 25px;">
                 <ul style="margin-bottom: 0rem;" class="list-inline">
                     <li class="list-inline-item">
-                        <input readonly style="margin-bottom:5px;background:#e9e9e9;color: black;border:none;"
-                            class="btn btn-primary btn-sm" href="#" name="Tag1" role="button" value="{{this.baivietchitiet.Tag1}}">
+                        <a style="margin-bottom:5px;background:#e9e9e9;color: black;border:none;"
+                            class="btn btn-primary btn-sm" href="/xemtheotag/{{this.baivietchitiet.Tag1}}" name="Tag1"
+                            role="button">{{this.baivietchitiet.Tag1}}
+                        </a>
                     </li>
                     <li class="list-inline-item">
-                        <input readonly style="margin-bottom: 5px;background:#e9e9e9;color: black;border:none;"
-                            class="btn btn-primary btn-sm" href="#" name="Tag2" role="button" value="{{this.baivietchitiet.Tag2}}">
+                        <a style="margin-bottom:5px;background:#e9e9e9;color: black;border:none;"
+                            class="btn btn-primary btn-sm" href="/xemtheotag/{{this.baivietchitiet.Tag2}}" name="Tag1"
+                            role="button">{{this.baivietchitiet.Tag2}}
+                        </a>
                     </li>
                     <li class="list-inline-item">
-                        <input readonly style="margin-bottom: 5px;background:#e9e9e9;color: black;border:none;"
-                            class="btn btn-primary btn-sm" href="#" name="Tag3" role="button" value="{{this.baivietchitiet.Tag3}}">
+                        <a style="margin-bottom:5px;background:#e9e9e9;color: black;border:none;"
+                            class="btn btn-primary btn-sm" href="/xemtheotag/{{this.baivietchitiet.Tag3}}" name="Tag1"
+                            role="button">{{this.baivietchitiet.Tag3}}
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -66,7 +75,7 @@
                 <br>
                 <div>
                     <p>Ý kiến của bạn:</p>
-                    <textarea class="form-control" rows="auto" id="comment"></textarea>
+                    <textarea class="form-control" rows="auto" id="comment" name="BinhLuan"></textarea>
                     <div class="d-flex justify-content-end">
                         <button type="button"
                             style="width:100px;text-align: center;margin-top: 10px;margin-bottom: 10px;"
@@ -80,24 +89,22 @@
                 <h5 style="margin-top:15px;">Bình luận của đọc giả:</h5>
                 <br>
                 <ul class="list-group list-group-flush">
+                    {{#each this.binhluan}}
                     <li class="list-group-item">
                         <h6 style="color:red;">
                             <i class="fa fa-user" style="margin-right: 8px;color:lightgray;margin-top: 12px;"></i>
-                            Phan Văn Hậu
+                            {{TenDocGia}}
                         </h6>
-                        <h6>Mấy đứa được nâng điểm trong đó chắc có con cháu ổng</h6>
+                        <p>{{NoiDung}}</p>
                         <ul class="list-inline">
+                            <li class="list-inline-item"><i class="fas fa-thumbs-up"></i> </li>
                             <li class="list-inline-item">
-                                <i class="fas fa-thumbs-up"></i>
-                            </li>
-                            <li class="list-inline-item">
-                                <h6>
-                                    77
-                                </h6>
+                                <h6>{{LuocThich}}</h6>
                             </li>
                         </ul>
-                        <span>20-4-20119 16:15</span>
+                        <span>{{Ngay}}</span>
                     </li>
+                    {{/each}}
                 </ul>
             </div>
         </div>
@@ -105,20 +112,16 @@
         <hr>
 
         <div class="col-sm-4">
-            <h5 style="color: black;">Các bài viết liên quan</h5>
+            <h5 style="color: black;">Cùng chuyên mục</h5>
             <div class="list-group list-group-flush">
-                {{#each this.bailienquan}}
+                {{#each this.cungcm}}
                 <div class="list-group-item" style="width: 80%">
-                    <a
-                        href="/chitietbaiviet/{{ID}}"><img
-                            src="{{AnhDaiDien}}"
-                            style="width: 100%">
+                    <a href="/chitietbaiviet/{{ID}}"><img src="{{AnhDaiDien}}" style="width: 100%">
                     </a>
-                    <a style="text-decoration: none;color: black;"
-                        href="/chitietbaiviet/{{ID}}">
+                    <a style="text-decoration: none;color: black;" href="/chitietbaiviet/{{ID}}">
                         <h6 style="padding-top: 8px;">{{TenBaiViet}}</h6>
                     </a>
-                    <span title="{{NgayDang}}">{{NgayDang}}</span>
+                    <span title="{{format NgayDang}}">{{format2 NgayDang}}</span>
                 </div>
                 {{/each}}
             </div>

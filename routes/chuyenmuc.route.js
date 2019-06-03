@@ -16,8 +16,9 @@ router.get('/:id/baiviet', (req, res, next) => {
 
     Promise.all([
         baivietModel.pageByCM(id, limit, offset),
-        baivietModel.countByCM(id)])
-        .then(([rows, count_rows]) => {
+        baivietModel.countByCM(id),
+        baivietModel.tag(id)])
+        .then(([rows, count_rows, tag]) => {
             for (const cm of res.locals.lcChuyenmuc) {
                 if (cm.ID == +id) {
                     cm.isActive = true;
@@ -35,7 +36,8 @@ router.get('/:id/baiviet', (req, res, next) => {
 
             res.render('vwBaiviet/byCat', {
                 baiviet: rows,
-                pages
+                pages,
+                tag:tag
             })
         })
         .catch(next)

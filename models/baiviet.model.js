@@ -1,15 +1,22 @@
 var db = require('../utills/db');
-
+ 
 module.exports = {
     all: () => {
         return db.load(`SELECT * FROM baiviet`);
     },
 
-    allByTag: (tag1, tag2, tag3) => {
+    allByTag: tag => {
         return db.load(`SELECT * FROM baiviet 
-        WHERE Tag1 IN (N'${tag1}',N'${tag2}',N'${tag3}') 
-        OR Tag2 IN (N'${tag1}',N'${tag2}',N'${tag3}')
-        OR Tag3 IN (N'${tag1}',N'${tag2}',N'${tag3}')`);
+        WHERE Tag1 = N'${tag}' OR Tag2 = N'${tag}' OR Tag3 = N'${tag}' `);
+    },
+
+    tag: (IdCm) => {
+        return db.load(`SELECT Tag1 FROM baiviet WHERE ID_ChuyenMuc = ${IdCm} LIMIT 3`);
+    },
+
+    CungCm: (Id) => {
+        return db.load(`SELECT * FROM baiviet 
+        WHERE ID_ChuyenMuc = (SELECT ID_ChuyenMuc FROM baiviet WHERE ID = ${Id}) LIMIT 5 `);
     },
 
     allByCat: CatId => {
