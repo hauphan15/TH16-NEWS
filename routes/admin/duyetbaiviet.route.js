@@ -1,7 +1,7 @@
 var exress = require('express');
 var baivietchoduyetModel = require('../../models/baivietchoduyet.model');
 var router = exress.Router();
-
+ 
 
 router.get('/', (req, res, next) => {
     baivietchoduyetModel.all()

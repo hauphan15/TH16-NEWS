@@ -1,5 +1,5 @@
 var db = require('../utills/db');
- 
+
 module.exports = {
     all: () => {
         return db.load(`SELECT * FROM baiviet`);
@@ -11,7 +11,7 @@ module.exports = {
     },
 
     tag: (IdCm) => {
-        return db.load(`SELECT Tag1 FROM baiviet WHERE ID_ChuyenMuc = ${IdCm} LIMIT 3`);
+        return db.load(`SELECT Tag1 FROM baiviet WHERE ID_ChuyenMuc = ${IdCm} ORDER BY RAND() LIMIT 3`);
     },
 
     CungCm: (Id) => {
@@ -46,29 +46,33 @@ module.exports = {
     update: entity => {
         return db.update('baiviet', 'ID', entity);
     },
+    updateView: id => {
+        return db.updateView(id);
+    },
 
     BaiNoiBat: () => {
-        return db.load(`SELECT * FROM baiviet WHERE GhiChu = N'bài nổi bật' LIMIT 3`);
+        return db.load(`SELECT * FROM baiviet ORDER BY SoLuotXem DESC LIMIT 3`);
     },
 
-    XemNhieuNhat1: () => {
-        return db.load(`SELECT * FROM baiviet LIMIT 5`);
+    XemNhieuNhat: () => {
+        return db.load(`SELECT * FROM baiviet ORDER BY SoLuotXem DESC LIMIT 10`);
     },
 
-    XemNhieuNhat2: () => {
-        return db.load(`SELECT * FROM baiviet LIMIT 5 OFFSET 5`);
+    MoiNhat: () => {
+        return db.load(`SELECT * FROM baiviet ORDER BY NgayDang DESC LIMIT 10`);
     },
+    TopCm: () => {
+        return db.load(`SELECT t1.*
+                        FROM baiviet t1
+                        WHERE t1.NgayDang = (SELECT MAX(t2.NgayDang)
+                        FROM baiviet t2
+                        WHERE t2.ID_ChuyenMuc = t1.ID_ChuyenMuc
+                        LIMIT 1)`);
 
-    MoiNhat1: () => {
-        return db.load(`SELECT * FROM baiviet LIMIT 5`);
     },
-    MoiNhat2: () => {
-        return db.load(`SELECT * FROM baiviet LIMIT 5 OFFSET 5`);
-    },
-    TopCm1: () => {
-        return db.load(`SELECT * FROM baiviet LIMIT 5`);
-    },
-    TopCm2: () => {
-        return db.load(`SELECT * FROM baiviet LIMIT 5 OFFSET 5`);
+    search: (test) => {
+        return db.load(`SELECT * 
+                        FROM baiviet 
+                        WHERE MATCH (TenBaiViet) AGAINST ('${test}' IN NATURAL LANGUAGE MODE)`);
     },
 };

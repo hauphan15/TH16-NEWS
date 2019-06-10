@@ -39,7 +39,7 @@ module.exports = {
             });
         });
     },
-    update: (tableName, idField,entity) => {
+    update: (tableName, idField, entity) => {
         return new Promise((resolve, reject) => {
             var id = entity[idField];
             delete entity[idField];
@@ -69,6 +69,20 @@ module.exports = {
                 connec.end();
             });
         });
-    }
+    },
+    updateView: (id) => {
+        return new Promise((resolve, reject) => {
+            var sql = `UPDATE baiviet SET SoLuotXem = SoLuotXem + 1 WHERE ID = ?`;
+            var connec = createConnection();
+            connec.query(sql, id, (error, values) => {
+                if (error)
+                    reject(error);
+                else {
+                    resolve(values.changedRows);
+                }
+                connec.end();
+            });
+        });
+    },
 }
 

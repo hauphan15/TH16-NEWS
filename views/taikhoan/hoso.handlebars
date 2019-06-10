@@ -1,0 +1,41 @@
+<div style="margin-bottom:20px;color: red;text-align:center;">
+    <h4>TÀI KHOẢN CỦA TÔI</h4>
+</div>
+<hr>
+<form>
+    <div class="form-group">
+        <label for="disabledTextInput">Email</label>
+        <input type="text" id="disabledTextInput" class="form-control" value="abcth16@gmail.com" disabled="true">
+    </div>
+    <div class="form-group">
+        <label for="disabledTextInput">Họ tên</label>
+        <input type="text" id="disabledTextInput" class="form-control" disabled="true">
+    </div>
+    <div class="form-group">
+        <label>Bút danh</label>
+        <input type="text" name="" id="input" class="form-control" value="" disabled="true">
+    </div>
+    <div class="form-group">
+        <label for="">Ngày sinh</label>
+        <input type="date" class="form-control" value="" disabled="true">
+    </div>
+    <div style="text-align:center;margin-top:20px;">
+        <a href="CapNhatTaiKhoan.html">
+            <button style="width:180px;" type="button" class="btn btn-danger">Cập nhật thông tin</button>
+        </a>
+    </div>
+</form>
+<form>
+    <div class="form-group" style=" margin-top:20px;">
+        <label for="">Đổi mật khẩu</label>
+        <input type="password" class="form-control" placeholder="Nhập mật khẩu cũ" disabled="true" id="mkc">
+        <input style="margin-top: 10px;" type="password" class="form-control" placeholder="Nhập mật mật mới"
+            disabled="true" id="mkm">
+        <input style="margin-top: 10px;" type="password" class="form-control" placeholder="Xác nhận lại" disabled="true"
+            id="xn">
+    </div>
+    <div style="text-align:center;margin-top:20px;margin-bottom:50px;">
+        <button style="width:180px;" type="button" class="btn btn-danger" id="btn-doimk" onclick="enableInput()">Đổi
+            mật khẩu</button>
+    </div>
+</form>

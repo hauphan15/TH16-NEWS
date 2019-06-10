@@ -1,5 +1,6 @@
 var exress = require('express');
 var chuyenmucModel = require('../../models/chuyenmuc.model');
+var baivietModel = require('../../models/baiviet.model');
 var router = exress.Router();
 
 router.get('/', (req, res, next) => {
@@ -30,7 +31,9 @@ router.post('/update', (req, res, next) => {
 })
 
 router.post('/delete', (req, res, next) => {
-    chuyenmucModel.delete(req.body.ID)
+    var ID_ChuyenMuc = req.body.ID;
+    Promise.all([chuyenmucModel.delete(req.body.ID),
+    baivietModel.delete(ID_ChuyenMuc)])
         .then(n => {
             res.redirect('back');
         })

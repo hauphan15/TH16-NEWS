@@ -1,14 +1,14 @@
 var exress = require('express');
-var phongvienModel = require('../../models/phongvien.model');
+var taikhoanModel = require('../../models/taikhoan.model');
 var router = exress.Router();
 
 router.get('/', (req, res, next) => {
-    var p = phongvienModel.all();
-    p.then(rows => {
-        res.render('admin/vwPhongvien/index', {
-            phongvien: rows
-        });
-    }).catch(next);
+    taikhoanModel.loadPV()
+        .then(rows => {
+            res.render('admin/vwPhongvien/index', {
+                phongvien: rows
+            });
+        }).catch(next);
 })
 
 

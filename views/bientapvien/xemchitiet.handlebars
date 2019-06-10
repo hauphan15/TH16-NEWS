@@ -1,16 +1,38 @@
+{{#section 'js'}}
+<script
+    src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=vz4czdokcip1w2272wtcxuitz6j7v1xxr6zbl9q7ox4rejr1"></script>
+<script>
+    $(function () {
+        tinymce.init({
+            selector: '#NoiDung',
+            height: 500,
+            menubar: false,
+            plugins: 'paste image link autolink lists table media',
+            toolbar: [
+                'undo redo | bold italic underline strikethrough | numlist bullist | alignleft aligncenter alignright',
+                'forecolor backcolor',
+                'table link image media',
+            ],
+        });
+    })
+</script>
+{{/section}}
+
 <h4 class="text-center" style="margin-top:20px;"><b>Chi tiết bài viết</b></h4>
 
 <form action="" method="POST" role="form" style="margin-bottom:20px;">
     <div class="form-group">
         <label for="exampleFormControlSelect1">ID BVCD</label>
-        <input readonly style="width:150px;" class="form-control" id="ID_BVCD" name="ID_BVCD" value="{{this.xemchitiet.ID_BVCD}}">
+        <input readonly style="width:150px;" class="form-control" id="ID_BVCD" name="ID_BVCD"
+            value="{{this.xemchitiet.ID_BVCD}}">
     </div>
 
     <div class="form-group">
         <label for="exampleFormControlSelect1">ID BVPV</label>
-        <input readonly style="width:150px;" class="form-control" id="ID_BVPV" name="ID_BVPV" value="{{this.xemchitiet.ID_BVPV}}">
+        <input readonly style="width:150px;" class="form-control" id="ID_BVPV" name="ID_BVPV"
+            value="{{this.xemchitiet.ID_BVPV}}">
     </div>
-    
+
     <div class="form-group">
         <div class="input-group">
             <div>
@@ -67,11 +89,6 @@
             rows="3">{{this.xemchitiet.AnhDaiDien}}</textarea>
     </div>
 
-    <div class="form-group">
-        <label for="exampleFormControlTextarea1">Tiêu đề ảnh</label>
-        <textarea class="form-control" id="TieuDeAnh" name="TieuDeAnh" rows="3">{{this.xemchitiet.TieuDeAnh}}</textarea>
-    </div>
-
     <div class="form-group" style="height:auto;">
         <label for="exampleFormControlTextarea1">Nội dung</label>
         <textarea class="form-control" id="NoiDung" name="NoiDung" rows="50">{{this.xemchitiet.NoiDung}}</textarea>
@@ -94,7 +111,7 @@
         <label for="exampleFormControlInput1">Ngày duyệt</label>
         <input class="form-control" id="NgayDang" name="NgayDang">
     </div>
-    
+
     <div style="text-align:center;margin-top: 50px;margin-bottom: 50px;">
         <button formaction="/bientapvien/xemchitiet/duyet" style="width:150px;" type="submit"
             class="btn btn-outline-primary"><i class="fas fa-check" style="margin-right:10px;"></i></i>Duyệt</button>

@@ -4,12 +4,12 @@
             style="text-decoration: none;color: black;font-size:25px;font:Arial;">
             <b>{{this.baivietchitiet.TenChuyenMuc}}</b>
         </a>
-    </div>
+    </div> 
     <hr>
     <div class="row">
         <div class="col-sm-8 content">
             <div class="tieu-de">
-                <p style="color: #e32;font-size:x-large;font:Arial;">
+                <p style="color: #e32;font-size:xx-large;font:Arial;">
                     <b>
                         {{this.baivietchitiet.TenBaiViet}}
                     </b>
@@ -28,21 +28,11 @@
             </div>
             <div class="chi-tiet-bai-viet">
                 <br><br>
-                <div class="img">
-                    <img style="width:586px;height:382px;" src=" {{this.baivietchitiet.AnhDaiDien}}">
-                </div>
-                <div style="background:#e9e9e9;width:586px;">
-                    <p style="font-size: 8pt;color: slategray;padding:5px;">
-                        {{this.baivietchitiet.TieuDeAnh}}
-                    </p>
-                </div>
                 <div>
-                    <p style="font: Arial;width: inherit">
-                        {{this.baivietchitiet.NoiDung}}
-                    </p>
+                    {{{this.baivietchitiet.NoiDung}}}
                 </div>
             </div>
- 
+
             <div class="d-flex justify-content-end">
                 <b> {{this.baivietchitiet.BienTapVien}} </b>
             </div>

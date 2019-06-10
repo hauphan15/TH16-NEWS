@@ -5,11 +5,11 @@ module.exports = {
         return db.load(`SELECT * FROM chuyenmuc`);
     },
 
-    allWithDetails: () =>{
+    allWithDetails: () => {
         return db.load(`SELECT * From ChuyenMuc`);
     },
 
-    singel: id =>{
+    singel: id => {
         return db.load(`SELECT * FROM chuyenmuc WHERE ID = ${id}`)
     },
 
@@ -17,11 +17,11 @@ module.exports = {
         return db.add('chuyenmuc', entity);
     },
 
-    update: entity =>{
+    update: entity => {
         return db.update('chuyenmuc', 'ID', entity);
     },
 
-    delete: id =>{
+    delete: id => {
         return db.delete('chuyenmuc', 'ID', id);
     }
 };

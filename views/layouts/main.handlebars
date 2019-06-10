@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     {{{_sections.css}}}
-    {{{_sections.cssbtv}}}
     <title>TH16 NEWS</title>
 </head>
 
@@ -21,14 +20,30 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-danger" style="height: 51px;">
             <a class="navbar-brand" href="/"><b style="color:white;">TH16 NEWS</b></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="form-inline my-2 my-lg-0">
-                    <input style="height: 27px;" class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm"
-                        aria-label="Search">
-                    <button style="width:50px;;height: 27px;padding:0;font-size:11px;"
+                <form class="form-inline my-2 my-lg-0" method="POST">
+                    <input style="height: 27px;" class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm"
+                        name="txtsearch" id="search">
+                    <button style="width:50px;;height: 27px;padding:0;font-size:11px;" formaction="/ketquatimkiem/submit"
                         class="btn btn-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
             <ul class="navbar-nav mr-auto" style="height: 40px;">
+                {{#if isAuthenticated}}
+                <li class="nav-item">
+                    <a href="/taikhoan/dangnhap" style="text-decoration: none;color:white"><i class="far fa-user fa-sm"
+                            style="margin-top:12px;"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/taikhoan/dangnhap">
+                        <p style="color:white;">{{authUser.HoTen}}</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/taikhoan/dangxuat">
+                        <p style="color:white;">Đăng xuất</p>
+                    </a>
+                </li>
+                {{else}}
                 <li class="nav-item">
                     <a href="/taikhoan/dangnhap" style="text-decoration: none;color:white"><i class="far fa-user fa-sm"
                             style="margin-top:12px;"></i></a>
@@ -43,6 +58,7 @@
                         <p style="color:white;">Đăng ký</p>
                     </a>
                 </li>
+                {{/if}}
             </ul>
         </nav>
     </div>
@@ -101,9 +117,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
     {{{_sections.js}}}
-    {{{_sections.jsbtv}}}
 </body>
 
 </html>

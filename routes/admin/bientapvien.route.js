@@ -1,19 +1,19 @@
 var exress = require('express');
-var bientapvienModel = require('../../models/bientapvien.model');
+var taikhoanModel = require('../../models/taikhoan.model');
 var router = exress.Router();
 
 router.get('/', (req, res, next) => {
-    var p = bientapvienModel.all();
-    p.then(rows => {
-        res.render('admin/vwBientapvien/index', {
-            bientapvien: rows
-        });
-    }).catch(next);
+    taikhoanModel.loadBTV()
+        .then(rows => {
+            res.render('admin/vwBientapvien/index', {
+                bientapvien: rows
+            });
+        }).catch(next);
 })
 
 
 router.post('/add', (req, res, next) => {
-    bientapvienModel.add(req.body)
+    taikhoanModel.add(req.body)
         .then(ID => {
             console.log(ID);
             res.redirect('back');
@@ -22,7 +22,7 @@ router.post('/add', (req, res, next) => {
 })
 
 router.post('/update', (req, res, next) => {
-    bientapvienModel.update(req.body)
+    taikhoanModel.update(req.body)
         .then(n => {
             res.redirect('back');
         })
@@ -30,7 +30,7 @@ router.post('/update', (req, res, next) => {
 })
 
 router.post('/delete', (req, res, next) => {
-    bientapvienModel.delete(req.body.ID)
+    taikhoanModel.delete(req.body.ID)
         .then(n => {
             res.redirect('back');
         })

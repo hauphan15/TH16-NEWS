@@ -1,18 +1,29 @@
 <h4 class="text-center" style="margin-top:40px;margin-bottom:20px;">Danh sách bài viết</h4>
 
-<form action="" method="POST" role="form" style="margin-bottom:20px;">
-    <div class="row">
-        <div class="col-2">
-            <input type="text" readonly class="form-control" id="ID_BVPV" name="ID_BVPV" placeholder="ID_BVPV">
-        </div>
-        <div class="col-5">
-            <button style="width:150px;" type="submit" class="btn btn-outline-info" formaction="/writer/xemchitiet">
-                <i class="fas fa-eye" style="margin-right:10px;"></i>Xem chi tiết</button>
-            <button style="width:150px;" type="submit" class="btn btn-outline-danger" formaction="/writer/dsbaiviet/xoa">
-                <i class="fas fa-trash-alt" style="margin-right:10px;"></i>Xóa</button>
-        </div>
+<div class="row">
+    <div class="col-8">
+        <form action="" method="POST" role="form" style="margin-bottom:20px;">
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <input type="text" readonly class="form-control" id="ID_BVPV" name="ID_BVPV" placeholder="ID_BVPV">
+                </li>
+                <li class="list-inline-item">
+                    <button style="width:150px;" type="submit" class="btn btn-outline-info"
+                        formaction="/writer/xemchitiet">
+                        <i class="fas fa-eye" style="margin-right:10px;"></i>Xem chi tiết</button></li>
+                <li class="list-inline-item"> <button style="width:150px;" type="submit" class="btn btn-outline-danger"
+                        formaction="/writer/dsbaiviet/xoa">
+                        <i class="fas fa-trash-alt" style="margin-right:10px;"></i>Xóa</button></li>
+            </ul>
+        </form>
     </div>
-</form>
+    <div class="col-sm-4">
+        <button style="width:150px;float:right;" type="button" class="btn btn-outline-info">
+            <i class="fas fa-pen-alt" style="margin-right:10px;"></i><a style="text-decoration:none;" href="/writer/dangbaiviet">Đăng bài viết</a></button>
+    </div>
+</div>
+
+
 
 <table class="table table-bordered table-hover" id="tbl">
     <thead>
