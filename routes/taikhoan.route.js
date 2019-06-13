@@ -1,5 +1,5 @@
 var exress = require('express');
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcrypt-nodejs');
 var passport = require('passport');
 var taikhoanModel = require('../models/taikhoan.model');
 var auth = require('../middlewares/auth');
