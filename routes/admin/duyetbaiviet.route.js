@@ -17,6 +17,7 @@ router.post('/xemchitiet', (req, res, next) => {
     baivietchoduyetModel.singel(req.body.ID_BVCD)
         .then(rows => {
             res.render('admin/vwBvchoduyet/xemchitiet', {
+                title:'Duyệt bài',
                 xemchitiet: rows[0]
             })
 

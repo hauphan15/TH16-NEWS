@@ -13,6 +13,7 @@ router.get('/:id', (req, res, next) => {
         baivietModel.updateView(id)])
         .then(([rows, cm, bl]) => {
             res.render('baivietchitiet/baiviet', {
+                title: rows[0].TenChuyenMuc + ' - ' + rows[0].TenBaiViet,
                 baivietchitiet: rows[0],
                 cungcm: cm,
                 binhluan: bl
@@ -20,7 +21,7 @@ router.get('/:id', (req, res, next) => {
         })
         .catch(next)
 
-})
+});
 
 
 

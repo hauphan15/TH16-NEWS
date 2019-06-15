@@ -19,7 +19,9 @@ router.get('/is-available', (req, res, next) => {
 
 
 router.get('/dangky', (req, res, next) => {
-    res.render('taikhoan/dangky');
+    res.render('taikhoan/dangky',{
+        title:'Đăng Ký'
+    });
 })
 
 router.post('/dangky', (req, res, next) => {
@@ -40,7 +42,9 @@ router.post('/dangky', (req, res, next) => {
 })
 
 router.get('/dangnhap', (req, res, next) => {
-    res.render('taikhoan/dangnhap');
+    res.render('taikhoan/dangnhap',{
+        title:'Đăng Nhập'
+    })
 })
 
 router.post('/dangnhap', (req, res, next) => {
@@ -50,8 +54,9 @@ router.post('/dangnhap', (req, res, next) => {
 
         if (!user) {
             return res.render('taikhoan/dangnhap', {
-                err_message: info.message
-            })
+                err_message: info.message,
+                title:'error'
+            });
         }
 
         req.logIn(user, err => {

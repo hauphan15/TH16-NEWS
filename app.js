@@ -12,6 +12,8 @@ require('./middlewares/view-engine')(app);
 require('./middlewares/passport')(app);
 require('./middlewares/secsion')(app);
 
+app.use(express.static('public'));
+
 app.use(require('./middlewares/auth-locals.mdw'));
 app.use(require('./middlewares/locals.mdw'));
 

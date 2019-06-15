@@ -9,6 +9,7 @@ router.get('/', (req, res, next) => {
     chuyenmucModel.all()
         .then(rows => {
             res.render('phongvien/dangbaiviet', {
+                title:"Đăng Bài",
                 chuyenmuc: rows,
                 ID_BVPV
             });
