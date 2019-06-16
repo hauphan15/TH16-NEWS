@@ -10,6 +10,7 @@ router.post('/', (req, res, next) => {
     dsbavietModel.singel(id)
         .then(rows => {
             res.render('phongvien/xemchitiet', {
+                title:'Xem chi tiết',
                 xemchitiet: rows[0]
             })
 

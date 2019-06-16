@@ -12,6 +12,7 @@ router.get('/', (req, res, next) => {
         .then(([noibat, xemnhieu, moinhat, topcm]) => {
             res.render('home', {
                 bainoibat: noibat,
+                title:'Trang Chủ',
                 xemnhieunhat1: xemnhieu[0],
                 xemnhieunhat2: xemnhieu[1],
                 xemnhieunhat3: xemnhieu[2],

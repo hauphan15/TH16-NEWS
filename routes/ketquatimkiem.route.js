@@ -12,6 +12,7 @@ router.post('/submit', (req, res, next) => {
     baivietModel.search(test)
         .then(rows => {
             res.render('ketquatimkiem/index', {
+                title:'Tìm kiếm',
                 baiviet: rows,
                 test: test
             })

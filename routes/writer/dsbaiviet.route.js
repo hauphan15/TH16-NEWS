@@ -7,6 +7,7 @@ router.get('/', (req, res, next) => {
     dsbavietModel.all()
         .then(rows => {
             res.render('phongvien/danhsachbaiviet', {
+                title:'Danh sách',
                 dsbaiviet: rows
             });
         }).catch(next)

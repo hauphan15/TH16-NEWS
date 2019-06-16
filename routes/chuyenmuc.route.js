@@ -25,6 +25,7 @@ router.get('/:id/baiviet', (req, res, next) => {
                 }
             }
 
+            var title=rows[0].TenChuyenMuc;
             var total = count_rows[0].total;
             var nPages = Math.floor(total / limit);
             if (total % limit > 0) nPages++;
@@ -35,6 +36,7 @@ router.get('/:id/baiviet', (req, res, next) => {
             }
 
             res.render('vwBaiviet/byCat', {
+                title,
                 baiviet: rows,
                 pages,
                 tag:tag
@@ -54,7 +56,13 @@ router.get('/:id/:id_cmc/baiviet', (req, res, next) => {
                     cm.isActive = true;
                 }
             }
+            var title='TH16 News';
+            if(rows.length>0){
+                title=rows[0].ChuyenMucCon;
+            }
+
             res.render('vwBaiviet/byCat', {
+                title,
                 baiviet: rows,
                 cmc: rows[0]
             });
