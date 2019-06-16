@@ -7,7 +7,7 @@ var router = exress.Router();
 
 
 router.post('/duyet', (req, res, next) => {
-    var ngaydang = moment(req.body.NgayDang, 'DD/MM/YYYY HH:MM').format('YYYY-MM-DD hh:mm:ss');
+    var ngaydang = moment(req.body.NgayDang, 'DD/MM/YYYY H:mm').format('YYYY-MM-DD hh:mm:ss');
     var entity = {
         ID_ChuyenMuc: req.body.ID_ChuyenMuc,
         TenChuyenMuc: req.body.TenChuyenMuc,

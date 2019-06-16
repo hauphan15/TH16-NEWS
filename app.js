@@ -9,11 +9,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 require('./middlewares/view-engine')(app);
+require('./middlewares/session')(app);
 require('./middlewares/passport')(app);
-require('./middlewares/secsion')(app);
+
 
 app.use(require('./middlewares/auth-locals.mdw'));
 app.use(require('./middlewares/locals.mdw'));
+
 
 app.use('/', require('./routes/home.route'));
 
@@ -31,7 +33,7 @@ app.use('/admin/docgia', require('./routes/admin/docgia.route'));
 app.use('/admin/phongvien', require('./routes/admin/phongvien.route'));
 app.use('/admin/chuyenmuc', require('./routes/admin/chuyenmuc.route'));
 app.use('/admin/dsbaiviet', require('./routes/admin/dsbaiviet.route'));
- 
+
 app.use('/chuyenmuc', require('./routes/chuyenmuc.route'));
 
 app.use('/taikhoan', require('./routes/taikhoan.route'));

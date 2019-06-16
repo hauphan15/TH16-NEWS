@@ -2,7 +2,7 @@ var session = require('express-session');
 
 module.exports = function (app) {
     app.use(session({
-        secret: 'fgzaaflpt20imorsst20',
+        secret: 'mrhauphanzz',
         resave: true,
         saveUninitialized: true
     }));

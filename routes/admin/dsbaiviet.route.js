@@ -19,12 +19,5 @@ router.post('/xoa', (req, res, next) => {
         .catch(next)
 })
 
-router.post('/xemchitiet', (req, res, next) => {
-    baivietModel.delete(req.body.ID)
-        .then(n => {
-            res.end('xem chi tiet');
-        })
-        .catch(next)
-})
 
 module.exports = router;

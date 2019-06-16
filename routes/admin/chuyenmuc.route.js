@@ -4,12 +4,12 @@ var baivietModel = require('../../models/baiviet.model');
 var router = exress.Router();
 
 router.get('/', (req, res, next) => {
-    var p = chuyenmucModel.all();
-    p.then(rows => {
-        res.render('admin/vwChuyenmuc/index', {
-            chuyenmuc: rows
-        });
-    }).catch(next);
+    chuyenmucModel.all()
+        .then(rows => {
+            res.render('admin/vwChuyenmuc/index', {
+                chuyenmuc: rows,
+            });
+        }).catch(next);
 })
 
 

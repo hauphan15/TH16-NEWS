@@ -5,6 +5,14 @@ module.exports = {
         return db.load(`SELECT * FROM baiviet`);
     },
 
+    count: () => {
+        return db.load(`SELECT COUNT(ID_ChuyenMuc) FROM baiviet GROUP BY ID_ChuyenMuc`);
+    },
+
+    delete: id => {
+        return db.delete('baiviet', 'ID', id);
+    },
+
     allByTag: tag => {
         return db.load(`SELECT * FROM baiviet 
         WHERE Tag1 = N'${tag}' OR Tag2 = N'${tag}' OR Tag3 = N'${tag}' `);

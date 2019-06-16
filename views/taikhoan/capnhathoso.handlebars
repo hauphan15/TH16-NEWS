@@ -1,0 +1,49 @@
+{{#section 'css'}}
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+{{/section}}
+
+
+{{#section 'js'}}
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+<script>
+    $(function () {
+        $('#txtngaysinh').datetimepicker({
+            format: 'd/m/Y',
+            timepicker: false,
+            mask: true,
+        });
+    })
+</script>
+{{/section}}
+
+
+<div style="margin-bottom:20px;text-align:center;margin-top:30px;">
+    <h4>Tài khoản của tôi</h4>
+</div>
+<hr>
+<div style="width:400px;margin-left:350px;">
+    <form method="POST">
+        <div class="form-group">
+            <label for="">ID</label>
+            <input readonly type="text" name="ID" class="form-control" value="{{authUser.ID}}">
+        </div>
+        <div class="form-group">
+            <label for="">Email</label>
+            <input type="text" name="Email" class="form-control" value="{{authUser.Email}}">
+        </div>
+        <div class="form-group">
+            <label for="">Họ tên</label>
+            <input type="text" name="HoTen" class="form-control" value="{{authUser.HoTen}}">
+        </div>
+        <div class="form-group">
+            <label for="">Ngày sinh</label>
+            <input type="text" class="form-control" id="txtngaysinh" name="NgaySinh" value="{{format3 authUser.NgaySinh}}">
+        </div>
+        <div style="text-align:center;margin-top:20px;">
+            <button style="width:180px;" type="submit" formaction="/taikhoan/submit" class="btn btn-danger">Lưu thay
+                đổi</button>
+        </div>
+    </form>
+</div>

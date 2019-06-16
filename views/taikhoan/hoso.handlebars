@@ -1,41 +1,64 @@
-<div style="margin-bottom:20px;color: red;text-align:center;">
-    <h4>TÀI KHOẢN CỦA TÔI</h4>
+<div style="margin-bottom:20px;text-align:center;margin-top:30px;">
+    <h4>Tài khoản của tôi</h4>
 </div>
 <hr>
-<form>
-    <div class="form-group">
-        <label for="disabledTextInput">Email</label>
-        <input type="text" id="disabledTextInput" class="form-control" value="abcth16@gmail.com" disabled="true">
+<div class="row">
+    <div class="col-sm-6" style="padding-right:220px;">
+        <div class="form-group">
+            <label for="disabledTextInput">ID</label>
+            <input readonly type="text" name="ID" class="form-control" value="{{authUser.ID}}">
+        </div>
+        <div class="form-group">
+            <label for="disabledTextInput">Tên đăng nhập</label>
+            <input readonly type="text" name="TenDangNhap" class="form-control" value="{{authUser.TenDangNhap}}">
+        </div>
+        <div class="form-group">
+            <label for="disabledTextInput">Email</label>
+            <input readonly type="text" name="Email" class="form-control" value="{{authUser.Email}}">
+        </div>
+        <div class="form-group">
+            <label for="disabledTextInput">Họ tên</label>
+            <input readonly type="text" name="HoTen" class="form-control" value="{{authUser.HoTen}}">
+        </div>
+        <div class="form-group">
+            <label for="">Ngày sinh</label>
+            <input readonly type="text" class="form-control" id="txtngaysinh" name="NgaySinh" value="{{format3 authUser.NgaySinh}}">
+        </div>
+        <div class="form-group">
+            <label for="">Bút danh</label>
+            <input readonly type="text" class="form-control" value="{{authUser.ButDanh}}">
+        </div>
+        <div class="form-group">
+            <label for="">Chuyên mục quản lý</label>
+            <input readonly type="text" class="form-control" value="{{ authUser.ID_CMQL}}">
+        </div>
+        <div style="text-align:center;margin-top:20px;">
+            <a href="hosocanhan/capnhathoso">
+                <button style="width:180px;" type="button" class="btn btn-danger">Cập nhật thông tin</button>
+            </a>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="disabledTextInput">Họ tên</label>
-        <input type="text" id="disabledTextInput" class="form-control" disabled="true">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label for=""><b>Danh sách chức năng</b></label>
+            <div>
+                <div class="list-group list-group-flush">
+                    <a href="/admin/bientapvien" class="list-group-item list-group-item-action"><i
+                            class="fas fa-user-edit" style="margin-right:10px;"></i>Biên tập viên</a>
+                    <a href="/admin/chuyenmuc" class="list-group-item list-group-item-action"><i class="fas fa-list-ol"
+                            style="margin-right:10px;"></i>Chuyên mục</a>
+                    <a href="/admin/docgia" class="list-group-item list-group-item-action"><i class="fas fa-book-reader"
+                            style="margin-right:10px;"></i>Đọc giả</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-tags"
+                            style="margin-right:10px;"></i>Tag</a>
+                    <a href="/admin/phongvien" class="list-group-item list-group-item-action"><i class="fas fa-camera"
+                            style="margin-right:10px;"></i>Phóng viên</a>
+                    <a href="/admin/duyetbaiviet" class="list-group-item list-group-item-action"><i
+                            class="fas fa-vote-yea" style="margin-right:10px;"></i>Duyệt bài viết</a>
+                    <a href="/admin/dsbaiviet" class="list-group-item list-group-item-action"><i class="fas fa-th-list"
+                            style="margin-right:10px;"></i>Danh sách bài viết</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label>Bút danh</label>
-        <input type="text" name="" id="input" class="form-control" value="" disabled="true">
-    </div>
-    <div class="form-group">
-        <label for="">Ngày sinh</label>
-        <input type="date" class="form-control" value="" disabled="true">
-    </div>
-    <div style="text-align:center;margin-top:20px;">
-        <a href="CapNhatTaiKhoan.html">
-            <button style="width:180px;" type="button" class="btn btn-danger">Cập nhật thông tin</button>
-        </a>
-    </div>
-</form>
-<form>
-    <div class="form-group" style=" margin-top:20px;">
-        <label for="">Đổi mật khẩu</label>
-        <input type="password" class="form-control" placeholder="Nhập mật khẩu cũ" disabled="true" id="mkc">
-        <input style="margin-top: 10px;" type="password" class="form-control" placeholder="Nhập mật mật mới"
-            disabled="true" id="mkm">
-        <input style="margin-top: 10px;" type="password" class="form-control" placeholder="Xác nhận lại" disabled="true"
-            id="xn">
-    </div>
-    <div style="text-align:center;margin-top:20px;margin-bottom:50px;">
-        <button style="width:180px;" type="button" class="btn btn-danger" id="btn-doimk" onclick="enableInput()">Đổi
-            mật khẩu</button>
-    </div>
-</form>
+</div>

@@ -2,7 +2,7 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var bcrypt = require('bcryptjs');
 var taikhoanModel = require('../models/taikhoan.model');
-
+  
 module.exports = function (app) {
     app.use(passport.initialize());
     app.use(passport.session());

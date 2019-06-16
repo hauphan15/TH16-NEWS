@@ -23,23 +23,25 @@
                 <form class="form-inline my-2 my-lg-0" method="POST">
                     <input style="height: 27px;" class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm"
                         name="txtsearch" id="search">
-                    <button style="width:50px;;height: 27px;padding:0;font-size:11px;" formaction="/ketquatimkiem/submit"
-                        class="btn btn-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                    <button style="width:50px;;height: 27px;padding:0;font-size:11px;"
+                        formaction="/ketquatimkiem/submit" class="btn btn-light my-2 my-sm-0" type="submit"><i
+                            class="fas fa-search"></i></button>
                 </form>
             </div>
+
             <ul class="navbar-nav mr-auto" style="height: 40px;">
                 {{#if isAuthenticated}}
                 <li class="nav-item">
-                    <a href="/taikhoan/dangnhap" style="text-decoration: none;color:white"><i class="far fa-user fa-sm"
+                    <a href="/taikhoan/hosocanhan" style="text-decoration: none;color:white"><i class="far fa-user fa-sm"
                             style="margin-top:12px;"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/taikhoan/dangnhap">
+                    <a class="nav-link" href="/taikhoan/hosocanhan">
                         <p style="color:white;">{{authUser.HoTen}}</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/taikhoan/dangxuat">
+                    <a class="nav-link" href="javascript: $('#frmSignout').submit();">
                         <p style="color:white;">Đăng xuất</p>
                     </a>
                 </li>
@@ -86,7 +88,7 @@
             </div>
         </nav>
     </div>
-
+    <form id="frmSignout" action="/taikhoan/dangxuat" method="POST"></form>
     <div class="container">
         {{{body}}}
     </div>

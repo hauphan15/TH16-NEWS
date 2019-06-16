@@ -14,6 +14,9 @@ module.exports = function (app) {
             format2: date => {
                 return moment(date, 'MM/DD/YYYY H:mm').startOf('hour').fromNow();
             },
+            format3: date => {
+                return moment(date, 'YYYY-MM-DD').format('DD/MM/YYYY');
+            },
             section: hbs_sections()
         }
     }));

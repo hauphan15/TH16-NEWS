@@ -3,7 +3,7 @@
     <form action="" method="POST" role="form" style="margin-bottom:20px;">
         <div class="row">
             <div class="col-1">
-                <input type="text" class="form-control" placeholder="ID" id="stt" name="ID">
+                <input readonly type="text" class="form-control" placeholder="ID" id="stt" name="ID">
             </div>
             <div class="col-2">
                 <input type="text" class="form-control" placeholder="Chuyên mục" id="cm" name="ChuyenMuc">
@@ -15,9 +15,6 @@
                     <input type="text" aria-label="Last name" class="form-control" placeholder="Chuyên mục con"
                         name="CMC2" id="cmc2">
                 </div>
-            </div>
-            <div class="col-2">
-                <input type="text" class="form-control" placeholder="Số bài viết" id="sbv" name="SoBai">
             </div>
             <div class="col-2">
                 <input type="text" class="form-control" placeholder="Biên tập viên" id="btv" name="BienTapVien">
@@ -40,7 +37,6 @@
                 <th>ID</th>
                 <th>Chuyên mục</th>
                 <th colspan="2">Chuyên mục con</th>
-                <th>Số bài viết</th>
                 <th>Biên tập viên</th>
             </tr>
         </thead>
@@ -51,11 +47,7 @@
                 <td>{{ChuyenMuc}}</td>
                 <td style="width:200px;">{{CMC1}}</td>
                 <td>{{CMC2}}</td>
-                <td>{{SoBai}}</td>
                 <td>{{BienTapVien}}</td>
-                <td style="width:120px;">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Xem chi tiết</button>
-                </td>
             </tr>
             {{/each}}
         </tbody>
@@ -70,8 +62,7 @@
             document.getElementById("cm").value = this.cells[1].innerHTML;
             document.getElementById("cmc1").value = this.cells[2].innerHTML;
             document.getElementById("cmc2").value = this.cells[3].innerHTML;
-            document.getElementById("sbv").value = this.cells[4].innerHTML;
-            document.getElementById("btv").value = this.cells[5].innerHTML;
+            document.getElementById("btv").value = this.cells[4].innerHTML;
         };
     }
 </script>

@@ -3,6 +3,7 @@ var bcrypt = require('bcryptjs');
 var passport = require('passport');
 var taikhoanModel = require('../models/taikhoan.model');
 var auth = require('../middlewares/auth');
+var moment = require('moment');
 
 var router = exress.Router();
 
@@ -25,13 +26,14 @@ router.get('/dangky', (req, res, next) => {
 router.post('/dangky', (req, res, next) => {
     var saltRounds = 10;
     var hash = bcrypt.hashSync(req.body.matkhau, saltRounds);
+    var ngaysinh = moment(req.body.ngaysinh, 'DD/MM/YYYY').format('YYYY-MM-DD');
 
     var entity = {
         TenDangNhap: req.body.tendn,
         Password: hash,
         Hoten: req.body.hoten,
         Email: req.body.email,
-        NgaySinh: req.body.ngaysinh,
+        NgaySinh: ngaysinh
     }
 
     taikhoanModel.add(entity).then((id) => {
@@ -63,7 +65,26 @@ router.post('/dangnhap', (req, res, next) => {
 })
 
 router.get('/hosocanhan', auth, (req, res, next) => {
-    res.end('hosocanhan');
+    res.render('taikhoan/hoso');
+})
+
+router.get('/hosocanhan/capnhathoso', auth, (req, res, next) => {
+    res.render('taikhoan/capnhathoso');
+})
+
+
+router.post('/submit', (req, res, next) => {
+    var ngaysinh = moment(req.body.NgaySinh, 'DD/MM/YYYY').format('YYYY-MM-DD');
+    var entity = {
+        ID: req.body.ID,
+        HoTen: req.body.HoTen,
+        Email: req.body.Email,
+        NgaySinh: ngaysinh,
+        ButDanh: req.body.ButDanh
+    }
+    taikhoanModel.update(entity).then((id) => {
+        res.redirect('/taikhoan/hosocanhan');
+    })
 })
 
 router.post('/dangxuat', auth, (req, res, next) => {
