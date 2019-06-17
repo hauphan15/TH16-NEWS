@@ -11,52 +11,56 @@
     }
 
     /* xem nhiều */
-    .xem-nhieu .list-inline li {
-        width: 211px;
+    .xem-nhieu  .list-inline-item{
+        width: 210px;
     }
 
-    .xem-nhieu .list-inline {
+    .xem-nhieu  .list-inline-item .name-title {
+        height: 80px;
+        width: 200px;
+    }
+
+    .xem-nhieu .list-inline-item img {
+        height: 130px;
+        width: 210px;
+    }
+
+    .moi-nhat  .list-inline-item{
+        width: 210px;
+    }
+
+    .moi-nhat  .list-inline-item .name-title {
+        height: 80px;
+        width: 200px;
+    }
+
+    .moi-nhat .list-inline-item img {
+        height: 130px;
+        width: 210px;
+    }
+
+    .top-chuyen-muc .list-inline-item{
+        width: 210px;
+    }
+
+    .top-chuyen-muc  .list-inline-item .name-title {
+        height: 80px;
+        width: 200px;
+    }
+
+    .top-chuyen-muc .list-inline-item img {
+        height: 130px;
+        width: 210px;
+    }
+
+
+    .button-slick{
         display: inline-block;
+        display: flex;
+        margin: 10;
+        justify-content: space-between;
     }
-
-    .xem-nhieu .list-inline .list-inline-item .name-title {
-        height: 80px;
-    }
-
-    .xem-nhieu .list-inline .list-inline-item img {
-        height: 130px;
-        width: 210px;
-    }
-
-    /* mới nhất */
-    .moi-nhat .list-inline li {
-        width: 210px;
-    }
-
-    .moi-nhat .list-inline .list-inline-item .name-title {
-        height: 80px;
-    }
-
-    .moi-nhat .list-inline .list-inline-item img {
-        height: 130px;
-        width: 210px;
-    }
-
-    /* Top 10 chuyên mục */
-    .top-chuyen-muc .list-inline li {
-        width: 210px;
-        height: 256px;
-    }
-
-    .top-chuyen-muc .list-inline {
-        display: inline-block;
-    }
-
-    .top-chuyen-muc .list-inline .list-inline-item .name-title {
-        height: 80px;
-    }
-
-    .top-chuyen-muc .list-inline .list-inline-item img {
-        height: 130px;
-        width: 210px;
+    .button-slick button{
+        width: 30px;
+        height: 30px;
     }
