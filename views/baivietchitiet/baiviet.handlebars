@@ -4,7 +4,7 @@
             style="text-decoration: none;color: black;font-size:25px;font:Arial;">
             <b>{{this.baivietchitiet.TenChuyenMuc}}</b>
         </a>
-    </div> 
+    </div>
     <hr>
     <div class="row">
         <div class="col-sm-8 content">
@@ -65,13 +65,16 @@
                 <br>
                 <div>
                     <p>Ý kiến của bạn:</p>
-                    <textarea class="form-control" rows="auto" id="comment" name="BinhLuan"></textarea>
-                    <div class="d-flex justify-content-end">
-                        <button type="button"
-                            style="width:100px;text-align: center;margin-top: 10px;margin-bottom: 10px;"
-                            class="btn btn-success">Bình
-                            luận</button>
-                    </div>
+                    <form method="POST" action="">
+                        <textarea class="form-control" rows="auto" id="comment" name="BinhLuan"></textarea>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" formaction="/chitietbaiviet/{{this.baivietchitiet.ID}}/binhluan"
+                                style="width:100px;text-align: center;margin-top: 10px;margin-bottom: 10px;"
+                                class="btn btn-success">Bình
+                                luận</button>
+                        </div>
+                    </form>
+
                 </div>
             </div>
 
@@ -92,7 +95,7 @@
                                 <h6>{{LuocThich}}</h6>
                             </li>
                         </ul>
-                        <span>{{Ngay}}</span>
+                        <span>{{format Ngay}}</span>
                     </li>
                     {{/each}}
                 </ul>

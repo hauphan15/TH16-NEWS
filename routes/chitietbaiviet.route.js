@@ -1,6 +1,7 @@
 var exress = require('express');
 var baivietModel = require('../models/baiviet.model');
 var binhluanModel = require('../models/binhluan.model');
+var auth = require('../middlewares/auth');
 var router = exress.Router();
 
 
@@ -23,6 +24,23 @@ router.get('/:id', (req, res, next) => {
 
 });
 
+router.post('/:id/binhluan', auth, (req, res, next) => {
+    var date = new Date();
+    var entity = {
+        ID_BV: req.params.id,
+        ID_Docgia: res.locals.authUser.ID,
+        TenDocGia: res.locals.authUser.HoTen,
+        NoiDung: req.body.BinhLuan,
+        LuocThich: 0,
+        Ngay: date
+    }
+    binhluanModel.add(entity)
+        .then(() => {
+            res.redirect('back');
+        })
+        .catch(next)
+
+})
 
 
 module.exports = router;

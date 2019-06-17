@@ -28,7 +28,7 @@ app.use('/writer/dsbaiviet', require('./routes/writer/dsbaiviet.route'));
 app.use('/bientapvien/duyetbaiviet', require('./routes/editor/duyetbaiviet.route'));
 app.use('/bientapvien/xemchitiet', require('./routes/editor/xemchitiet.route'));
 
-app.use('/admin/xemchitiet', require('./routes/admin/xemchitiet.route'));
+app.use('/admin/xemchitiet', require('./routes/admin/xemchitiet.route')); 
 app.use('/admin/duyetbaiviet', require('./routes/admin/duyetbaiviet.route'));
 app.use('/admin/bientapvien', require('./routes/admin/bientapvien.route'));
 app.use('/admin/docgia', require('./routes/admin/docgia.route'));
