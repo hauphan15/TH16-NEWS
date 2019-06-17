@@ -1,5 +1,3 @@
-
-
 <br>
 <div class="tin-noi-bat row">
     <div class="col-sm-8">
@@ -54,132 +52,133 @@
 <hr>
 
 <h5 class="text-danger">Được xem nhiều nhất</h5>
-<div class="xem-nhieu">
-    <ul class="list-inline">
-        {{!-- 1 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{xemnhieunhat1.ID}}"><img src="{{xemnhieunhat1.AnhDaiDien}}"></a>
-            <br>
+<div class="xem-nhieu" data-slick='{"slidesToShow": 5, "slidesToScroll": 5}'>
+    {{!-- 1 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{xemnhieunhat1.ID}}"><img src="{{xemnhieunhat1.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{xemnhieunhat1.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat1.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{xemnhieunhat1.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat1.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{xemnhieunhat1.ID}}">{{xemnhieunhat1.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format xemnhieunhat1.NgayDang}}">{{format2 xemnhieunhat1.NgayDang}}</span>
-        </li>
-        {{!-- 2 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{xemnhieunhat2.ID}}"><img src="{{xemnhieunhat2.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{xemnhieunhat1.ID}}">{{xemnhieunhat1.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format xemnhieunhat1.NgayDang}}">{{format2 xemnhieunhat1.NgayDang}}</span>
+    </div>
+    {{!-- 2 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{xemnhieunhat2.ID}}"><img src="{{xemnhieunhat2.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{xemnhieunhat2.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat2.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{xemnhieunhat2.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat2.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{xemnhieunhat2.ID}}">{{xemnhieunhat2.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format xemnhieunhat2.NgayDang}}">{{format2 xemnhieunhat2.NgayDang}}</span>
-        </li>
-        {{!-- 3 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{xemnhieunhat3.ID}}"><img src="{{xemnhieunhat3.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{xemnhieunhat2.ID}}">{{xemnhieunhat2.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format xemnhieunhat2.NgayDang}}">{{format2 xemnhieunhat2.NgayDang}}</span>
+    </div>
+    {{!-- 3 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{xemnhieunhat3.ID}}"><img src="{{xemnhieunhat3.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{xemnhieunhat3.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat3.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{xemnhieunhat3.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat3.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{xemnhieunhat3.ID}}">{{xemnhieunhat1.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format xemnhieunhat3.NgayDang}}">{{format2 xemnhieunhat3.NgayDang}}</span>
-        </li>
-        {{!-- 4 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{xemnhieunhat4.ID}}"><img src="{{xemnhieunhat4.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{xemnhieunhat3.ID}}">{{xemnhieunhat1.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format xemnhieunhat3.NgayDang}}">{{format2 xemnhieunhat3.NgayDang}}</span>
+    </div>
+    {{!-- 4 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{xemnhieunhat4.ID}}"><img src="{{xemnhieunhat4.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{xemnhieunhat4.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat4.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{xemnhieunhat4.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat4.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{xemnhieunhat4.ID}}">{{xemnhieunhat4.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format xemnhieunhat4.NgayDang}}">{{format2 xemnhieunhat4.NgayDang}}</span>
-        </li>
-        {{!-- 5 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{xemnhieunhat5.ID}}"><img src="{{xemnhieunhat5.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{xemnhieunhat4.ID}}">{{xemnhieunhat4.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format xemnhieunhat4.NgayDang}}">{{format2 xemnhieunhat4.NgayDang}}</span>
+    </div>
+    {{!-- 5 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{xemnhieunhat5.ID}}"><img src="{{xemnhieunhat5.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{xemnhieunhat5.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat5.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{xemnhieunhat5.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat5.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{xemnhieunhat5.ID}}">{{xemnhieunhat5.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format xemnhieunhat5.NgayDang}}">{{format2 xemnhieunhat5.NgayDang}}</span>
-        </li>
-    </ul>
-    <hr>
-    <ul class="list-inline">
-        {{!-- 6 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{xemnhieunhat6.ID}}"><img src="{{xemnhieunhat6.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{xemnhieunhat5.ID}}">{{xemnhieunhat5.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format xemnhieunhat5.NgayDang}}">{{format2 xemnhieunhat5.NgayDang}}</span>
+    </div>
+    {{!-- 6 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{xemnhieunhat6.ID}}"><img src="{{xemnhieunhat6.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{xemnhieunhat6.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat6.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{xemnhieunhat6.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat6.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{xemnhieunhat6.ID}}">{{xemnhieunhat6.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format xemnhieunhat6.NgayDang}}">{{format2 xemnhieunhat6.NgayDang}}</span>
-        </li>
-        {{!-- 7 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{xemnhieunhat7.ID}}"><img src="{{xemnhieunhat7.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{xemnhieunhat6.ID}}">{{xemnhieunhat6.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format xemnhieunhat6.NgayDang}}">{{format2 xemnhieunhat6.NgayDang}}</span>
+    </div>
+    {{!-- 7 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{xemnhieunhat7.ID}}"><img src="{{xemnhieunhat7.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{xemnhieunhat7.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat7.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{xemnhieunhat7.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat7.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{xemnhieunhat7.ID}}">{{xemnhieunhat7.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format xemnhieunhat7.NgayDang}}">{{format2 xemnhieunhat7.NgayDang}}</span>
-        </li>
-        {{!-- 8 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{xemnhieunhat8.ID}}"><img src="{{xemnhieunhat8.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{xemnhieunhat7.ID}}">{{xemnhieunhat7.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format xemnhieunhat7.NgayDang}}">{{format2 xemnhieunhat7.NgayDang}}</span>
+    </div>
+    {{!-- 8 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{xemnhieunhat8.ID}}"><img src="{{xemnhieunhat8.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{xemnhieunhat8.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat8.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{xemnhieunhat8.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat8.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{xemnhieunhat8.ID}}">{{xemnhieunhat8.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format xemnhieunhat8.NgayDang}}">{{format2 xemnhieunhat8.NgayDang}}</span>
-        </li>
-        {{!-- 9 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{xemnhieunhat9.ID}}"><img src="{{xemnhieunhat9.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{xemnhieunhat8.ID}}">{{xemnhieunhat8.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format xemnhieunhat8.NgayDang}}">{{format2 xemnhieunhat8.NgayDang}}</span>
+    </div>
+    {{!-- 9 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{xemnhieunhat9.ID}}"><img src="{{xemnhieunhat9.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{xemnhieunhat9.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat9.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{xemnhieunhat9.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat9.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{xemnhieunhat9.ID}}">{{xemnhieunhat9.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format xemnhieunhat9.NgayDang}}">{{format2 xemnhieunhat9.NgayDang}}</span>
-        </li>
-        {{!-- 10 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{xemnhieunhat10.ID}}"><img src="{{xemnhieunhat10.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{xemnhieunhat9.ID}}">{{xemnhieunhat9.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format xemnhieunhat9.NgayDang}}">{{format2 xemnhieunhat9.NgayDang}}</span>
+    </div>
+    {{!-- 10 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{xemnhieunhat10.ID}}"><img src="{{xemnhieunhat10.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{xemnhieunhat10.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat10.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{xemnhieunhat10.ID_ChuyenMuc}}/baiviet">{{xemnhieunhat10.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{xemnhieunhat10.ID}}">{{xemnhieunhat10.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format xemnhieunhat10.NgayDang}}">{{format2 xemnhieunhat10.NgayDang}}</span>
-        </li>
-    </ul>
+                href="/chitietbaiviet/{{xemnhieunhat10.ID}}">{{xemnhieunhat10.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format xemnhieunhat10.NgayDang}}">{{format2 xemnhieunhat10.NgayDang}}</span>
+    </div>
+</div>
+
+<div class="button-slick" style="margin-top: 10px">
+    <button class="prev-xem-nhieu"><img src="img/btnprev.svg" style="height: 100%;width:100%" alt=""></button>
+    <button class="next-xem-nhieu"><img src="img/btnnext.svg" style="height: 100%;width:100%" alt=""></button>
+
 </div>
 
 <hr>
@@ -187,264 +186,255 @@
 
 
 <h5 class="text-danger">Mới nhất</h5>
-<div class="moi-nhat">
-    <ul class="list-inline">
-        {{!-- 1 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{moinhat1.ID}}"><img src="{{moinhat1.AnhDaiDien}}"></a>
-            <br>
+<div class="moi-nhat" data-slick='{"slidesToShow": 5, "slidesToScroll": 5}'>
+    {{!-- 1 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{moinhat1.ID}}"><img src="{{moinhat1.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{moinhat1.ID_ChuyenMuc}}/baiviet">{{moinhat1.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{moinhat1.ID_ChuyenMuc}}/baiviet">{{moinhat1.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{moinhat1.ID}}">{{moinhat1.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format moinhat1.NgayDang}}">{{format2 moinhat1.NgayDang}}</span>
-        </li>
-        {{!-- 2 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{moinhat2.ID}}"><img src="{{moinhat2.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{moinhat1.ID}}">{{moinhat1.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format moinhat1.NgayDang}}">{{format2 moinhat1.NgayDang}}</span>
+    </div>
+    {{!-- 2 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{moinhat2.ID}}"><img src="{{moinhat2.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{moinhat2.ID_ChuyenMuc}}/baiviet">{{moinhat2.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{moinhat2.ID_ChuyenMuc}}/baiviet">{{moinhat2.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{moinhat2.ID}}">{{moinhat2.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format moinhat2.NgayDang}}">{{format2 moinhat2.NgayDang}}</span>
-        </li>
-        {{!-- 3 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{moinhat3.ID}}"><img src="{{moinhat3.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{moinhat2.ID}}">{{moinhat2.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format moinhat2.NgayDang}}">{{format2 moinhat2.NgayDang}}</span>
+    </div>
+    {{!-- 3 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{moinhat3.ID}}"><img src="{{moinhat3.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{moinhat3.ID_ChuyenMuc}}/baiviet">{{moinhat3.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{moinhat3.ID_ChuyenMuc}}/baiviet">{{moinhat3.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{moinhat3.ID}}">{{moinhat3.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format moinhat3.NgayDang}}">{{format2 moinhat3.NgayDang}}</span>
-        </li>
-        {{!-- 4 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{moinhat4.ID}}"><img src="{{moinhat4.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{moinhat3.ID}}">{{moinhat3.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format moinhat3.NgayDang}}">{{format2 moinhat3.NgayDang}}</span>
+    </div>
+    {{!-- 4 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{moinhat4.ID}}"><img src="{{moinhat4.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{moinhat4.ID_ChuyenMuc}}/baiviet">{{moinhat4.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{moinhat4.ID_ChuyenMuc}}/baiviet">{{moinhat4.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{moinhat4.ID}}">{{moinhat4.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format moinhat4.NgayDang}}">{{format2 moinhat4.NgayDang}}</span>
-        </li>
-        {{!-- 5 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{moinhat5.ID}}"><img src="{{moinhat5.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{moinhat4.ID}}">{{moinhat4.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format moinhat4.NgayDang}}">{{format2 moinhat4.NgayDang}}</span>
+    </div>
+    {{!-- 5 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{moinhat5.ID}}"><img src="{{moinhat5.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{moinhat5.ID_ChuyenMuc}}/baiviet">{{moinhat5.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{moinhat5.ID_ChuyenMuc}}/baiviet">{{moinhat5.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{moinhat5.ID}}">{{moinhat5.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format moinhat5.NgayDang}}">{{format2 moinhat5.NgayDang}}</span>
-        </li>
-    </ul>
-    <hr>
-    <ul class="list-inline">
-        {{!-- 6 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{moinhat6.ID}}"><img src="{{moinhat6.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{moinhat5.ID}}">{{moinhat5.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format moinhat5.NgayDang}}">{{format2 moinhat5.NgayDang}}</span>
+    </div>
+    {{!-- 6 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{moinhat6.ID}}"><img src="{{moinhat6.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{moinhat6.ID_ChuyenMuc}}/baiviet">{{moinhat6.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{moinhat6.ID_ChuyenMuc}}/baiviet">{{moinhat6.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{moinhat6.ID}}">{{moinhat6.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format moinhat6.NgayDang}}">{{format2 moinhat6.NgayDang}}</span>
-        </li>
-        {{!-- 7 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{moinhat7.ID}}"><img src="{{moinhat7.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{moinhat6.ID}}">{{moinhat6.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format moinhat6.NgayDang}}">{{format2 moinhat6.NgayDang}}</span>
+    </div>
+    {{!-- 7 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{moinhat7.ID}}"><img src="{{moinhat7.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{moinhat7.ID_ChuyenMuc}}/baiviet">{{moinhat7.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{moinhat7.ID_ChuyenMuc}}/baiviet">{{moinhat7.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{moinhat7.ID}}">{{moinhat7.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format moinhat7.NgayDang}}">{{format2 moinhat7.NgayDang}}</span>
-        </li>
-        {{!-- 8 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{moinhat8.ID}}"><img src="{{moinhat8.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{moinhat7.ID}}">{{moinhat7.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format moinhat7.NgayDang}}">{{format2 moinhat7.NgayDang}}</span>
+    </div>
+    {{!-- 8 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{moinhat8.ID}}"><img src="{{moinhat8.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{moinhat8.ID_ChuyenMuc}}/baiviet">{{moinhat8.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{moinhat8.ID_ChuyenMuc}}/baiviet">{{moinhat8.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{moinhat8.ID}}">{{moinhat8.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format moinhat8.NgayDang}}">{{format2 moinhat8.NgayDang}}</span>
-        </li>
-        {{!-- 9 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{moinhat9.ID}}"><img src="{{moinhat9.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{moinhat8.ID}}">{{moinhat8.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format moinhat8.NgayDang}}">{{format2 moinhat8.NgayDang}}</span>
+    </div>
+    {{!-- 9 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{moinhat9.ID}}"><img src="{{moinhat9.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{moinhat9.ID_ChuyenMuc}}/baiviet">{{moinhat9.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{moinhat9.ID_ChuyenMuc}}/baiviet">{{moinhat9.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{moinhat9.ID}}">{{moinhat9.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format moinhat9.NgayDang}}">{{format2 moinhat9.NgayDang}}</span>
-        </li>
-        {{!-- 10 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{moinhat10.ID}}"><img src="{{moinhat10.AnhDaiDien}}"></a>
-            <br>
+                href="/chitietbaiviet/{{moinhat9.ID}}">{{moinhat9.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format moinhat9.NgayDang}}">{{format2 moinhat9.NgayDang}}</span>
+    </div>
+    {{!-- 10 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{moinhat10.ID}}"><img src="{{moinhat10.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{moinhat10.ID_ChuyenMuc}}/baiviet">{{moinhat10.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{moinhat10.ID_ChuyenMuc}}/baiviet">{{moinhat10.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{moinhat10.ID}}">{{moinhat10.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format moinhat10.NgayDang}}">{{format2 moinhat10.NgayDang}}</span>
-        </li>
-    </ul>
+                href="/chitietbaiviet/{{moinhat10.ID}}">{{moinhat10.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format moinhat10.NgayDang}}">{{format2 moinhat10.NgayDang}}</span>
+    </div>
 </div>
+<div class="button-slick" style="margin-top: 10px">
+    <button class="prev-moi-nhat"><img src="img/btnprev.svg" style="height: 100%;width:100%" alt=""></button>
+    <button class="next-moi-nhat"><img src="img/btnnext.svg" style="height: 100%;width:100%" alt=""></button>
 
+</div>
 <hr>
 <hr>
 
 <h5 class="text-danger">Top 10 chuyên mục</h5>
-<div class="top-chuyen-muc">
-    <ul class="list-inline">
-        {{!-- 1 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{topcm1.ID}}"><img src="{{topcm1.AnhDaiDien}}"></a>
-            <br>
+<div class="top-chuyen-muc" data-slick='{"slidesToShow": 5, "slidesToScroll": 5}'>
+    {{!-- 1 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{topcm1.ID}}"><img src="{{topcm1.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{topcm1.ID_ChuyenMuc}}/baiviet">{{topcm1.TenChuyenMuc}}</a>
+        <h6 class="name-title">
+            <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{topcm1.ID}}">{{topcm1.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format topcm1.NgayDang}}">{{format2 topcm1.NgayDang}}</span>
+    </div>
+    {{!-- 2 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{topcm2.ID}}"><img src="{{topcm2.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{topcm2.ID_ChuyenMuc}}/baiviet">{{topcm2.TenChuyenMuc}}</a>
+        <h6 class="name-title">
+            <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{topcm2.ID}}">{{topcm2.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format topcm2.NgayDang}}">{{format2 topcm2.NgayDang}}</span>
+    </div>
+    {{!-- 3 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{topcm3.ID}}"><img src="{{topcm3.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{topcm3.ID_ChuyenMuc}}/baiviet">{{topcm3.TenChuyenMuc}}</a>
+        <h6 class="name-title">
+            <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{topcm3.ID}}">{{topcm3.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format topcm3.NgayDang}}">{{format2 topcm3.NgayDang}}</span>
+    </div>
+    {{!-- 4 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{topcm4.ID}}"><img src="{{topcm4.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{topcm4.ID_ChuyenMuc}}/baiviet">{{topcm4.TenChuyenMuc}}</a>
+        <h6 class="name-title">
+            <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{topcm4.ID}}">{{topcm4.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format topcm4.NgayDang}}">{{format2 topcm4.NgayDang}}</span>
+    </div>
+    {{!-- 5 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{topcm5.ID}}"><img src="{{topcm5.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{topcm5.ID_ChuyenMuc}}/baiviet">{{topcm5.TenChuyenMuc}}</a>
+        <h6 class="name-title">
+            <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{topcm5.ID}}">{{topcm5.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format topcm5.NgayDang}}">{{format2 topcm5.NgayDang}}</span>
+    </div>
+    {{!-- 6 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{topcm6.ID}}"><img src="{{topcm6.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{topcm6.ID_ChuyenMuc}}/baiviet">{{topcm6.TenChuyenMuc}}</a>
+        <h6 class="name-title">
+            <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{topcm6.ID}}">{{topcm6.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format topcm6.NgayDang}}">{{format2 topcm6.NgayDang}}</span>
+    </div>
+    {{!-- 7 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{topcm7.ID}}"><img src="{{topcm7.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{topcm7.ID_ChuyenMuc}}/baiviet">{{topcm7.TenChuyenMuc}}</a>
+        <h6 class="name-title">
+            <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{topcm7.ID}}">{{topcm7.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format topcm7.NgayDang}}">{{format2 topcm7.NgayDang}}</span>
+    </div>
+    {{!-- 8 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{topcm8.ID}}"><img src="{{topcm8.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{topcm8.ID_ChuyenMuc}}/baiviet">{{topcm8.TenChuyenMuc}}</a>
+        <h6 class="name-title">
+            <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{topcm8.ID}}">{{topcm8.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format topcm8.NgayDang}}">{{format2 topcm8.NgayDang}}</span>
+    </div>
+    {{!-- 9 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{topcm9.ID}}"><img src="{{topcm9.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{topcm9.ID_ChuyenMuc}}/baiviet">{{topcm9.TenChuyenMuc}}</a>
+        <h6 class="name-title">
+            <a style="text-decoration: none;color: black" href="/chitietbaiviet/{{topcm9.ID}}">{{topcm9.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format topcm9.NgayDang}}">{{format2 topcm9.NgayDang}}</span>
+    </div>
+    {{!-- 10 --}}
+    <div class="list-inline-item">
+        <a href="/chitietbaiviet/{{topcm10.ID}}"><img src="{{topcm10.AnhDaiDien}}"></a>
+        <br>
+        <a style="text-decoration: none;color: black"
+            href="/chuyenmuc/{{topcm10.ID_ChuyenMuc}}/baiviet">{{topcm10.TenChuyenMuc}}</a>
+        <h6 class="name-title">
             <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{topcm1.ID_ChuyenMuc}}/baiviet">{{topcm1.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{topcm1.ID}}">{{topcm1.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format topcm1.NgayDang}}">{{format2 topcm1.NgayDang}}</span>
-        </li>
-        {{!-- 2 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{topcm2.ID}}"><img src="{{topcm2.AnhDaiDien}}"></a>
-            <br>
-            <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{topcm2.ID_ChuyenMuc}}/baiviet">{{topcm2.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{topcm2.ID}}">{{topcm2.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format topcm2.NgayDang}}">{{format2 topcm2.NgayDang}}</span>
-        </li>
-        {{!-- 3 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{topcm3.ID}}"><img src="{{topcm3.AnhDaiDien}}"></a>
-            <br>
-            <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{topcm3.ID_ChuyenMuc}}/baiviet">{{topcm3.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{topcm3.ID}}">{{topcm3.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format topcm3.NgayDang}}">{{format2 topcm3.NgayDang}}</span>
-        </li>
-        {{!-- 4 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{topcm4.ID}}"><img src="{{topcm4.AnhDaiDien}}"></a>
-            <br>
-            <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{topcm4.ID_ChuyenMuc}}/baiviet">{{topcm4.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{topcm4.ID}}">{{topcm4.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format topcm4.NgayDang}}">{{format2 topcm4.NgayDang}}</span>
-        </li>
-        {{!-- 5 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{topcm5.ID}}"><img src="{{topcm5.AnhDaiDien}}"></a>
-            <br>
-            <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{topcm5.ID_ChuyenMuc}}/baiviet">{{topcm5.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{topcm5.ID}}">{{topcm5.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format topcm5.NgayDang}}">{{format2 topcm5.NgayDang}}</span>
-        </li>
-    </ul>
-    <hr>
-    <ul class="list-inline">
-        {{!-- 6 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{topcm6.ID}}"><img src="{{topcm6.AnhDaiDien}}"></a>
-            <br>
-            <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{topcm6.ID_ChuyenMuc}}/baiviet">{{topcm6.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{topcm6.ID}}">{{topcm6.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format topcm6.NgayDang}}">{{format2 topcm6.NgayDang}}</span>
-        </li>
-        {{!-- 7 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{topcm7.ID}}"><img src="{{topcm7.AnhDaiDien}}"></a>
-            <br>
-            <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{topcm7.ID_ChuyenMuc}}/baiviet">{{topcm7.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{topcm7.ID}}">{{topcm7.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format topcm7.NgayDang}}">{{format2 topcm7.NgayDang}}</span>
-        </li>
-        {{!-- 8 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{topcm8.ID}}"><img src="{{topcm8.AnhDaiDien}}"></a>
-            <br>
-            <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{topcm8.ID_ChuyenMuc}}/baiviet">{{topcm8.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{topcm8.ID}}">{{topcm8.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format topcm8.NgayDang}}">{{format2 topcm8.NgayDang}}</span>
-        </li>
-        {{!-- 9 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{topcm9.ID}}"><img src="{{topcm9.AnhDaiDien}}"></a>
-            <br>
-            <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{topcm9.ID_ChuyenMuc}}/baiviet">{{topcm9.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{topcm9.ID}}">{{topcm9.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format topcm9.NgayDang}}">{{format2 topcm9.NgayDang}}</span>
-        </li>
-        {{!-- 10 --}}
-        <li class="list-inline-item">
-            <a href="/chitietbaiviet/{{topcm10.ID}}"><img src="{{topcm10.AnhDaiDien}}"></a>
-            <br>
-            <a style="text-decoration: none;color: black"
-                href="/chuyenmuc/{{topcm10.ID_ChuyenMuc}}/baiviet">{{topcm10.TenChuyenMuc}}</a>
-            <h6 class="name-title">
-                <a style="text-decoration: none;color: black"
-                    href="/chitietbaiviet/{{topcm10.ID}}">{{topcm10.TenBaiViet}}</a>
-            </h6>
-            <span title="{{format topcm10.NgayDang}}">{{format2 topcm10.NgayDang}}</span>
-        </li>
-    </ul>
+                href="/chitietbaiviet/{{topcm10.ID}}">{{topcm10.TenBaiViet}}</a>
+        </h6>
+        <span title="{{format topcm10.NgayDang}}">{{format2 topcm10.NgayDang}}</span>
+    </div>
+
+</div>
+<div class="button-slick" style="margin-top: 10px">
+    <button class="prev-topcm"><img src="img/btnprev.svg" style="height: 100%;width:100%" alt=""></button>
+    <button class="next-topcm"><img src="img/btnnext.svg" style="height: 100%;width:100%" alt=""></button>
+
 </div>
 <hr>
 <hr>
