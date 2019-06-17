@@ -3,17 +3,21 @@
     <form action="" method="POST" role="form" style="margin-bottom:20px;">
         <div class="row">
             <div class="col-1">
-                <input readonly type="text" class="form-control" placeholder="ID" id="stt" name="ID">
+                <input type="text" class="form-control" placeholder="ID" id="stt" name="ID">
             </div>
             <div class="col-2">
                 <input type="text" class="form-control" placeholder="Chuyên mục" id="cm" name="ChuyenMuc">
             </div>
             <div class="col-4">
                 <div class="input-group">
-                    <input type="text" aria-label="First name" class="form-control" placeholder="Chuyên mục con"
-                        name="CMC1" id="cmc1">
-                    <input type="text" aria-label="Last name" class="form-control" placeholder="Chuyên mục con"
-                        name="CMC2" id="cmc2">
+                    <input type="text" class="form-control" placeholder="Chuyên mục con" name="CMC1" id="cmc1">
+                    <input type="text" class="form-control" placeholder="Chuyên mục con" name="CMC2" id="cmc2">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="ID_CMC1" name="ID_CMC1" id="idcmc1">
+                    <input type="text" class="form-control" placeholder="ID_CMC2" name="ID_CMC2" id="idcmc2">
                 </div>
             </div>
             <div class="col-2">
@@ -21,12 +25,12 @@
             </div>
         </div>
         <div style="margin-top:20px;">
-            <button formaction="/admin/chuyenmuc/add" style="width:150px;" type="submit" class="btn btn-outline-primary"><i class="fas fa-plus"
-                    style="margin-right:10px;"></i>Thêm</button>
-            <button formaction="/admin/chuyenmuc/delete" style="width:150px;" type="submit" class="btn btn-outline-danger"><i class="fas fa-trash-alt"
-                    style="margin-right:10px;"></i>Xóa</button>
-            <button formaction="/admin/chuyenmuc/update" style="width:150px;" type="submit" class="btn btn-outline-success"><i class="fas fa-pen"
-                    style="margin-right:10px;"></i>Cập
+            <button formaction="/admin/chuyenmuc/add" style="width:150px;" type="submit"
+                class="btn btn-outline-primary"><i class="fas fa-plus" style="margin-right:10px;"></i>Thêm</button>
+            <button formaction="/admin/chuyenmuc/delete" style="width:150px;" type="submit"
+                class="btn btn-outline-danger"><i class="fas fa-trash-alt" style="margin-right:10px;"></i>Xóa</button>
+            <button formaction="/admin/chuyenmuc/update" style="width:150px;" type="submit"
+                class="btn btn-outline-success"><i class="fas fa-pen" style="margin-right:10px;"></i>Cập
                 nhật</button>
         </div>
     </form>
@@ -37,6 +41,8 @@
                 <th>ID</th>
                 <th>Chuyên mục</th>
                 <th colspan="2">Chuyên mục con</th>
+                <th>ID CMC1</th>
+                <th>ID CMC2</th>
                 <th>Biên tập viên</th>
             </tr>
         </thead>
@@ -47,6 +53,8 @@
                 <td>{{ChuyenMuc}}</td>
                 <td style="width:200px;">{{CMC1}}</td>
                 <td>{{CMC2}}</td>
+                <td>{{ID_CMC1}}</td>
+                <td>{{ID_CMC2}}</td>
                 <td>{{BienTapVien}}</td>
             </tr>
             {{/each}}
@@ -62,7 +70,9 @@
             document.getElementById("cm").value = this.cells[1].innerHTML;
             document.getElementById("cmc1").value = this.cells[2].innerHTML;
             document.getElementById("cmc2").value = this.cells[3].innerHTML;
-            document.getElementById("btv").value = this.cells[4].innerHTML;
+            document.getElementById("idcmc1").value = this.cells[4].innerHTML;
+            document.getElementById("idcmc2").value = this.cells[5].innerHTML;
+            document.getElementById("btv").value = this.cells[6].innerHTML;
         };
     }
 </script>

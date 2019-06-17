@@ -5,6 +5,14 @@ module.exports = {
         return db.load(`SELECT * FROM dsbaivietphongvien`);
     },
 
+    allByTK_DC: idtk => {
+        return db.load(`SELECT * FROM dsbaivietphongvien WHERE ID_TK = ${idtk} AND TinhTrang != 'DD'`);
+    },
+
+    allByTK_DD: idtk => {
+        return db.load(`SELECT * FROM dsbaivietphongvien WHERE ID_TK = ${idtk} AND TinhTrang = 'DD'`);
+    },
+
     allByCat: CatId => {
         return db.load(`SELECT * FROM dsbaivietphongvien WHERE ID_ChuyenMuc = ${CatId}`);
     },

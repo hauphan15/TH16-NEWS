@@ -22,8 +22,17 @@
         </div>
         <div class="form-group">
             <label for="">Ngày sinh</label>
-            <input readonly type="text" class="form-control" id="txtngaysinh" name="NgaySinh" value="{{format3 authUser.NgaySinh}}">
+            <input readonly type="text" class="form-control" id="txtngaysinh" name="NgaySinh"
+                value="{{format3 authUser.NgaySinh}}">
         </div>
+        {{#if isDG}}
+        <div class="form-group">
+            <label for="">Số ngày còn lại</label>
+            <input readonly type="text" class="form-control" name="NgayConLai" value="{{ authUser.NgayConLai}}">
+        </div>
+        {{/if}}
+
+        {{#if isBTV}}
         <div class="form-group">
             <label for="">Bút danh</label>
             <input readonly type="text" class="form-control" value="{{authUser.ButDanh}}">
@@ -32,17 +41,26 @@
             <label for="">Chuyên mục quản lý</label>
             <input readonly type="text" class="form-control" value="{{ authUser.ID_CMQL}}">
         </div>
+        <div class="form-group">
+            <label for="">Bài viết đang chờ duyệt</label>
+            <a href="" role="button"></a>
+        </div>
+        {{/if}}
         <div style="text-align:center;margin-top:20px;">
             <a href="hosocanhan/capnhathoso">
                 <button style="width:180px;" type="button" class="btn btn-danger">Cập nhật thông tin</button>
             </a>
         </div>
     </div>
+
     <div class="col-sm-6">
         <div class="form-group">
+            {{#if isAdmin}}
             <label for=""><b>Danh sách chức năng</b></label>
             <div>
                 <div class="list-group list-group-flush">
+                    <a href="/admin/qltaikhoan" class="list-group-item list-group-item-action"><i
+                            class="fas fa-users" style="margin-right:10px;"></i>Tài khoản</a>
                     <a href="/admin/bientapvien" class="list-group-item list-group-item-action"><i
                             class="fas fa-user-edit" style="margin-right:10px;"></i>Biên tập viên</a>
                     <a href="/admin/chuyenmuc" class="list-group-item list-group-item-action"><i class="fas fa-list-ol"
@@ -59,6 +77,30 @@
                             style="margin-right:10px;"></i>Danh sách bài viết</a>
                 </div>
             </div>
+            {{/if}}
+
+            {{#if isBTV}}
+            <label for=""><b>Danh sách chức năng</b></label>
+            <div>
+                <div class="list-group list-group-flush">
+                    <a href="/bientapvien/duyetbaiviet/{{authUser.ID_CMQL}}"
+                        class="list-group-item list-group-item-action"><i class="fas fa-th-list"
+                            style="margin-right:10px;"></i>Các bài viết chờ duyệt</a>
+                </div>
+            </div>
+            {{/if}}
+
+            {{#if isPV}}
+            <label for=""><b>Danh sách chức năng</b></label>
+            <div>
+                <div class="list-group list-group-flush">
+                    <a href="/writer/dsbaiviet/{{authUser.ID}}" class="list-group-item list-group-item-action"><i
+                            class="fas fa-th-list" style="margin-right:10px;"></i>Các bài viết đang chờ duyệt</a>
+                    <a href="/writer/dangbaiviet" class="list-group-item list-group-item-action"><i
+                            class="fas fa-pen-alt" style="margin-right:10px;"></i>Đăng bài viết</a>
+                </div>
+            </div>
+            {{/if}}
         </div>
     </div>
 </div>

@@ -3,7 +3,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
 {{/section}}
 
-{{#section 'jsbtv'}} 
+{{#section 'jsbtv'}}
 <script
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
 <script>
@@ -20,33 +20,17 @@
 <h4 class="text-center" style="margin-top:40px;margin-bottom:20px;">Danh sách biên tập viên</h4>
 <form novalidate action="" method="POST" role="form" style="margin-bottom:20px;" id="form">
     <div class="row">
-        <div class="col-6">
+        <div class="col-3">
             <div class="form-group">
                 <label for="txttendn">ID</label>
                 <input readonly type="text" class="form-control" id="stt" name="ID">
             </div>
             <div class="form-group">
-                <label for="txttendn">Email</label>
-                <input type="text" class="form-control" id="email" name="Email">
-            </div>
-            <div class="form-group">
                 <label for="txttendn">Họ tên</label>
-                <input type="text" class="form-control" id="ht" name="HoTen">
-            </div>
-            <div class="form-group">
-                <label for="txttendn">Ngày sinh</label>
-                <input type="text" class="form-control" id="ns" name="NgaySinh">
+                <input readonly type="text" class="form-control" id="ht" name="HoTen">
             </div>
         </div>
-        <div class="col-6">
-            <div class="form-group">
-                <label for="txttendn">CMND/Hộ chiếu</label>
-                <input type="text" class="form-control" id="cmnd" name="CMND">
-            </div>
-            <div class="form-group">
-                <label for="txttendn">Số điện thoại</label>
-                <input type="text" class="form-control" id="sdt" name="Sdt">
-            </div>
+        <div class="col-3">
             <div class="form-group">
                 <label for="txttendn">Bút danh</label>
                 <input type="text" class="form-control" name="ButDanh" id="bd">
@@ -58,8 +42,6 @@
         </div>
     </div>
     <div style="margin-top:20px;">
-        <button formaction="/admin/bientapvien/add" style="width:150px;" type="submit"
-            class="btn btn-outline-primary"><i class="fas fa-plus" style="margin-right:10px;"></i>Thêm</button>
         <button formaction="/admin/bientapvien/delete" style="width:150px;" type="submit"
             class="btn btn-outline-danger"><i class="fas fa-trash-alt" style="margin-right:10px;"></i>Xóa</button>
         <button formaction="/admin/bientapvien/update" style="width:150px;" type="submit"
@@ -74,8 +56,6 @@
             <th>Email</th>
             <th>Họ tên</th>
             <th>Ngày sinh</th>
-            <th>CMND/Hộ chiếu</th>
-            <th>Số điện thoại</th>
             <th>Bút danh</th>
             <th>ID Chuyên mục quản lý</th>
         </tr>
@@ -86,11 +66,9 @@
             <th scope="row">{{ID}}</th>
             <td>{{Email}}</td>
             <td>{{HoTen}}</td>
-            <td>{{NgaySinh}}</td>
-            <td>{{CMND}}</td>
-            <td>{{Sdt}}</td>
+            <td>{{format3 NgaySinh}}</td>
             <td>{{ButDanh}}</td>
-            <td>{{ID_ChuyenMuc}}</td>
+            <td>{{ID_CMQL}}</td>
         </tr>
         {{/each}}
     </tbody>
@@ -102,13 +80,9 @@
     for (let i = 1; i < tb.rows.length; i++) {
         tb.rows[i].onclick = function () {
             document.getElementById("stt").value = this.cells[0].innerHTML;
-            document.getElementById("email").value = this.cells[1].innerHTML;
             document.getElementById("ht").value = this.cells[2].innerHTML;
-            document.getElementById("ns").value = this.cells[3].innerHTML;
-            document.getElementById("cmnd").value = this.cells[4].innerHTML;
-            document.getElementById("sdt").value = this.cells[5].innerHTML;
-            document.getElementById("bd").value = this.cells[6].innerHTML;
-            document.getElementById("idcm").value = this.cells[7].innerHTML;
+            document.getElementById("bd").value = this.cells[4].innerHTML;
+            document.getElementById("idcm").value = this.cells[5].innerHTML;
         };
     }
 </script>

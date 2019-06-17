@@ -7,7 +7,8 @@ var router = exress.Router();
 
 
 router.post('/duyet', (req, res, next) => {
-    var ngaydang = moment(req.body.NgayDang, 'DD/MM/YYYY H:mm').format('YYYY-MM-DD hh:mm:ss');
+    var ngaydang = moment(req.body.NgayDang, 'DD/MM/YYYY HH:mm').format('YYYY-MM-DD HH:mm:ss');
+    var daduyet = 'DD';
     var entity = {
         ID_ChuyenMuc: req.body.ID_ChuyenMuc,
         TenChuyenMuc: req.body.TenChuyenMuc,
@@ -23,9 +24,16 @@ router.post('/duyet', (req, res, next) => {
         Tag2: req.body.tag2,
         Tag3: req.body.tag3
     }
+
+    var entity2 = {
+        ID_BVPV: req.body.ID_BVPV,
+        TinhTrang: daduyet,
+        GhiChu: req.body.GhiChu
+    }
+
     Promise.all([
         baivietModel.add(entity),
-        dsbaivietpvModel.update(req.body),
+        dsbaivietpvModel.update(entity2),
         baivietchoduyetModel.delete(req.body.ID_BVCD)])
         .then(() => {
             res.redirect('/admin/duyetbaiviet');
@@ -35,9 +43,15 @@ router.post('/duyet', (req, res, next) => {
 
 
 router.post('/tuchoi', (req, res, next) => {
+    var entity = {
+        ID_BVPV: req.body.ID_BVPV,
+        TinhTrang: 'TC',
+        GhiChu: req.body.GhiChu
+    }
+
     Promise.all([
         baivietchoduyetModel.delete(req.body.ID_BVCD),
-        dsbaivietpvModel.update(req.body)])
+        dsbaivietpvModel.update(entity)])
         .then(() => {
             res.redirect('/admin/duyetbaiviet');
         })

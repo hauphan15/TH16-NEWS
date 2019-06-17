@@ -18,7 +18,7 @@
 {{/section}}
 
 
-<h4 class="text-center" style="margin-top:40px;margin-bottom:20px;">Danh sách phóng viên</h4>
+<h4 class="text-center" style="margin-top:40px;margin-bottom:20px;">Danh sách tài khoản</h4>
 <form action="" method="POST" role="form" style="margin-bottom:20px;">
     <div class="row">
         <div class="col-3">
@@ -27,21 +27,16 @@
                 <input readonly type="text" class="form-control" id="stt" name="ID">
             </div>
             <div class="form-group">
-                <label for="ht">Họ tên</label>
-                <input readonly type="text" class="form-control" id="ht" name="HoTen">
+                <label for="ht">Quyền</label>
+                <input  type="text" class="form-control" id="quyen" name="Quyen">
             </div>
-        </div>
-
-        <div class="col-6">
         </div>
     </div>
 
     <div style="margin-top:20px;">
-        <button formaction="/admin/phongvien/delete" style="width:150px;" type="submit"
-            class="btn btn-outline-danger"><i class="fas fa-trash-alt" style="margin-right:10px;"></i>Xóa</button>
-        {{!-- <button formaction="/admin/phongvien/remove" style="width:150px;" type="submit"
+        <button formaction="/admin/qltaikhoan/update" style="width:150px;" type="submit"
             class="btn btn-outline-success"><i class="fas fa-pen" style="margin-right:10px;"></i>Cập
-            nhật</button> --}}
+            nhật</button>
     </div>
 </form>
 
@@ -49,18 +44,22 @@
     <thead style="text-align:center;">
         <tr>
             <th>ID</th>
+            <th>Tên đăng nhập</th>
             <th>Email</th>
             <th>Họ tên</th>
             <th>Ngày sinh</th>
+            <th>Quyền</th>
         </tr>
     </thead>
     <tbody>
-        {{#each this.phongvien}}
+        {{#each this.taikhoan}}
         <tr>
             <td>{{ID}}</td>
+            <td>{{TenDangNhap}}</td>
             <td>{{Email}}</td>
             <td>{{HoTen}}</td>
             <td>{{format3 NgaySinh}}</td>
+            <td>{{Quyen}}</td>
         </tr>
         {{/each}}
     </tbody>
@@ -71,7 +70,7 @@
     for (let i = 1; i < tb.rows.length; i++) {
         tb.rows[i].onclick = function () {
             document.getElementById("stt").value = this.cells[0].innerHTML;
-            document.getElementById("ht").value = this.cells[2].innerHTML;
+            document.getElementById("quyen").value = this.cells[5].innerHTML;
         };
     }
 </script>

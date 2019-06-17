@@ -1,8 +1,7 @@
 var exress = require('express');
 var baivietchoduyetModel = require('../../models/baivietchoduyet.model');
-var baivietModel = require('../../models/baiviet.model');
 var router = exress.Router();
-
+ 
 
 router.get('/:idCMQL', (req, res, next) => {
     baivietchoduyetModel.allByCM(req.params.idCMQL)

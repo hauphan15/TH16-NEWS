@@ -1,31 +1,23 @@
 <h4 class="text-center" style="margin-top:40px;margin-bottom:20px;">Danh sách bài viết</h4>
 
+
+
+<h5>Đã duyệt</h5>
 <div class="row">
     <div class="col-8">
         <form action="" method="POST" role="form" style="margin-bottom:20px;">
             <ul class="list-inline">
                 <li class="list-inline-item">
-                    <input type="text" readonly class="form-control" id="ID_BVPV" name="ID_BVPV" placeholder="ID_BVPV">
+                    <input type="text" readonly class="form-control" id="ID_BVPV1" name="ID_BVPV" placeholder="ID_BVPV">
                 </li>
-                <li class="list-inline-item">
-                    <button style="width:150px;" type="submit" class="btn btn-outline-info"
-                        formaction="/writer/xemchitiet">
-                        <i class="fas fa-eye" style="margin-right:10px;"></i>Xem chi tiết</button></li>
                 <li class="list-inline-item"> <button style="width:150px;" type="submit" class="btn btn-outline-danger"
                         formaction="/writer/dsbaiviet/xoa">
                         <i class="fas fa-trash-alt" style="margin-right:10px;"></i>Xóa</button></li>
             </ul>
         </form>
     </div>
-    <div class="col-sm-4">
-        <button style="width:150px;float:right;" type="button" class="btn btn-outline-info">
-            <i class="fas fa-pen-alt" style="margin-right:10px;"></i><a style="text-decoration:none;" href="/writer/dangbaiviet">Đăng bài viết</a></button>
-    </div>
 </div>
-
-
-
-<table class="table table-bordered table-hover" id="tbl">
+<table class="table table-bordered table-hover" id="tbl1">
     <thead>
         <tr>
             <th>ID BVPV</th>
@@ -37,7 +29,54 @@
         </tr>
     </thead>
     <tbody>
-        {{#each this.dsbaiviet}}
+        {{#each this.bvdaduyet}}
+        <tr>
+            <td>{{ID_BVPV}}</td>
+            <td>{{TenBaiViet}}</td>
+            <td>{{ID_ChuyenMuc}}</td>
+            <td>{{ID_CMC}}</td>
+            <td>{{TinhTrang}}</td>
+            <td>{{GhiChu}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<h5>Đang chờ duyệt</h5>
+<div class="row">
+    <div class="col-8">
+        <form action="" method="POST" role="form" style="margin-bottom:20px;">
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <input type="text" readonly class="form-control" id="ID_BVPV2" name="ID_BVPV" placeholder="ID_BVPV">
+                </li>
+                <li class="list-inline-item">
+                    <button style="width:150px;" type="submit" class="btn btn-outline-info"
+                        formaction="/writer/xemchitiet">
+                        <i class="fas fa-eye" style="margin-right:10px;"></i>Xem chi tiết</button></li>
+                <li class="list-inline-item"> <button style="width:150px;" type="submit" class="btn btn-outline-danger"
+                        formaction="/writer/dsbaiviet/xoa">
+                        <i class="fas fa-trash-alt" style="margin-right:10px;"></i>Xóa</button></li>
+            </ul>
+        </form>
+    </div>
+</div>
+
+
+
+<table class="table table-bordered table-hover" id="tbl2">
+    <thead>
+        <tr>
+            <th>ID BVPV</th>
+            <th>Tên bài viết</th>
+            <th>ID Chuyên mục</th>
+            <th>ID Chuyên mục con</th>
+            <th>Tình trạng</th>
+            <th>Ghi chú</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each this.bvdangcho}}
         <tr>
             <td>{{ID_BVPV}}</td>
             <td>{{TenBaiViet}}</td>
@@ -51,10 +90,17 @@
 </table>
 
 <script>
-    var tb = document.getElementById("tbl");
+    var tb = document.getElementById("tbl1");
     for (let i = 1; i < tb.rows.length; i++) {
         tb.rows[i].onclick = function () {
-            document.getElementById("ID_BVPV").value = this.cells[0].innerHTML;
+            document.getElementById("ID_BVPV1").value = this.cells[0].innerHTML;
+        };
+    }
+
+    var tb = document.getElementById("tbl2");
+    for (let i = 1; i < tb.rows.length; i++) {
+        tb.rows[i].onclick = function () {
+            document.getElementById("ID_BVPV2").value = this.cells[0].innerHTML;
         };
     }
 </script>

@@ -1,6 +1,5 @@
 var exress = require('express');
 var baivietModel = require('../models/baiviet.model');
-var chuyenmuc = require('../models/chuyenmuc.model');
 var router = exress.Router();
 
 

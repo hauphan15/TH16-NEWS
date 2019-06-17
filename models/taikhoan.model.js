@@ -14,7 +14,7 @@ module.exports = {
     },
 
     loadDG: () => {
-        return db.load(`SELECT * FROM taikhoan WHERE Quyen = 'DG'`);
+        return db.load(`SELECT * FROM taikhoan WHERE Quyen = ''`);
     },
 
     singel: id => {

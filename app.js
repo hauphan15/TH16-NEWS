@@ -35,6 +35,7 @@ app.use('/admin/docgia', require('./routes/admin/docgia.route'));
 app.use('/admin/phongvien', require('./routes/admin/phongvien.route'));
 app.use('/admin/chuyenmuc', require('./routes/admin/chuyenmuc.route'));
 app.use('/admin/dsbaiviet', require('./routes/admin/dsbaiviet.route'));
+app.use('/admin/qltaikhoan', require('./routes/admin/taikhoan.route'));
 
 app.use('/chuyenmuc', require('./routes/chuyenmuc.route'));
 
@@ -49,7 +50,7 @@ app.use('/ketquatimkiem', require('./routes/ketquatimkiem.route'));
 app.use((req, res, next) => {
     res.render('err/404', { layout: false });
 })
-
+ 
 app.use((error, req, res, next) => {
     res.render('err/error', {
         layout: false,

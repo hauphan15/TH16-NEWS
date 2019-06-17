@@ -3,12 +3,16 @@ var dsbavietModel = require('../../models/dsbaiviet_phongvien.model');
 var bvchoduyetModel = require('../../models/baivietchoduyet.model');
 var router = exress.Router();
 
-router.get('/', (req, res, next) => {
-    dsbavietModel.all()
-        .then(rows => {
+router.get('/:idtk', (req, res, next) => {
+
+    Promise.all([
+        dsbavietModel.allByTK_DD(req.params.idtk),
+        dsbavietModel.allByTK_DC(req.params.idtk)])
+        .then(([rows1, rows2]) => {
             res.render('phongvien/danhsachbaiviet', {
-                title:'Danh sách',
-                dsbaiviet: rows
+                title: 'Danh sách',
+                bvdaduyet: rows1,
+                bvdangcho: rows2,
             });
         }).catch(next)
 })

@@ -9,10 +9,10 @@ module.exports = function (app) {
         layoutsDir: 'views/layouts',
         helpers: {
             format: date => {
-                return moment(date, 'MM/DD/YYYY H:mm').format('DD/MM/YYYY H:mm');
+                return moment(date, 'MM/DD/YYYY HH:mm').format('DD/MM/YYYY HH:mm');
             },
             format2: date => {
-                return moment(date, 'MM/DD/YYYY H:mm').startOf('hour').fromNow();
+                return moment(date, 'MM/DD/YYYY HH:mm').startOf('hour').fromNow();
             },
             format3: date => {
                 return moment(date, 'YYYY-MM-DD').format('DD/MM/YYYY');

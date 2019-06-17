@@ -35,7 +35,8 @@ router.post('/dangky', (req, res, next) => {
         Password: hash,
         Hoten: req.body.hoten,
         Email: req.body.email,
-        NgaySinh: ngaysinh
+        NgaySinh: ngaysinh,
+        NgayConLai:7
     }
 
     taikhoanModel.add(entity).then((id) => {
@@ -85,7 +86,6 @@ router.post('/submit', (req, res, next) => {
         HoTen: req.body.HoTen,
         Email: req.body.Email,
         NgaySinh: ngaysinh,
-        ButDanh: req.body.ButDanh
     }
     taikhoanModel.update(entity).then((id) => {
         res.redirect('/taikhoan/hosocanhan');
