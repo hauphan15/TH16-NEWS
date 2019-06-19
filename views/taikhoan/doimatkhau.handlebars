@@ -1,0 +1,70 @@
+{{#section 'css'}}
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+{{/section}}
+
+{{#section 'js'}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+<script>
+    $(function () {
+        $('#form').validate({
+            rules: {
+                matkhaucu: {
+                    remote: {
+                        url: '/taikhoan/check-password'
+                    }
+                }
+                ,
+                xacnhanmk: {
+                    required: true,
+                    equalTo: $('[name="matkhau"]')
+                }
+            },
+            messages: {
+                matkhaucu: {
+                    remote: 'Your password is incorrect.'
+                }
+                ,
+                xacnhanmk: {
+                    required: 'Your password does not match.',
+                    equalTo: 'Your password does not match.'
+                }
+            },
+            errorElement: 'small',
+            errorClass: 'help-block text-danger',
+            highlight: function (e) {
+                $(e).removeClass('is-valid').addClass('is-invalid');
+            },
+            unhighlight: function (e) {
+                $(e).removeClass('is-invalid').addClass('is-valid');
+            }
+        });
+    })
+</script>
+{{/section}}
+
+<div style="margin-bottom:20px;text-align:center;margin-top:30px;">
+    <h4>Tài khoản của tôi</h4>
+</div>
+<hr>
+<div>
+    <form action="" method="POST" style="width:400px;margin-left:356px;margin-top:20px;" id="form">
+        <div class="form-group">
+            <label for="">Nhập mật khẩu hiện tại</label>
+            <input type="password" name="matkhaucu" id="matkhaucu" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Nhập mật khẩu mới</label>
+            <input type="password" name="matkhau" id="matkhau" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Xác nhận mật khẩu mới</label>
+            <input type="password" name="xacnhanmk" id="xacnhanmk" class="form-control">
+        </div>
+        <div style="text-align:center;margin-top:20px;">
+            <button style="width:120px;" type="submit" formaction="/taikhoan/doimatkhau/submit"
+                class="btn btn-danger">Lưu</button>
+        </div>
+    </form>
+</div>

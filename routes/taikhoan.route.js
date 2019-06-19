@@ -18,10 +18,21 @@ router.get('/is-available', (req, res, next) => {
     })
 })
 
+router.get('/check-password', (req, res, next) => {
+    var matkhaucu = req.query.matkhaucu;
+    var id = res.locals.authUser.ID;
+    taikhoanModel.singel(id).then(rows => {
+        var ret = bcrypt.compareSync(matkhaucu, rows[0].Password);
+        if (ret) {
+            return res.json(true);
+        }
+        return res.json(false);
+    })
+})
 
 router.get('/dangky', (req, res, next) => {
-    res.render('taikhoan/dangky',{
-        title:'Đăng Ký'
+    res.render('taikhoan/dangky', {
+        title: 'Đăng Ký'
     });
 })
 
@@ -36,7 +47,7 @@ router.post('/dangky', (req, res, next) => {
         Hoten: req.body.hoten,
         Email: req.body.email,
         NgaySinh: ngaysinh,
-        NgayConLai:7
+        NgayConLai: 7
     }
 
     taikhoanModel.add(entity).then((id) => {
@@ -45,8 +56,8 @@ router.post('/dangky', (req, res, next) => {
 })
 
 router.get('/dangnhap', (req, res, next) => {
-    res.render('taikhoan/dangnhap',{
-        title:'Đăng Nhập'
+    res.render('taikhoan/dangnhap', {
+        title: 'Đăng Nhập'
     })
 })
 
@@ -58,7 +69,7 @@ router.post('/dangnhap', (req, res, next) => {
         if (!user) {
             return res.render('taikhoan/dangnhap', {
                 err_message: info.message,
-                title:'error'
+                title: 'error'
             });
         }
 
@@ -72,6 +83,10 @@ router.post('/dangnhap', (req, res, next) => {
 
 router.get('/hosocanhan', auth, (req, res, next) => {
     res.render('taikhoan/hoso');
+})
+
+router.get('/doimatkhau/:idtk', auth, (req, res, next) => {
+    res.render('taikhoan/doimatkhau');
 })
 
 router.get('/hosocanhan/capnhathoso', auth, (req, res, next) => {
@@ -91,6 +106,20 @@ router.post('/submit', (req, res, next) => {
         res.redirect('/taikhoan/hosocanhan');
     })
 })
+
+router.post('/doimatkhau/submit', (req, res, next) => {
+    var saltRounds = 10;
+    var hash = bcrypt.hashSync(req.body.matkhau, saltRounds);
+
+    var entity = {
+        ID: res.locals.authUser.ID,
+        Password: hash
+    }
+    taikhoanModel.update(entity).then((id) => {
+        res.redirect('/taikhoan/hosocanhan');
+    })
+})
+
 
 router.post('/dangxuat', auth, (req, res, next) => {
     req.logOut();
