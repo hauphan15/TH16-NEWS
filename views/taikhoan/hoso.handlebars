@@ -4,6 +4,7 @@
 <hr>
 <div class="row">
     <div class="col-sm-6" style="padding-right:220px;">
+        <label for=""><b>Thông tin cá nhân</b></label>
         <div class="form-group">
             <label for="disabledTextInput">ID</label>
             <input readonly type="text" name="ID" class="form-control" value="{{authUser.ID}}">
@@ -46,11 +47,6 @@
             <a href="" role="button"></a>
         </div>
         {{/if}}
-        <div style="text-align:center;margin-top:20px;">
-            <a href="hosocanhan/capnhathoso">
-                <button style="width:180px;" type="button" class="btn btn-danger">Cập nhật thông tin</button>
-            </a>
-        </div>
     </div>
 
     <div class="col-sm-6">
@@ -59,8 +55,10 @@
             <label for=""><b>Danh sách chức năng</b></label>
             <div>
                 <div class="list-group list-group-flush">
-                    <a href="/taikhoan/doimatkhau/{{authUser.ID}}" class="list-group-item list-group-item-action"><i class="fas fa-key"
-                            style="margin-right:10px;"></i>Đổi mật khẩu</a>
+                    <a href="/taikhoan/hosocanhan/capnhathoso" class="list-group-item list-group-item-action"><i
+                            class="fas fa-address-card" style="margin-right:10px;"></i>Cập nhật hồ sơ</a>
+                    <a href="/taikhoan/doimatkhau/{{authUser.ID}}" class="list-group-item list-group-item-action"><i
+                            class="fas fa-key" style="margin-right:10px;"></i>Đổi mật khẩu</a>
                     <a href="/admin/qltaikhoan" class="list-group-item list-group-item-action"><i class="fas fa-users"
                             style="margin-right:10px;"></i>Tài khoản</a>
                     <a href="/admin/bientapvien" class="list-group-item list-group-item-action"><i
@@ -85,8 +83,10 @@
             <label for=""><b>Danh sách chức năng</b></label>
             <div>
                 <div class="list-group list-group-flush">
-                    <a href="/taikhoan/doimatkhau/{{authUser.ID}}" class="list-group-item list-group-item-action"><i class="fas fa-key"
-                            style="margin-right:10px;"></i>Đổi mật khẩu</a>
+                    <a href="/taikhoan/hosocanhan/capnhathoso" class="list-group-item list-group-item-action"><i
+                            class="fas fa-address-card" style="margin-right:10px;"></i>Cập nhật hồ sơ</a>
+                    <a href="/taikhoan/doimatkhau/{{authUser.ID}}" class="list-group-item list-group-item-action"><i
+                            class="fas fa-key" style="margin-right:10px;"></i>Đổi mật khẩu</a>
                     <a href="/bientapvien/duyetbaiviet/{{authUser.ID_CMQL}}"
                         class="list-group-item list-group-item-action"><i class="fas fa-th-list"
                             style="margin-right:10px;"></i>Các bài viết chờ duyệt</a>
@@ -98,8 +98,10 @@
             <label for=""><b>Danh sách chức năng</b></label>
             <div>
                 <div class="list-group list-group-flush">
-                    <a href="/taikhoan/doimatkhau/{{authUser.ID}}" class="list-group-item list-group-item-action"><i class="fas fa-key"
-                            style="margin-right:10px;"></i>Đổi mật khẩu</a>
+                    <a href="/taikhoan/hosocanhan/capnhathoso" class="list-group-item list-group-item-action"><i
+                            class="fas fa-address-card" style="margin-right:10px;"></i>Cập nhật hồ sơ</a>
+                    <a href="/taikhoan/doimatkhau/{{authUser.ID}}" class="list-group-item list-group-item-action"><i
+                            class="fas fa-key" style="margin-right:10px;"></i>Đổi mật khẩu</a>
                     <a href="/writer/dsbaiviet/{{authUser.ID}}" class="list-group-item list-group-item-action"><i
                             class="fas fa-th-list" style="margin-right:10px;"></i>Các bài viết đang chờ duyệt</a>
                     <a href="/writer/dangbaiviet" class="list-group-item list-group-item-action"><i
@@ -112,8 +114,10 @@
             <label for=""><b>Danh sách chức năng</b></label>
             <div>
                 <div class="list-group list-group-flush">
-                    <a href="/taikhoan/doimatkhau/{{authUser.ID}}" class="list-group-item list-group-item-action"><i class="fas fa-key"
-                            style="margin-right:10px;"></i>Đổi mật khẩu</a>
+                    <a href="/taikhoan/hosocanhan/capnhathoso" class="list-group-item list-group-item-action"><i
+                            class="fas fa-address-card" style="margin-right:10px;"></i>Cập nhật hồ sơ</a>
+                    <a href="/taikhoan/doimatkhau/{{authUser.ID}}" class="list-group-item list-group-item-action"><i
+                            class="fas fa-key" style="margin-right:10px;"></i>Đổi mật khẩu</a>
                 </div>
             </div>
             {{/if}}
