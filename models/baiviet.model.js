@@ -24,7 +24,7 @@ module.exports = {
 
     CungCm: (Id) => {
         return db.load(`SELECT * FROM baiviet 
-        WHERE ID_ChuyenMuc = (SELECT ID_ChuyenMuc FROM baiviet WHERE ID = ${Id}) LIMIT 5 `);
+        WHERE ID_ChuyenMuc = (SELECT ID_ChuyenMuc FROM baiviet WHERE ID = ${Id}) ORDER BY RAND() LIMIT 5 `);
     },
 
     allByCat: CatId => {
