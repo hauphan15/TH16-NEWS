@@ -1,5 +1,3 @@
-# DoAnWeb
-Đồ án giữa kỳ và cuối kỳ web
-Báo điện tử TH16-NEWS
-Giai đoạn đầu - giữa kỳ: site tĩnh
-Giai đoạn cuối - cuối kỳ: site động
+# TH16-NEWS - A project of Subject: Web Application Development 
+
+## This is online newspaper application, providing hot news everyday, covering many field sush as: politics, society, bussiness, international, sport, education...
